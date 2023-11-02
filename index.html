@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PROJETO INDIVIDUAL - JULIA INADA DE FREITAS</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+
+    <div class="header">
+        <div class="container">
+            <h1>Karate Shotokan</h1>
+            <ul class="navbar">
+                <li><a href="#">Home</a></li>
+                <!-- <li><a href="#">Valores</a></li> -->
+                <li><a href="#">História</a></li>
+                <li><a href="#">Senseis</a></li>
+                <li><a href="#">Graduações</a></li>
+                <li><a href="#">Shiai/Kata</a></li>
+                <li><a href="#">Login/Cadastro</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="slideshow-container">
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 3</div> -->
+            <img src="IMG-20230715-WA0015.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 3</div> -->
+            <img src="IMG-20230711-WA0040.jpg">
+        </div>
+
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 3</div> -->
+            <img src="IMG-20231019-WA0023.jpg">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div> -->
+
+    <!-- Banner -->
+    <div class="banner">
+        <div class="container">
+            <p>Aprenda a se defender, ter mais disciplina, força e confiança</p>
+        </div>
+    </div>
+
+    <div class="historia">
+        <div class="container">
+            <h1>Valores</h1>
+            <p class="valorD">Disciplina</p>
+            <p class="valorF">Foco</p>
+            <p class="valorR">Resiliência</p>
+            <p class="valorA">Autocontrole</p>
+            <p class="valorRes">Respeito</p>
+        </div>
+    </div>
+
+    <div class="senseis">
+        <div class="container">
+            <h1>Senseis</h1>
+            <p class="senseiIsa">Isabela</p>
+            <p class="senseiElaine">Elaine</p>
+            <p class="senseiGui">Guilherme</p>
+            <p class="senseiJoao">João</p>
+            <p class="senseiJunior">Júnior</p>
+            <p class="senseiWagner">Wagner</p>
+            <p class="senseiRildo">Rildo</p>
+            <p class="senseiGilberto">Gilberto</p>
+        </div>
+    </div>
+
+    <div class="graduacoes">
+        <div class="container">
+            <h1>Graduações</h1>
+
+            <div class="divisao1Graduacoes">
+                <p class="branca">Branca</p>
+                <p class="amarela">Amarela</p>
+                <p class="vermelha">Vermelha</p>
+                <p class="laranja">Laranja</p>
+            </div>
+            <div class="divisao2Graduacoes">
+                <p class="verde">Verde</p>
+                <p class="roxa">Roxa</p>
+                <p class="marrom">Marrom</p>
+                <p class="preta">Preta</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+
+</script>

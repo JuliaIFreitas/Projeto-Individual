@@ -1,0 +1,320 @@
+@font-face {
+    font-family: Karate;
+    src: url(Karate.ttf);
+}
+
+@font-face {
+    font-family: Japones;
+    src: url(NotoSansJP-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: Regular;
+    src: url(SawarabiGothic-Regular.ttf);
+}
+
+h1{
+    font-family: Karate;
+}
+
+body {
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    border: 1px solid purple;
+    background-color: rgb(253, 211, 133);
+}
+
+.header .container {
+    width: 80%;
+    border: 1px solid steelblue;
+    display: flex;
+    height: 100px;
+    margin: 0 10% 0;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.header .container .navbar {
+    list-style: none;
+    border: 1px solid green;
+    font-family: Regular;
+}
+
+.header .container .navbar li {
+    display: inline;
+    padding: 0px 15px;
+    border: 1px solid darkturquoise;
+}
+
+.header .container .navbar li a {
+    text-decoration: none;
+    border: 1px solid tomato;
+    color: black;
+}
+
+.slideshow-container {
+    width: 100%;
+    position: relative;
+    margin: 0;
+    border: 1px solid red;
+}
+
+.mySlides {
+    display: flex;
+    /* height: 150px; */
+    border: 1px solid blue;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+} */
+
+/* .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+} */
+  
+/* .active, .dot:hover {
+    background-color: #717171;
+} */
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+.banner {
+    width: 100%;
+    height: 500px;
+    border: 1px solid rgb(224, 64, 117);
+    background-image: url(IMG-20230715-WA0015.jpg);
+}
+
+.banner .container {
+    width: 80%;
+    height: 100%;
+    border: 1px solid goldenrod;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 10%;
+}
+
+.banner .container p {
+    margin: 0;
+    width: 15%;
+    font-family: Regular;
+    border: 1px solid rgb(60, 168, 60);
+    display: flex;
+}
+
+.historia {
+    width: 100%;
+    height: 500px;
+    border: 1px solid saddlebrown;
+    background-color: rgb(247, 213, 151);
+}
+
+.historia .container {
+    width: 80%;
+    height: 100%;
+    border: 1px solid green;
+    display: flex;
+    margin: 0 10%;
+}
+
+.historia .container .valorD {
+    margin: 7% 0;
+    font-family: Regular;
+    width: 100%;
+    display: flex;
+    border: 1px solid rebeccapurple;
+    height: 10%;
+    background-color: chartreuse;
+}
+
+.historia .container .valorF {
+    font-family: Regular;
+    width: 100%;
+    height: 10%;
+    margin: 14% 0;
+    display: flex;
+    border: 1px solid rebeccapurple;
+    background-color: red;
+    justify-content: flex-end;
+}
+
+.historia .container .valorR {
+    margin: 20% 0;
+    font-family: Regular;
+    width: 100%;
+    display: flex;
+    border: 1px solid rebeccapurple;
+    height: 10%;
+    background-color: hotpink;
+}
+
+.historia .container .valorA {
+    margin: 26% 0;
+    font-family: Regular;
+    width: 100%;
+    display: flex;
+    border: 1px solid rebeccapurple;
+    height: 10%;
+    background-color: blue;
+}
+
+.historia .container .valorRes {
+    margin: 32% 0;
+    font-family: Regular;
+    width: 100%;
+    display: flex;
+    border: 1px solid rebeccapurple;
+    height: 10%;
+    background-color: aqua;
+}
+
+.senseis {
+    width: 100%;
+    height: 500px;
+    background-color: rgb(221, 143, 55);
+}
+
+.senseis .container {
+    width: 80%;
+    height: 100%;
+    border: 1px solid royalblue;
+    display: flex;
+    margin: 0 10%;
+}
+
+.senseis .container p {
+    margin: 5% 0 0 0;
+    font-family: Regular;
+    border: 1px solid teal;
+    width: 40%;
+    height: 20%;
+}
+
+.graduacoes {
+    width: 100%; 
+    height: 500px;
+    background-color: rgb(243, 188, 85);
+}
+
+.graduacoes .container {
+    width: 80%; 
+    height: 100%;
+    border: 1px solid olive;
+    margin: 0 10%;
+    display: flex;
+}
+
+.graduacoes .container p {
+    font-family: Regular;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.graduacoes .container .divisao1Graduacoes {
+    width: 100%;
+    height: 50%;
+    border: 1px solid green;
+    display: flex;
+}
+
+.graduacoes .container .branca {
+    border: 1px solid white;
+    width: 20%;
+    height: 45%;
+}
+
+.graduacoes .container .amarela {
+    border: 1px solid yellow;
+    width: 20%;
+    height: 45%;
+}
+
+.graduacoes .container .vermelha {
+    border: 1px solid red;
+    width: 20%;
+    height: 45%;
+}
+
+.graduacoes .container .laranja {
+    border: 1px solid orange;
+    width: 20%;
+    height: 100%;
+}
+
+.graduacoes .container .divisao2Graduacoes {
+    width: 100%;
+    height: 50%;
+    border: 1px solid hotpink;
+    display: flex;
+    align-self: flex-end;
+}
+
+.graduacoes .container .divisao2Graduacoes .verde {
+    border: 1px solid green;
+    width: 20%;
+    height: 45%;
+    align-self: flex-end;
+}
+
+.graduacoes .container .roxa {
+    border: 1px solid purple;
+    width: 20%;
+    height: 45%;
+    align-self: flex-end;
+}
+
+.graduacoes .container .marrom {
+    border: 1px solid brown;
+    width: 20%;
+    height: 45%;
+    align-self: flex-end;
+}
+
+.graduacoes .container .preta {
+    border: 1px solid black;
+    width: 20%;
+    height: 45%;
+    align-self: flex-end;
+}
