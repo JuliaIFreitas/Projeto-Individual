@@ -232,13 +232,13 @@ body {
     height: 20%;
 }
 
-.graduacoes {
+.graduacoes1 {
     width: 100%; 
-    height: 500px;
+    height: 250px;
     background-color: rgb(243, 188, 85);
 }
 
-.graduacoes .container {
+.graduacoes1 .container {
     width: 80%; 
     height: 100%;
     border: 1px solid olive;
@@ -246,75 +246,100 @@ body {
     display: flex;
 }
 
-.graduacoes .container p {
+.graduacoes1 .container p {
     font-family: Regular;
-    flex-wrap: wrap;
     display: flex;
 }
 
-.graduacoes .container .divisao1Graduacoes {
+.graduacoes1 .container .divisao1Graduacoes {
     width: 100%;
-    height: 50%;
+    height: 100%;
     border: 1px solid green;
     display: flex;
 }
 
-.graduacoes .container .branca {
+.graduacoes1 .container .branca {
     border: 1px solid white;
     width: 20%;
-    height: 45%;
+    height: 100%;
+    display: flex;
+    margin: 0;
 }
 
-.graduacoes .container .amarela {
+.graduacoes1 .container .amarela {
     border: 1px solid yellow;
     width: 20%;
-    height: 45%;
+    height: 100%;
+    display: flex;
+    margin: 0;
 }
 
-.graduacoes .container .vermelha {
+.graduacoes1 .container .vermelha {
     border: 1px solid red;
     width: 20%;
-    height: 45%;
+    height: 100%;
+    display: flex;
+    margin: 0;
 }
 
-.graduacoes .container .laranja {
+.graduacoes1 .container .laranja {
     border: 1px solid orange;
     width: 20%;
     height: 100%;
+    display: flex;
+    margin: 0;
 }
 
-.graduacoes .container .divisao2Graduacoes {
+.graduacoes2 {
+    background-color: rgb(243, 188, 85);
+    height: 250px;
     width: 100%;
-    height: 50%;
+}
+
+.graduacoes2 .container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    border: 1px solid rgb(128, 0, 49);
+    margin: 0 10%;
+}
+
+.graduacoes2 .container .divisao2Graduacoes {
+    width: 100%;
+    height: 100%;
     border: 1px solid hotpink;
     display: flex;
     align-self: flex-end;
 }
 
-.graduacoes .container .divisao2Graduacoes .verde {
+.graduacoes2 .container .divisao2Graduacoes .verde {
     border: 1px solid green;
-    width: 20%;
-    height: 45%;
-    align-self: flex-end;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    margin: 0;
 }
 
-.graduacoes .container .roxa {
+.graduacoes2 .container .divisao2Graduacoes .roxa {
     border: 1px solid purple;
-    width: 20%;
-    height: 45%;
-    align-self: flex-end;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    margin: 0;
 }
 
-.graduacoes .container .marrom {
+.graduacoes2 .container .divisao2Graduacoes .marrom {
     border: 1px solid brown;
-    width: 20%;
-    height: 45%;
-    align-self: flex-end;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    margin: 0;
 }
 
-.graduacoes .container .preta {
+.graduacoes2 .container .divisao2Graduacoes .preta {
     border: 1px solid black;
-    width: 20%;
-    height: 45%;
-    align-self: flex-end;
+    width: 25%;
+    height: 100%;
+    display: flex;
+    margin: 0;
 }
