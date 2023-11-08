@@ -19,8 +19,8 @@
                 <li><a href="#">Home</a></li>
                 <!-- <li><a href="#">Valores</a></li> -->
                 <li><a href="#">História</a></li>
-                <li><a href="#">Senseis</a></li>
-                <li><a href="#">Graduações</a></li>
+                <li><a href="#div_senseis">Senseis</a></li>
+                <li><a href="#div_graduacoes">Graduações</a></li>
                 <li><a href="#">Shiai/Kata</a></li>
                 <li><a href="#">Login/Cadastro</a></li>
             </ul>
@@ -31,17 +31,17 @@
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">1 / 3</div> -->
-            <img src="IMG-20230715-WA0015.jpg">
+            <img src="IMAGENS/IMG-20230715-WA0015.jpg">
         </div>
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">2 / 3</div> -->
-            <img src="IMG-20230711-WA0040.jpg">
+            <img src="IMAGENS/IMG-20230711-WA0040.jpg">
         </div>
 
         <div class="mySlides fade">
             <!-- <div class="numbertext">3 / 3</div> -->
-            <img src="IMG-20231019-WA0023.jpg">
+            <img src="IMAGENS/IMG-20231019-WA0023.jpg">
         </div>
 
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -62,18 +62,44 @@
         </div>
     </div>
 
-    <div class="historia">
+    <div class="valores">
         <div class="container">
             <h1>Valores</h1>
+        </div>
+    </div>
+
+    <div class="disciplinaValor">
+        <div class="container">
             <p class="valorD">Disciplina</p>
-            <p class="valorF">Foco</p>
+        </div>
+    </div>
+
+    <div class="focoValor">
+        <div class="container">
+            <p class="valorF">Foco</p>            
+        </div>
+    </div>
+
+    <div class="resilienciaValor">
+        <div class="container">
             <p class="valorR">Resiliência</p>
+        </div>
+    </div>
+
+    <div class="autocontroleValor">
+        <div class="container">
             <p class="valorA">Autocontrole</p>
+        </div>
+    </div>
+
+    <div class="respeitoValor">
+        <div class="container">
             <p class="valorRes">Respeito</p>
         </div>
     </div>
 
-    <div class="senseis">
+
+    <div id="div_senseis" class="senseis">
         <div class="container">
             <h1>Senseis</h1>
             <p class="senseiIsa">Isabela</p>
@@ -87,26 +113,48 @@
         </div>
     </div>
 
-    <div class="graduacoes1">
+    <div id="div_graduacoes" class="graduacoes1">
         <div class="container">
             <h1>Graduações</h1>
 
             <div class="divisao1Graduacoes">
-                <p class="branca">Branca (Shiro Obi) <br> <br>Representa a pureza, o começo, a iniciação, é o verdadeiro começo nas artes marciais do karatê. </p>
-                <p class="amarela">Amarela <br><br>Assim como um sol que desponta todos os dias, ela significa que é um iniciante no Karatê </p>
-                <p class="vermelha">Vermelha <br><br>A cor vermelha sugere motivação, atividade e vontade. Ela também simboliza aquilo que deve ser contido pelo seu portador.</p>
-                <p class="laranja">Laranja</p>
+                <p class="branca">Branca (Shiro Obi) <br> <br>Representa a pureza, o começo, a iniciação, é o verdadeiro
+                    começo nas artes marciais do karatê. </p>
+                <p class="amarela">Amarela <br><br>Assim como um sol que desponta todos os dias, ela significa que é um
+                    iniciante no Karatê </p>
+                <p class="vermelha">Vermelha <br><br>A cor vermelha sugere motivação, atividade e vontade. Ela também
+                    simboliza aquilo que deve ser contido pelo seu portador.</p>
+                <p class="laranja">Laranja <br><br>Simboliza aquilo que o praticante deve buscar: o encorajamento,
+                    robustez, gentileza e tolerância. Devem acreditar que agora tudo é possível, pois ela estimula o
+                    otimismo, entusiasmo e o encorajamento.</p>
             </div>
         </div>
     </div>
     <div class="graduacoes2">
         <div class="container">
             <div class="divisao2Graduacoes">
-                <p class="verde">Verde</p>
-                <p class="roxa">Roxa</p>
-                <p class="marrom">Marrom</p>
-                <p class="preta">Preta</p>
+                <p class="verde">
+                    Verde <br><br>Ela representa a esperança e a fé. É a cor mais harmoniosa e
+                    calmante de todas. Simbolizando harmonia e equilíbrio. Além de uma vida nova, o crescimento e a
+                    saúde.
+                </p>
+                <p class="roxa">Roxa <br><br>Ela gera sentimentos como respeito próprio, dignidade e autoestima.
+                    Representa o mistério, expressa sensação de individualidade, mas também simboliza a dignidade, a
+                    inspiração e justiça.</p>
+                <p class="marrom">Marrom <br><br>É a cor da solidificação. Representa a constância, a disciplina, a
+                    uniformidade adquirida e a observação das regras mantidas até aqui. Ela também sugere segurança e
+                    isolamento.</p>
+                <p class="preta">Preta <br><br>É a junção de todas as cores. Enfim o corpo e a mente chegaram ao final
+                    de uma jornada e ao início de outra mais elevada. A faixa na cor preta, representa humildade,
+                    autocontrole, maturidade, serenidade, disciplina responsabilidade, dignidade e conhecimento. É a cor
+                    do poder. </p>
             </div>
+        </div>
+    </div>
+
+    <div class="divBotaoGraduacoes">
+        <div class="container">
+            <button class="botaoGraduacoes" onclick="saberMaisGraduacoes()">Saiba Mais</button>
         </div>
     </div>
 

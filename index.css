@@ -123,7 +123,7 @@ body {
     width: 100%;
     height: 500px;
     border: 1px solid rgb(224, 64, 117);
-    background-image: url(IMG-20230715-WA0015.jpg);
+    background-image: url(IMAGENS/IMG-20230715-WA0015.jpg);
 }
 
 .banner .container {
@@ -144,14 +144,14 @@ body {
     display: flex;
 }
 
-.historia {
+.valores {
     width: 100%;
-    height: 500px;
+    height: 83,33px;
     border: 1px solid saddlebrown;
     background-color: rgb(247, 213, 151);
 }
 
-.historia .container {
+.valores .container {
     width: 80%;
     height: 100%;
     border: 1px solid green;
@@ -159,54 +159,109 @@ body {
     margin: 0 10%;
 }
 
-.historia .container .valorD {
-    margin: 7% 0;
+.disciplinaValor {
+    background-color: rgb(247, 213, 151);
+}
+
+.disciplinaValor .container {
+    height: 100%;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+}
+
+.disciplinaValor .container .valorD {
+    /* margin: 7% 0; */
     font-family: Regular;
     width: 100%;
     display: flex;
     border: 1px solid rebeccapurple;
-    height: 10%;
+    height: 83,33px;
     background-color: chartreuse;
 }
 
-.historia .container .valorF {
+.focoValor {
+    background-color: rgb(247, 213, 151);
+}
+
+.focoValor .container {
+    height: 100%;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+}
+
+.focoValor .container .valorF {
     font-family: Regular;
     width: 100%;
-    height: 10%;
-    margin: 14% 0;
+    height: 83,33px;
+    /* margin: 14% 0; */
     display: flex;
     border: 1px solid rebeccapurple;
     background-color: red;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
 }
 
-.historia .container .valorR {
-    margin: 20% 0;
+.resilienciaValor {
+    background-color: rgb(247, 213, 151);
+}
+
+.resilienciaValor .container {
+    height: 100%;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+}
+
+.resilienciaValor .container .valorR {
+    /* margin: 20% 0; */
     font-family: Regular;
     width: 100%;
     display: flex;
     border: 1px solid rebeccapurple;
-    height: 10%;
+    height: 83,33px;
     background-color: hotpink;
 }
 
-.historia .container .valorA {
-    margin: 26% 0;
+.autocontroleValor {
+    background-color: rgb(247, 213, 151);
+}
+
+.autocontroleValor .container {
+    height: 100%;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+}
+
+.autocontroleValor .container .valorA {
+    /* margin: 26% 0; */
     font-family: Regular;
     width: 100%;
     display: flex;
     border: 1px solid rebeccapurple;
-    height: 10%;
+    height: 90x;
     background-color: blue;
 }
 
-.historia .container .valorRes {
-    margin: 32% 0;
+.respeitoValor {
+    background-color: rgb(247, 213, 151);
+}
+
+.respeitoValor .container {
+    height: 100%;
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+}
+
+.respeitoValor .container .valorRes {
+    /* margin: 32% 0; */
     font-family: Regular;
     width: 100%;
     display: flex;
     border: 1px solid rebeccapurple;
-    height: 10%;
+    height: 83,33px;
     background-color: aqua;
 }
 
@@ -235,7 +290,7 @@ body {
 .graduacoes1 {
     width: 100%; 
     height: 250px;
-    background-color: rgb(243, 188, 85);
+    background-color: rgb(255, 205, 111);
 }
 
 .graduacoes1 .container {
@@ -260,38 +315,50 @@ body {
 
 .graduacoes1 .container .branca {
     border: 1px solid white;
-    width: 20%;
-    height: 100%;
+    width: 18%;
+    height: 85%;
     display: flex;
-    margin: 0;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: white;
+    border-radius: 4%;
 }
 
 .graduacoes1 .container .amarela {
-    border: 1px solid yellow;
-    width: 20%;
-    height: 100%;
+    border: 1px solid rgb(238, 238, 75);
+    width: 18%;
+    height: 85%;
     display: flex;
-    margin: 0;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: rgb(252, 252, 65);
+    border-radius: 4%;
 }
 
 .graduacoes1 .container .vermelha {
     border: 1px solid red;
-    width: 20%;
-    height: 100%;
+    width: 18%;
+    height: 85%;
     display: flex;
-    margin: 0;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: rgb(247, 96, 96);
+    border-radius: 4%;
 }
 
 .graduacoes1 .container .laranja {
     border: 1px solid orange;
-    width: 20%;
-    height: 100%;
+    width: 18%;
+    height: 85%;
     display: flex;
-    margin: 0;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: rgb(248, 186, 71);
+    border-radius: 4%;
 }
 
 .graduacoes2 {
-    background-color: rgb(243, 188, 85);
+    background-color: rgb(255, 205, 111);
     height: 250px;
     width: 100%;
 }
@@ -314,32 +381,72 @@ body {
 
 .graduacoes2 .container .divisao2Graduacoes .verde {
     border: 1px solid green;
-    width: 25%;
-    height: 100%;
+    width: 22%;
+    height: 85%;
     display: flex;
-    margin: 0;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: rgb(94, 247, 94);
+    border-radius: 4%;
 }
 
 .graduacoes2 .container .divisao2Graduacoes .roxa {
     border: 1px solid purple;
-    width: 25%;
-    height: 100%;
+    width: 22%;
+    height: 85%;
     display: flex;
-    margin: 0;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: rgb(223, 88, 223);
+    border-radius: 4%;
 }
 
 .graduacoes2 .container .divisao2Graduacoes .marrom {
     border: 1px solid brown;
-    width: 25%;
-    height: 100%;
+    width: 22%;
+    height: 85%;
     display: flex;
-    margin: 0;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: rgb(124, 67, 67);
+    border-radius: 4%;
+    color: white;
 }
 
 .graduacoes2 .container .divisao2Graduacoes .preta {
     border: 1px solid black;
-    width: 25%;
+    width: 22%;
+    height: 85%;
+    display: flex;
+    margin: 1% 1%;
+    padding: 1% 1%;
+    background-color: black;
+    border-radius: 4%;
+    color: white;
+}
+
+.divBotaoGraduacoes {
+    border: 1px solid navy;
+    background-color: rgb(255, 205, 111);
+    width: 100%;
+    height: 60px;
+}
+
+.divBotaoGraduacoes .container {
+    border: 1px solid rgb(212, 0, 255);
+    width: 80%;
     height: 100%;
     display: flex;
-    margin: 0;
+    margin: 0 10%;
+}
+
+.divBotaoGraduacoes .container .botaoGraduacoes{
+    height: 30px;
+    width: 200px;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    font-family: Regular;
+    font-size: 20px;
+    background-color: rgb(235, 102, 41);
 }
