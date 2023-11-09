@@ -6,4 +6,6 @@ página para as graduações
 página para os senseis
 	história (?)
 página para shiai e kata
-pessoa saber quando vai ter competição
+cadastro:
+	pessoa saber quando vai ter competição
+	entrar em contato com os senseis
