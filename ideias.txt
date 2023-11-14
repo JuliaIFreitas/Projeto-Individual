@@ -9,3 +9,35 @@ página para shiai e kata
 cadastro:
 	pessoa saber quando vai ter competição
 	entrar em contato com os senseis
+
+cadastro:
+	nome
+	telefone
+	endereço
+	email
+	dt nasc
+	senha
+	confirme sua senha
+
+	qual faixa
+	qual associação
+	qual sensei
+
+	pratica desde quando
+	algo sobre ods
+
+login:
+	email
+	senha
+
+dash:
+	qnts competições já participou
+	qnts pontos em cada
+
+aviso:
+	competições
+
+senseis:
+	foto de cada um
+	tempo de faixa preta
+	contato?

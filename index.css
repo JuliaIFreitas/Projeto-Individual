@@ -469,47 +469,75 @@ body {
     height: 100%;
     margin: 0 10%;
     border: 1px solid purple;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+
+.shiaikata .container .bannerKata {
+    border: 1px solid aqua;
+    height: 100%;
     display: flex;
-    flex-wrap: wrap;
 }
 
-.shiaikata .container .shiai {
+.shiaikata .container .bannerKata .shiai {
     border: 1px solid black;
-    width: 40%;
-    height: 30%;
+    width: 50%;
+    height: 80%;
 }
 
-.shiaikata .container .shiai h2 {
+.shiaikata .container .bannerKata .shiai .Titulokumite {
     border: 1px solid blue;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.shiaikata .container .shiai p {
+.shiaikata .container .bannerKata .shiai p {
     border: 1px solid red;
-    height: 60%;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
 }
 
-.shiaikata .container .shiai img {
+.shiaikata .container .bannerKata .shiai img {
     border: 2px solid green;
     height: 50%;
-    width: 45%;
-    margin: 0 10%;
-    display: flex;
+    width: 50%;
 }
 
-.shiaikata .container .kata {
+.shiaikata .container .bannerKata .kata {
+    border: 2px solid rgb(0, 255, 21);
+    width: 50%;
+    height: 80%;
+}
+
+.shiaikata .container .bannerKata .kata .tituloKata {
     border: 1px solid blue;
-    width: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.shiaikata .container .kata h2 {
-    border: 1px solid teal;
+.shiaikata .container .bannerKata .kata .textoKata {
+    border: 2px solid magenta;
+    width: 95%;
+    margin: 0 2.5%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
 }
 
-.shiaikata .container .kata p {
-    border: 2px solid salmon;
+.shiaikata .container .bannerKata .kata img {
+    border: 1px solid brown;
+    width: 50%; 
+    display: flex;
+    justify-content: center;
+    align-self: ce;
 }
 
 .graduacoes {
