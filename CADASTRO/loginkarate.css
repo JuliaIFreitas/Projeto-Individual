@@ -44,6 +44,7 @@ body {
     height: 40%;
     width: 60%;
     margin: 15% 20%;
+    font-size: 20px;
 }
 
 .login .container .camposLogin input {
@@ -52,8 +53,8 @@ body {
     border-radius: 5px;
 }
 
-.login .container .camposLogin button {
-    border: 2px solid hotpink;
+.login .container .camposLogin .botao {
+    /* border: 2px solid hotpink; */
     width: 50%;
     height: 10%;
     margin: 0 25%;
