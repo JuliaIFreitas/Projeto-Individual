@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+}
+
+.arm {
+    width: 100%;
+    height: 700px;
+    border: 2px solid orange;
+    display: flex;
+}
+
+.arm .container {
+    border: 2px solid blue;
+    width: 17%;
+    height: 100%;
+    margin: 0;
+}
+
+.arm .container .perfil img {
+    border-radius: 50%;
+    border: 2px solid yellow;
+    width: 80%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    /* height: 80%; */
+    margin: 9% 10%;
+}
+
+.arm .container .perfil .descricao {
+    border: 2px solid gold;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.arm .tela {
+    border: 2px solid purple;
+    width: 100%;
+    height: 100%;
+    /* margin: 0  0 0 17%; */
+}
+
+.arm .tela .metricas {
+    width: 100%;
+    height: 20%;
+    border: 2px solid green;
+    display: flex;
+}
+
+.arm .tela .metricas .competicao {
+    border: 2px solid aqua;
+    width: 20%;
+    height: 100%;
+}
+
+.arm .tela .metricas .kata {
+    border: 2px solid salmon;
+    width: 40%;
+    height: 100%;
+}
+
+.arm .tela .metricas .kata h2 {
+    border: 2px solid red;
+    margin: 1%;
+}
+
+.arm .tela .metricas .kata p {
+    border: 1px solid indigo;
+    margin: 0;
+    height: 30%;
+}
+
+.arm .tela .metricas .kata button {
+    width: 30%;
+    height: 20%;
+    margin: 1% 5%;
+}
+
+.arm .tela .metricas .movimentos {
+    border: 2px solid seagreen;
+    width: 40%;
+    height: 100%;
+}
+
+.arm .tela .graficoKata {
+    height: 35%;
+    border: 2px solid slateblue;
+    width: 100%;
+    display: flex;
+}
+
+.arm .tela .graficoKata p {
+    border: 1px solid mediumspringgreen;
+    height: 10%;
+}
+
+.arm .tela .graficoKata .kata {
+    border: 2px solid teal;
+    align-self: flex-end;
+    display: flex;
+}
