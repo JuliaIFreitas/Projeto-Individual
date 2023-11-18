@@ -29,6 +29,8 @@
             <div class="metricas">
                 <div class="competicao">
                     <h2>Próxima competição: </h2>
+                    <p><b>Brasileiro:</b>  10/12/2023</p>
+                    <a href="https://www.karatedobrasil.com/">Saiba Mais</a>
                 </div>
                 <div class="kata">
                     <h2>Quantos katas sabe: </h2><br>
@@ -52,7 +54,7 @@
             <div class="graficoKata">
                 <p>Por saber 8 katas, você atualmente é "Cheng"</p>
                 <div>
-                    <canvas class="kata" id="arm5" style="position: relative; width: 90%; height: 90%;"></canvas>
+                    <canvas class="kata" id="arm5" style="position: relative; width: 100%; height: 90%;"></canvas>
                 </div>
             </div>
 
@@ -63,7 +65,7 @@
                     <p>
                         Quantos katas você sabe:
                     </p>
-                    <input id="input_qtdKata"><br><br>
+                    <input class="campo" placeholder="Quantidade de Katas" id="input_qtdKata"><br><br>
                     <button id="id_botao" class="botao" onclick="avancar()">Avançar</button>
                     <div id="div_novoKata"></div>
                     <div id="div_addKata"></div>
@@ -91,7 +93,7 @@
             labels: ['Heian Shodan', 'Heian Nidan', 'Heian Sandan', 'Heian Yodan', 'Heian Godan', 'Tekki Shodan', 'Tekki Nidan', 'Tekki Sandan', 'Bassai Dai', 'Kanku Dai', 'Empi', 'Jion', 'Jitte', 'Hangetsu', 'Gankaku', 'Bassai Sho', 'Kanku Sho', 'Chinte', 'Unsu', 'Sochin', 'Nijushiho', 'Gojushiro Dai', 'Gojushiro Sho', 'Meikyo', 'Jiin', 'Wankan'],
             datasets: [{
                 label: 'Kata',
-                data: [100, 19, 90, 70, 2, 3, 73, 12, 12, 50, 12, 12, 12, 39, 12, 12, 12, 95, 12, 12, 12, 12, 29, 12, 12, 12],
+                data: [12, 19, 90, 70, 2, 3, 73, 12, 12, 50, 12, 12, 12, 39, 12, 12, 12, 95, 12, 12, 12, 12, 29, 12, 12, 12],
                 borderWidth: 1
             }]
         },

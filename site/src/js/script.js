@@ -11,15 +11,18 @@ function addkata() {
 
 var listaKata = [];
 var qtdKata = ``;
+var nomeKata = ``;
 
 function avancar() {
     qtdKata = Number(input_qtdKata.value);
+    // nomeKata = input_nomeKata.value;
+    // listaKata.push(nomeKata);
 
     for (posicao = 0; posicao < qtdKata; posicao++) {
         div_novoKata.innerHTML += `
-            Digite o nome do kata: <input id="input_nomeKata"><br><br>
+            <p>Digite o nome do kata: </p>
+            <input class="campo" placeholder="Nome do Kata" id="input_nomeKata"><br><br>
             `;
-        listaKata.push(input_nomeKata.value);
     }
 
     div_addKata.innerHTML = `
@@ -29,9 +32,12 @@ function avancar() {
 
 function continuar() {
 
+    nomeKata = input_nomeKata.value;
+    listaKata.push(nomeKata);
+
     for (posicao = 0; posicao < qtdKata; posicao++) {
         div_novoKata.innerHTML += `
-            Digite quantos moviemntos sabe: <input type="number" id="input_qntSabe"><br><br>
+            <p>Digite quantos movimentos sabe: </p><input class="campo" placeholder="Número de movimentos" type="number" id="input_qntSabe"><br><br>
             `;
     }
 
