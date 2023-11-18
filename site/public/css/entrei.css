@@ -99,3 +99,66 @@ body {
     align-self: flex-end;
     display: flex;
 }
+
+.janela-modal {
+    width: 50%;
+    height: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(218, 174, 218, 0.5);
+    border-radius: 4%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 5% 0 0 25%;
+    padding: 10px;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modal {
+    width: 40%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    /* position: fixed; */
+}
+
+.fechar {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: blueviolet;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.janela-modal.abrir {
+    display: flex;
+}
+
+@keyframes abrirModal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir .modal {
+    animation: abrirModal 0.5s;
+}

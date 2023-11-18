@@ -1,4 +1,4 @@
-function addkata() {
+function addKata() {
     var sabeKata = input_qtdSabeKata.value; 
     var kataEscolhido = kataEscolhido.value;
 
@@ -30,39 +30,39 @@ function addkata() {
     var sabeWankan = (16 * sabeKata) / 100;
 
 
-    div_kata.innerHTML = `
-    Selecione o kata:
-    <select name="katasopcoes" id="kataEscolhido">
-        <option value="">Heian Shodan</option>
-        <option value="">Heian Nida</option>
-        <option value="">Heian Sandan</option>
-        <option value="">Heian Yodan</option>
-        <option value="">Heian Godan</option>
-        <option value="">Tekki Shodan</option>
-        <option value="">Tekki Nidan</option>
-        <option value="">Tekki Sandan</option>
-        <option value="">Bassai Dai</option>
-        <option value="">Kanku Dai</option>
-        <option value="">Empi</option>
-        <option value="">Jion</option>
-        <option value="">Jitte</option>
-        <option value="">Hangetsu</option>
-        <option value="">Gankaku</option>
-        <option value="">Bassai Sho</option>
-        <option value="">Kanku Sho</option>
-        <option value="">Chinte</option>
-        <option value="">Unsu</option>
-        <option value="">Sochin</option>
-        <option value="">Nijushiho</option>
-        <option value="">Gojushiro Dai</option>
-        <option value="">Gojushiro Sho</option>
-        <option value="">Meikyo</option>
-        <option value="">Jiin</option>
-        <option value="">Wankan</option>
-    </select>
-    Digite o quanto você sabe (%): 
-    <input id="input_qtdSabeKata">
-    `;
+    // div_kata.innerHTML = `
+    // Selecione o kata:
+    // <select name="katasopcoes" id="kataEscolhido">
+    //     <option value="">Heian Shodan</option>
+    //     <option value="">Heian Nida</option>
+    //     <option value="">Heian Sandan</option>
+    //     <option value="">Heian Yodan</option>
+    //     <option value="">Heian Godan</option>
+    //     <option value="">Tekki Shodan</option>
+    //     <option value="">Tekki Nidan</option>
+    //     <option value="">Tekki Sandan</option>
+    //     <option value="">Bassai Dai</option>
+    //     <option value="">Kanku Dai</option>
+    //     <option value="">Empi</option>
+    //     <option value="">Jion</option>
+    //     <option value="">Jitte</option>
+    //     <option value="">Hangetsu</option>
+    //     <option value="">Gankaku</option>
+    //     <option value="">Bassai Sho</option>
+    //     <option value="">Kanku Sho</option>
+    //     <option value="">Chinte</option>
+    //     <option value="">Unsu</option>
+    //     <option value="">Sochin</option>
+    //     <option value="">Nijushiho</option>
+    //     <option value="">Gojushiro Dai</option>
+    //     <option value="">Gojushiro Sho</option>
+    //     <option value="">Meikyo</option>
+    //     <option value="">Jiin</option>
+    //     <option value="">Wankan</option>
+    // </select>
+    // Digite o quanto você sabe (%): 
+    // <input id="input_qtdSabeKata">
+    // `;
 
     if (kataEscolhido == `Heian Shodan`) {
         if (sabeHShodan <= 25) {

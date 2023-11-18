@@ -39,7 +39,8 @@
                         20: Sr. Miyagi
                         26: Funakoshi
                     </p>
-                    <a href="addkata.html"><button onclick="addkata()">Adicionar Kata</button></a>
+
+                    <button onclick="addkata()">Adicionar Kata</button>
                     <div id="div_kata"></div>
                 </div>
                 <div class="movimentos">
@@ -47,22 +48,42 @@
                     <button onclick="addMov()">Adicionar Golpe</button>
                 </div>
             </div>
+
             <div class="graficoKata">
                 <p>Por saber 8 katas, você atualmente é "Cheng"</p>
                 <div>
-                    <canvas class="kata" id="myChart" style="position: relative; width: 90%; height: 90%;"></canvas>
+                    <canvas class="kata" id="arm5" style="position: relative; width: 90%; height: 90%;"></canvas>
                 </div>
             </div>
+
+            <div class="janela-modal" id="janela-modal">
+                <div class="modal">
+                    <button class="fechar" id="fechar">X</button>
+                    <h1>Adicionar Kata</h1>
+                    <p>
+                        Quantos katas você sabe:
+                    </p>
+                    <input id="input_qtdKata"><br><br>
+                    <button id="id_botao" class="botao" onclick="avancar()">Avançar</button>
+                    <div id="div_novoKata"></div>
+                    <div id="div_addKata"></div>
+                    <div id="div_finalizarKata"></div>
+                </div>
+            </div>
+
+            <script src="../src/js/script.js"></script>
+            <script src="../src/js/addkata.js"></script>
 
         </div>
     </div>
 </body>
+
 </html>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
-    const ctx = document.getElementById('myChart');
+    const ctx = document.getElementById('arm5');
 
     new Chart(ctx, {
         type: 'bar',

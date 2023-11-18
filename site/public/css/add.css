@@ -43,10 +43,11 @@ body {
 
 .katanovo .escolherkata .espaco {
     border: 2px solid green;
-    height: 60%;
-    width: 30%;
+    height: 90%;
+    width: 40%;
     display: flex;
     align-items: center;
+    background-color: rgba(160, 250, 80, 0.6);
 }
 
 .katanovo .escolherkata .espaco .campos {
@@ -54,6 +55,7 @@ body {
     height: 60%;
     padding: 10%;
     /* display: flex; */
+    font-size: 20px;
 }
 
 .katanovo .escolherkata .espaco .campos .botao {
@@ -64,4 +66,3 @@ body {
     border-radius: 10px;
     margin: 0 20%;
 }
-
