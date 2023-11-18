@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+}
+
+.katanovo {
+    height: 700px;
+    width: 100%;
+    display: flex;
+}
+
+.katanovo .container {
+    border: 2px solid blue;
+    width: 17%;
+    height: 100%;
+    margin: 0;
+}
+
+/* .katanovo .container .perfil img {
+    border-radius: 50%;
+    border: 2px solid yellow;
+    width: 80%;
+    max-width: 400px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: 80%;
+    margin: 9% 10%;
+} */
+
+.katanovo .container .perfil .descricao {
+    border: 2px solid gold;
+    width: 80%;
+    margin: 0 10%;
+}
+
+.katanovo .escolherkata {
+    height: 100%;
+    width: 83%;
+    border: 2px solid orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.katanovo .escolherkata .espaco {
+    border: 2px solid green;
+    height: 60%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.katanovo .escolherkata .espaco .campos {
+    border: 1px solid red;
+    height: 60%;
+    padding: 10%;
+    /* display: flex; */
+}
+
+.katanovo .escolherkata .espaco .campos .botao {
+    background-color: orange;
+    align-self: center;
+    width: 60%;
+    height: 10%;
+    border-radius: 10px;
+    margin: 0 20%;
+}
+

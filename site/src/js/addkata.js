@@ -2,33 +2,33 @@ function addkata() {
     var sabeKata = input_qtdSabeKata.value; 
     var kataEscolhido = kataEscolhido.value;
 
-    var heianShodan = 21;
-    var sabeHShodan = (heianShodan * sabeKata) / 100;
-    // nidan: 26
-    // sandan 20
-    // yodan 27
-    // godan 23
-    // tekki shodan 29
-    // tekki nidan 24
-    // tekki sandan 36
-    // bassai dai 42
-    // kanku dai 65
-    // jitte 24
-    // hangetsu 41
-    // empi 37
-    // gankaku 42
-    // jion 47
-    // bassai sho 27
-    // kanku sho 47
-    // chinte 33
-    // unsu 24
-    // sochin 37
-    // nijushiho 34
-    // gojushiho dai 54
-    // gojushiho sho 65
-    // meykio 33
-    // jiin 34
-    // wankan 16 
+    var sabeHShodan = (21 * sabeKata) / 100;
+    var sabeHNidan = (26 * sabeKata) / 100;
+    var sabeHSandan = (20 * sabeKata) / 100;
+    var sabeHYodan = (27 * sabeKata) / 100;
+    var sabeHGodan = (23 * sabeKata) / 100;
+    var sabeTShodan = (29 * sabeKata) / 100;
+    var sabeTNidan = (24 * sabeKata) / 100;
+    var sabeTSandan = (36 * sabeKata) / 100;
+    var sabeBDai = (42 * sabeKata) / 100;
+    var sabeKDai = (65 * sabeKata) / 100;
+    var sabeJitte = (24 * sabeKata) / 100;
+    var sabeHangetsu = (41 * sabeKata) / 100;
+    var sabeEmpi = (37 * sabeKata) / 100;
+    var sabeGankaku = (42 * sabeKata) / 100;
+    var sabeJion = (47 * sabeKata) / 100;
+    var sabeBSho = (27 * sabeKata) / 100;
+    var sabeKSho = (47 * sabeKata) / 100;
+    var sabeChinte = (33 * sabeKata) / 100;
+    var sabeUnsu = (24 * sabeKata) / 100;
+    var sabeSochin = (37 * sabeKata) / 100;
+    var sabeNijushiho = (34 * sabeKata) / 100;
+    var sabeGDai = (54 * sabeKata) / 100;
+    var sabeGSho = (65 * sabeKata) / 100;
+    var sabeMeykio = (33 * sabeKata) / 100;
+    var sabeJiin = (34 * sabeKata) / 100;
+    var sabeWankan = (16 * sabeKata) / 100;
+
 
     div_kata.innerHTML = `
     Selecione o kata:

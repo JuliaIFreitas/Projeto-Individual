@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADD KATA - JULIA INADA DE FREITAS</title>
+    <link rel="stylesheet" href="css/add.css">
+</head>
+<body>
+
+    <div class="katanovo">
+        <div class="container">
+            <div class="perfil">
+                <img src="" alt="">
+                <div class="descricao">
+                    <p>Nome: <br>
+                        Associação: <br>
+                        Sensei: <br>
+                        Faixa: <br>
+                        Medalhas: <br><br>
+                        <!-- <button onclick="adicionar()">Adicionar Competição</button> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="escolherkata">
+            <!-- <div class="container2"> -->
+                <div class="espaco">
+                    <div class="campos">
+                        Quantos katas você sabe:
+                        <input id="input_qtdKata"><br><br>
+                        <button class="botao" onclick="avancar()">Avançar</button>   
+                        <div id="div_novoKata"></div>    
+                        <div id="div_addKata"></div>     
+                        <div id="div_finalizarKata"></div>                                          
+                    </div>
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+
+    var listaKata = [];
+    var qtdKata = ``;
+
+    function avancar() {
+        qtdKata = Number(input_qtdKata.value);
+
+        for(posicao = 0; posicao < qtdKata; posicao++) {
+            div_novoKata.innerHTML += `
+            Digite o nome do kata: <input id="input_nomeKata"><br><br>
+            `;
+        }
+
+        div_addKata.innerHTML = `
+        <button class="botao" onclick="continuar()">Continuar</button>   
+        `;
+    }
+
+    function continuar() {
+
+        for (posicao = 0; posicao < qtdKata; posicao ++) {
+            div_novoKata.innerHTML += `
+            Digite o quanto sabe do kata: <input id="input_qntSabe"><br><br>
+            `;
+        }
+
+        div_finalizarKata.innerHTML = `
+        <button class="botao" onclick="adicionarKata()">Adicionar</button>   
+        `;
+    }
+
+</script>
