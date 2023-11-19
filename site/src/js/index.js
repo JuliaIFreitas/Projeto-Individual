@@ -63,3 +63,25 @@ function mostrarFoto6() {
         }
     })
 }
+
+function mostrarOds3() {
+    const modal3 = document.getElementById('modalOds3')
+    modal3.classList.add('abrirOds3')
+
+    modal3.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharOds3' || e.target.id == 'modalOds3') {
+            modal3.classList.remove('abrirOds3')
+        }
+    })
+}
+
+function mostrarOds8() {
+    const modal8 = document.getElementById('modalOds8')
+    modal8.classList.add('abrir8')
+
+    modal8.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharOds8' || e.target.id == 'modalOds8') {
+            modal8.classList.remove('abrir8')
+        }
+    })
+}

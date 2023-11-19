@@ -22,7 +22,7 @@
                 <li><a href="#div_historia">História</a></li>
                 <li><a href="#div_senseis">Senseis</a></li>
                 <li><a href="#div_graduacoes">Graduações</a></li>
-                <li><a href="#div_shiaiKata">Shiai/Kata</a></li>
+                <li><a href="#div_modalidades">Modalidades</a></li>
                 <li><a href="index.html">Login/Cadastro</a></li>
             </ul>
         </div>
@@ -247,10 +247,10 @@
                     manter a paz e a segurança internacionais, desenvolver relações amistosas entre as nações, conseguir
                     uma cooperação internacional para resolver problemas internacionais e promover e estimular o
                     respeito aos direitos humanos e ser um centro destinado a harmonizar a ação das nações para a
-                    consecução desses objetivos comuns. 
+                    consecução desses objetivos comuns.
                 </p>
-                <a href="https://brasil.un.org/pt-br"><button class="botao">Saiba Mais</button></a>      
-                </div>
+                <a href="https://brasil.un.org/pt-br"><button class="botao">Saiba Mais</button></a>
+            </div>
 
             <div class="imagem">
                 <img src="assets/imgs/IMAGENS/un-logo.svg" alt="">
@@ -281,19 +281,48 @@
 
     <div class="escolhido">
         <div class="container">
-            <h1>ODS Escolhido</h1>
-            <div class="ods3">
-                <h2>ODS 3</h2>
-                <p>Eu escolhi o ODS 3 - Saúde de Qualidade
-                    <br>Pois, independente do seu objetivo ao praticar, o karatê lhe proporcionará uma melhor saúde e
-                    bem-estar. Sendo ela tanto física quanto mental. Melhor disposição, força, determinação, foco e
-                    concentração.
-                </p>
+
+            <div class="modalOds3" id="modalOds3">
+                <div class="modalOdsDentro3">
+                    <button class="fecharOds3" id="fecharOds3">X</button>
+                    <div class="divModal3">
+                        <h2>ODS 3 - Saúde de Qualidade</h2>
+                        <p>Eu escolhi o ODS 3 - Saúde de Qualidade
+                            <br>Pois, independente do seu objetivo ao praticar, o karatê lhe proporcionará uma melhor saúde
+                            e bem-estar. Sendo ela tanto física quanto mental. Melhor disposição, força, determinação, foco
+                            e concentração.
+                        </p>
+                    </div>
+                </div>
             </div>
 
-            <div class="imagem">
-                <img src="assets/imgs/IMAGENS/ods3.png" alt="">
+            <div class="modalOds8" id="modalOds8">
+                <div class="modal8">
+                    <button class="fecharOds8" id="fecharOds8">X</button>
+                    <div class="divModal8">
+                        <h2>ODS 8 - Trabalho Decente e Crescimento Econômico</h2>
+                        <p>Eu escolhi o ODS 8 - Trabalho Decente e Crescimento Econômico 
+                            <br>Porque o karatê abre muitas portas para os praticantes. Seja sendo senseis e dando aulas, ou sendo árbitros nas competições. 
+                        </p>
+                    </div>
+                </div>
             </div>
+
+                <h1>ODS Escolhidos</h1>
+                <div onclick="mostrarOds3()" class="ods3">
+                    <h2>ODS 3</h2>
+                    <!-- <div class="imagem"> -->
+                        <img class="imagemOds3" src="assets/imgs/IMAGENS/SDG-3.svg" alt="">
+                    <!-- </div> -->
+                </div>
+    
+                <div onclick="mostrarOds8()" class="ods8">
+                    <h2>ODS 8</h2>
+                    <div>
+                        <img class="imagemOds8" src="assets/imgs/IMAGENS/SDG-8.svg" alt="">
+                    </div>
+                </div>
+
         </div>
     </div>
 
@@ -312,9 +341,9 @@
         </div>
     </div>
 
-    <div id="div_shiaiKata" class="shiaikata">
+    <div id="div_modalidades" class="shiaikata">
         <div class="container">
-            <h1>Shiai e Kata</h1>
+            <h1>Modalidades</h1>
 
             <div class="bannerKata">
                 <div class="shiai">

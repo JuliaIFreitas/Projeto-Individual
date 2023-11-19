@@ -26,7 +26,7 @@ html {
     font-family: Karate;
     display: flex;
     justify-content: flex-start;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 25%;
     font-size: 28px;
 }
@@ -34,7 +34,7 @@ html {
 h1 {
     width: 100%;
     height: 70px;
-    border: 1px solid fuchsia;
+    /* border: 1px solid fuchsia; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,14 +49,14 @@ body {
 .header {
     width: 100%;
     height: 100px;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     background-color: rgb(230, 90, 90);
     position: fixed;
 }
 
 .header .container {
     width: 80%;
-    border: 1px solid steelblue;
+    /* border: 1px solid steelblue; */
     display: flex;
     height: 100px;
     margin: 0 10% 0;
@@ -67,7 +67,7 @@ body {
 
 .header .container .navbar {
     list-style: none;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     font-family: Regular;
     font-size: 17px;
 }
@@ -75,12 +75,12 @@ body {
 .header .container .navbar li {
     display: inline;
     padding: 0px 15px;
-    border: 1px solid darkturquoise;
+    /* border: 1px solid darkturquoise; */
 }
 
 .header .container .navbar li a {
     text-decoration: none;
-    border: 1px solid tomato;
+    /* border: 1px solid tomato; */
     color: black;
 }
 
@@ -481,7 +481,7 @@ body {
 
 .escolhido {
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-color: rgb(155, 252, 142);
 }
 
@@ -489,7 +489,7 @@ body {
     width: 80%;
     height: 100%;
     margin: 0 10%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -497,14 +497,13 @@ body {
 }
 
 .escolhido .container .ods3 {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 35%;
     height: 70%;
-    margin: 0 8%;
 }
 
 .escolhido .container .ods3 h2 {
-    border: 1px solid pink;
+    /* border: 2px solid pink; */
     width: 100%;
     font-size: 25px;
     justify-content: center;
@@ -512,27 +511,38 @@ body {
     display: flex;
 }
 
-.escolhido .container .ods3 p {
-    border: 1px solid blue;
-    width: 100%;
-    height: 70%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
+.escolhido .container .imagemOds3 {
+    height: 50%;
+    width: 50%;
+    margin: 0 25%;
+    /* border: 1px solid purple; */
+    cursor: pointer;
 }
 
-.escolhido .container img {
-    height: 50%;
-    width: 40%;
+.escolhido .container .ods8 {
+    /* border: 1px solid maroon; */
+    width: 35%;
+    height: 70%;
+}
+
+.escolhido .container .ods8 h2 {
+    /* border: 1px solid white; */
+    width: 100%;
     display: flex;
     justify-content: center;
-    border: 2px solid purple;
+}
+
+.escolhido .container .imagemOds8 {
+    height: 50%;
+    width: 50%;
+    margin: 5% 25%;
+    /* border: 2px solid purple; */
+    cursor: pointer;
 }
 
 .senseis {
     width: 100%;
-    height: 500px;
+    height: 600px;
     background-color: rgb(221, 143, 55);
 }
 
@@ -555,22 +565,21 @@ body {
 .shiaikata {
     height: 600px;
     width: 100%;
-    background-color: rgb(241, 218, 173);
+    background-color: rgb(202, 162, 137);
 }
 
 .shiaikata .container {
     width: 80%;
     height: 100%;
     margin: 0 10%;
-    border: 1px solid purple;
-    /* display: flex;
-    flex-wrap: wrap; */
+    /* border: 1px solid purple; */
 }
 
 .shiaikata .container .bannerKata {
-    border: 1px solid aqua;
+    /* border: 1px solid aqua; */
     height: 100%;
     display: flex;
+    justify-content: space-around;
 }
 
 .shiaikata .container .bannerKata .shiai {
@@ -580,7 +589,7 @@ body {
 }
 
 .shiaikata .container .bannerKata .shiai .Titulokumite {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -588,18 +597,20 @@ body {
 }
 
 .shiaikata .container .bannerKata .shiai p {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 30%;
-    width: 100%;
+    width: 95%;
+    margin: 0 2.5%;
     display: flex;
     justify-content: center;
     font-size: 20px;
 }
 
 .shiaikata .container .bannerKata .shiai img {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     height: 50%;
     width: 50%;
+    margin: 0 25%;
 }
 
 .shiaikata .container .bannerKata .kata {
@@ -609,7 +620,7 @@ body {
 }
 
 .shiaikata .container .bannerKata .kata .tituloKata {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
     display: flex;
     justify-content: center;
@@ -617,32 +628,33 @@ body {
 }
 
 .shiaikata .container .bannerKata .kata .textoKata {
-    border: 2px solid magenta;
+    /* border: 2px solid magenta; */
     width: 95%;
     margin: 0 2.5%;
-    height: 20%;
+    height: 30%;
     display: flex;
     justify-content: center;
     font-size: 20px;
 }
 
 .shiaikata .container .bannerKata .kata img {
-    border: 1px solid brown;
+    /* border: 1px solid brown; */
     width: 50%;
     display: flex;
     justify-content: center;
+    margin: 0 25%;
 }
 
 .graduacoes {
     width: 100%;
     height: 700px;
-    background-color: rgb(255, 205, 111);
+    background-color: rgb(136, 103, 132);
 }
 
 .graduacoes .container {
     width: 80%;
     height: 100%;
-    border: 2px solid rgb(73, 73, 1);
+    /* border: 2px solid rgb(73, 73, 1); */
     margin: 0 10%;
     display: flex;
     flex-wrap: wrap;
@@ -652,10 +664,10 @@ body {
 .graduacoes .container .faixa {
     width: 20%;
     height: 33%;
-    border: 1px solid rgb(0, 124, 128);
+    /* border: 1px solid rgb(0, 124, 128); */
     border-radius: 10px;
     margin: 0 2%;
-    background-color: rgb(241, 213, 252);
+    background-color: rgb(243, 219, 219);
 }
 
 .faixa h2:hover {
@@ -663,14 +675,14 @@ body {
 }
 
 .graduacoes .container .faixa h2 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     height: 21%;
 }
 
 .graduacoes .container .faixa p {
-    border: 1px solid navy;
+    /* border: 1px solid navy; */
     height: 60%;
     width: 90%;
     margin: 0 5%;
@@ -680,14 +692,14 @@ body {
 }
 
 .divBotaoGraduacoes {
-    border: 1px solid navy;
+    /* border: 1px solid navy; */
     background-color: rgb(255, 205, 111);
     width: 100%;
     height: 60px;
 }
 
 .divBotaoGraduacoes .container {
-    border: 1px solid rgb(212, 0, 255);
+    /* border: 1px solid rgb(212, 0, 255); */
     width: 80%;
     height: 100%;
     display: flex;
