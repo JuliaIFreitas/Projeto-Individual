@@ -23,6 +23,9 @@
     height: 40%;
     padding: 10%;
     border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* position: fixed; */
 }
 
@@ -53,7 +56,7 @@
     position: absolute;
     top: -5px;
     right: -5px;
-    width: 8%;
+    width: 5%;
     height: 8%;
     border-radius: 50%;
     border: 0;
@@ -90,6 +93,9 @@
     height: 40%;
     padding: 10%;
     border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     /* position: fixed; */
 }
 
@@ -120,7 +126,7 @@
     position: absolute;
     top: -5px;
     right: -5px;
-    width: 8%;
+    width: 5%;
     height: 8%;
     border-radius: 50%;
     border: 0;
@@ -156,11 +162,14 @@
     height: 40%;
     padding: 10%;
     border-radius: 5%;
-    /* position: fixed; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .modalImg3 .modal3 img {
-    width: 80%;
+    /* width: 80%; */
+    height: 130%;
 }
 
 .modalImg3.abrir3 {
@@ -186,7 +195,7 @@
     position: absolute;
     top: -5px;
     right: -5px;
-    width: 8%;
+    width: 5%;
     height: 8%;
     border-radius: 50%;
     border: 0;
@@ -222,14 +231,14 @@
     height: 60%;
     padding: 10%;
     border-radius: 5%;
-    /* position: fixed; */
-}
-
-.modalImg4 .modal4 img {
-    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modalImg4 .modal4 img {
+    width: 65%;
+    height: 100%;
 }
 
 .modalImg4.abrir4 {
@@ -255,7 +264,7 @@
     position: absolute;
     top: -5px;
     right: -5px;
-    width: 8%;
+    width: 5%;
     height: 8%;
     border-radius: 50%;
     border: 0;
@@ -291,15 +300,14 @@
     height: 60%;
     padding: 10%;
     border-radius: 5%;
-    /* position: fixed; */
-}
-
-.modalImg5 .modal5 img {
-    width: 60%;
-    height: 110%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modalImg5 .modal5 img {
+    width: 90%;
+    height: 100%;
 }
 
 .modalImg5.abrir5 {
@@ -325,7 +333,7 @@
     position: absolute;
     top: -5px;
     right: -5px;
-    width: 8%;
+    width: 5%;
     height: 8%;
     border-radius: 50%;
     border: 0;
@@ -361,15 +369,14 @@
     height: 60%;
     padding: 10%;
     border-radius: 5%;
-    /* position: fixed; */
-}
-
-.modalImg6 .modal6 img {
-    width: 90%;
-    height: 110%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modalImg6 .modal6 img {
+    width: 120%;
+    height: 100%;
 }
 
 .modalImg6.abrir6 {
@@ -395,7 +402,7 @@
     position: absolute;
     top: -5px;
     right: -5px;
-    width: 8%;
+    width: 5%;
     height: 8%;
     border-radius: 50%;
     border: 0;
