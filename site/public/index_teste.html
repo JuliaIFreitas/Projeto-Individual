@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJETO INDIVIDUAL - JULIA INADA DE FREITAS</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/modal.css">
 </head>
 
 <body>
@@ -33,9 +34,13 @@
                 <h2>Comunidade Karate Shotokan</h2>
                 <p>Quer ficar por dentro das competições, monitorar seus treinos e se conectar com outros karatecas?
                     <br><br> Cadastre-se já! <br><br>
-                    <a href="CADASTRO/cadastrokarate.html"><button class="botao" onclick="cadastrar()">Cadastrar</button>
+                    <a href="CADASTRO/cadastrokarate.html"><button class="botao"
+                            onclick="cadastrar()">Cadastrar</button>
                     </a>
                 </p>
+            </div>
+            <div class="imagem">
+                <img class="imagem" src="./assets/imgs/IMAGENS/shotokan-removebg-preview.png" alt="">
             </div>
         </div>
     </div>
@@ -130,32 +135,82 @@
 
     <div class="valores">
         <div class="container">
+
+            <div class="modalImg1" id="modalImg1">
+                <div class="modal">
+                    <button class="fecharFoto" id="fecharFoto">X</button>
+                    <img src="./assets/imgs/IMAGENS/aprendendo.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="modalImg2" id="modalImg2">
+                <div class="modal2">
+                    <button class="fecharFoto2" id="fecharFoto2">X</button>
+                    <img src="./assets/imgs/IMAGENS/foco.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="modalImg3" id="modalImg3">
+                <div class="modal3">
+                    <button class="fecharFoto3" id="fecharFoto3">X</button>
+                    <img src="./assets/imgs/IMAGENS/aprendendo.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="modalImg4" id="modalImg4">
+                <div class="modal4">
+                    <button class="fecharFoto4" id="fecharFoto4">X</button>
+                    <img src="./assets/imgs/IMAGENS/espirito.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="modalImg5" id="modalImg5">
+                <div class="modal5">
+                    <button class="fecharFoto5" id="fecharFoto5">X</button>
+                    <img src="./assets/imgs/IMAGENS/respeito.jpg" alt="">
+                </div>
+            </div>
+
+            <div class="modalImg6" id="modalImg6">
+                <div class="modal6">
+                    <button class="fecharFoto6" id="fecharFoto6">X</button>
+                    <img src="./assets/imgs/IMAGENS/familia.jpg" alt="">
+                </div>
+            </div>
+
             <h1>Valores</h1>
 
-            <div class="conjunto">
+            <div onclick="mostrarFoto()" class="conjunto">
                 <h2>Disciplina</h2>
                 <p>Aprendemos a seguir as regras e a ouvir os mais experientes</p>
             </div>
 
-            <div class="conjunto">
+            <div onclick="mostrarFoto2()" class="conjunto">
                 <h2>Foco</h2>
                 <p>A consciência deve estar completamente presente no momento, no dojô.</p>
             </div>
 
-            <div class="conjunto">
+            <div onclick="mostrarFoto3()" class="conjunto">
                 <h2>Resiliência</h2>
                 <p>Sempre há o que aprender, então sempre aceitamos críticas e orientações</p>
             </div>
 
-            <div class="conjunto">
-                <h2>Autocontrole</h2>
-                <p>Aprendemos para nos defender, não atacar os outros. Por isso, o espírito de agressão deve ser contido
+            <div onclick="mostrarFoto4()" class="conjunto">
+                <h2>Justiça</h2>
+                <p>Aprendemos para nos defender, não atacar os outros. Por isso, o espírito de agressão deve ser
+                    contido.
                 </p>
             </div>
 
-            <div class="conjunto">
+            <div onclick="mostrarFoto5()" class="conjunto">
                 <h2>Respeito</h2>
                 <p>O conhecimento vem dos mais experientes, mas estamos todos aprendendo e todos devem ser respeitados
+                </p>
+            </div>
+
+            <div onclick="mostrarFoto6()" class="conjunto">
+                <h2>Família</h2>
+                <p>Antes de sermos uma equipe, somos uma família. Nos apoiamos, incentivamos, ajudamos e amamos.
                 </p>
             </div>
         </div>
@@ -176,7 +231,7 @@
             </div>
 
             <div class="imagem">
-                <img src="IMAGENS/un-logo.svg" alt="">
+                <img src="assets/imgs/IMAGENS/un-logo.svg" alt="">
             </div>
         </div>
     </div>
@@ -215,7 +270,7 @@
             </div>
 
             <div class="imagem">
-                <img src="IMAGENS/ods3.png" alt="">
+                <img src="assets/imgs/IMAGENS/ods3.png" alt="">
             </div>
         </div>
     </div>
@@ -242,17 +297,20 @@
             <div class="bannerKata">
                 <div class="shiai">
                     <h2 class="Titulokumite">Shiai kumite</h2>
-                    <p>Shiai é o combate entre competidores. O objetivo é marcar pontos contra o adversário através de técnicas de ataque e defesa. As regras do shiai kumite são estabelecidas pela federação de
+                    <p>Shiai é o combate entre competidores. O objetivo é marcar pontos contra o adversário através de
+                        técnicas de ataque e defesa. As regras do shiai kumite são estabelecidas pela federação de
                         karate responsável pelo evento.</p>
 
-                    <img src="IMAGENS/shiai.gif" alt="">
+                    <img src="assets/imgs/IMAGENS/shiai.gif" alt="">
                 </div>
 
                 <div class="kata">
                     <h2 class="tituloKata">Kata</h2>
-                    <p class="textoKata">Kata é um conjunto de movimentos de ataque e defesa, previamente estabelecidos em várias direções e ângulos. Tem por objetivo desenvolver a coordenação motora, estética postural e agilidade.</p>
+                    <p class="textoKata">Kata é um conjunto de movimentos de ataque e defesa, previamente estabelecidos
+                        em várias direções e ângulos. Tem por objetivo desenvolver a coordenação motora, estética
+                        postural e agilidade.</p>
 
-                    <img src="IMAGENS/kata.gif" alt="">
+                    <img src="assets/imgs/IMAGENS/kata.gif" alt="">
                 </div>
             </div>
 
@@ -264,44 +322,44 @@
             <h1>Graduações</h1>
 
             <div class="faixa">
-                <h2><img src="IMAGENS/faixa_branca.jpg" alt=""></h2>
+                <h2><img src="assets/imgs/IMAGENS/faixa_branca.jpg" alt=""></h2>
                 <p>Representa a pureza, o começo, a iniciação, é o verdadeiro começo nas artes marciais do karatê. </p>
             </div>
 
             <div class="faixa">
-                <h2><img src="IMAGENS/faixa_amarela.png" alt=""></h2>
+                <h2><img src="assets/imgs/IMAGENS/faixa_amarela.png" alt=""></h2>
                 <p> Assim como um sol que desponta todos os dias, ela significa que é um iniciante no Karatê </p>
             </div>
 
             <div class="faixa">
-                <h2><img src="IMAGENS/faixa_laranja.png" alt=""></h2>
+                <h2><img src="assets/imgs/IMAGENS/faixa_laranja.png" alt=""></h2>
                 <p>Sugere motivação, atividade e vontade. Também simboliza aquilo que deve ser contido pelo seu portador
                 </p>
             </div>
 
             <div class="faixa">
-                <h2><img src="IMAGENS/faixa_vermelha.png" alt=""></h2>
+                <h2><img src="assets/imgs/IMAGENS/faixa_vermelha.png" alt=""></h2>
                 <p> Simboliza aquilo que o praticante deve buscar: o encorajamento, robustez, gentileza e tolerância</p>
             </div>
 
             <div class="faixa">
-                <h2><img src="IMAGENS/faixa_verde.png" alt=""></h2>
+                <h2><img src="assets/imgs/IMAGENS/faixa_verde.png" alt=""></h2>
                 <p>Ela representa a esperança, a fé e o crescimento. É a cor mais harmoniosa e calmante de todas</p>
             </div>
 
             <div class="faixa">
-                <h2><img src="IMAGENS/faixa_roxa.png" alt=""></h2>
+                <h2><img src="assets/imgs/IMAGENS/faixa_roxa.png" alt=""></h2>
                 <p>Representa o mistério, a dignidade, a inspiração e justiça.</p>
             </div>
 
             <div class="faixa">
-                <h2><img src="IMAGENS/faixa_marrom.png" alt=""></h2>
+                <h2><img src="assets/imgs/IMAGENS/faixa_marrom.png" alt=""></h2>
                 <p>É a cor da solidificação. Representa a constância, a disciplina, a uniformidade adquirida. Também
                     sugere segurança e isolamento.</p>
             </div>
 
             <div class="faixa">
-                <h2><img src="IMAGENS/faixa_preta.png" alt=""></h2>
+                <h2><img src="assets/imgs/IMAGENS/faixa_preta.png" alt=""></h2>
                 <p>É a junção de todas as cores. Representa autocontrole, serenidade, disciplina e responsabilidade,
                     dignidade e conhecimento. É a cor do poder. </p>
             </div>
@@ -313,6 +371,8 @@
             <button class="botaoGraduacoes" onclick="saberMaisGraduacoes()">Saiba Mais</button>
         </div>
     </div>
+
+    <script src="../src/js/index.js"></script>
 
 </body>
 

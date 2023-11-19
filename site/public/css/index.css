@@ -31,7 +31,7 @@ html {
     font-size: 28px;
 }
 
-h1{
+h1 {
     width: 100%;
     height: 70px;
     border: 1px solid fuchsia;
@@ -87,32 +87,33 @@ body {
 .chamando {
     height: 600px;
     width: 100%;
-    background-color: rgb(241, 212, 158);
+    background-color: rgb(240, 200, 200);
 }
 
 .chamando .container {
     height: 100%;
     width: 80%;
     margin: 0 10%;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     font-size: 30px;
+    display: flex;
 }
 
 .chamando .container .paragrafo {
     /* border: 2px solid red; */
     width: 60%;
-    height: 100%;
+    height: 90%;
     margin: 10% 0;
 }
 
-.chamando .container h2 {
+.chamando .container .paragrafo h2 {
     /* border: 2px solid orange; */
     font-size: 30px;
     width: 100%;
     padding: 3%;
 }
 
-.chamando .container p {
+.chamando .container .paragrafo p {
     /* border: 1px solid purple; */
     width: 100%;
     height: 60%;
@@ -128,6 +129,12 @@ body {
     background-color: rgb(245, 141, 80);
     border-radius: 5px;
     cursor: pointer;
+}
+
+.chamando .container img {
+    /* border: 2px solid green; */
+    margin: 120% 40%;
+    height: 30%;
 }
 
 .slideshow-container {
@@ -200,8 +207,8 @@ body {
 .banner {
     width: 100%;
     height: 500px;
-    border: 1px solid rgb(224, 64, 117);
-    background-image: url(/IMAGENS/IMG-20230715-WA0015.jpg);
+    border: 2px solid rgb(224, 64, 117);
+    background-image: url(/site/public/assets/imgs/IMAGENS/IMG-20230715-WA0015.jpg);
 }
 
 .banner .container {
@@ -226,8 +233,8 @@ body {
 .historia {
     width: 100%;
     height: 550px;
-    border: 2px solid lawngreen;
-    background-color: rgb(241, 192, 101);
+    /* border: 2px solid lawngreen; */
+    background-color: rgb(109, 49, 49);
 }
 
 .historia .container {
@@ -235,7 +242,7 @@ body {
     height: 100%;
     margin: 0 10%;
     display: flex;
-    border: 1px solid red;  
+    /* border: 1px solid red;   */
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -246,32 +253,37 @@ body {
     border: 3px solid black;
 } */
 
-.historia .container .conjunto  h2 {
-    border: 1px solid green;
+.historia .container .conjunto h2 {
+    /* border: 1px solid green; */
     height: 18px;
     width: 50%;
     margin: 5% 25%;
     font-size: 18px;
     display: flex;
     justify-content: center;
-    background-color: gray;
+    background-color: rgb(79, 53, 122);
     border-radius: 5px;
+    color: white;
 }
 
-.historia .container .conjunto{
+.historia .container .conjunto {
     width: 17%;
     height: 30%;
-    border: 1px solid rgb(123, 204, 193);
+    /* border: 1px solid rgb(123, 204, 193); */
     margin-left: 3%;
-    background-color: yellow;
+    background-color: rgb(188, 166, 209);
     border-radius: 10px;
+}
+
+.historia .container .conjunto:hover {
+    width: 15%;
 }
 
 .historia .container .conjunto p {
     width: 90%;
     height: 110px;
     margin: 0 5%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,40 +291,44 @@ body {
 
 .valores {
     width: 100%;
-    height: 600px;
+    height: 800px;
     border: 1px solid saddlebrown;
-    background-color: rgb(247, 213, 151);
+    background-color: rgb(161, 127, 127);
 }
 
 .valores .container {
     width: 80%;
     height: 100%;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
     margin: 0 10%;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.valores .container .conjunto{
-    width: 18%;
-    height: 30%;
-    border: 2px solid black;
-    margin: 1% 7%;
-    border-radius: 10px;
-    background-color: rgb(189, 252, 233);
+.valores .container .conjunto {
+    width: 25%;
+    height: 22%;
+    border: 1px solid black;
+    /* margin: 1% 7%; */
+    /* border-radius: 10px; */
+    background-color: rgb(141, 206, 186);
+    cursor: pointer;
 }
 
-.valores .container .conjunto h2{
+.valores .container .conjunto h2 {
     width: 60%;
     height: 15%;
     margin: 10% 20%;
     border: 1px solid rgb(53, 3, 53);
-    font-size: 18px;
+    background-color: rgb(201, 179, 221);
+    font-size: 19px;
+    border-radius: 10px;
     display: flex;
     justify-content: center;
 }
 
-.valores .container .conjunto p{
+.valores .container .conjunto p {
     height: 60%;
     width: 90%;
     margin: 0 5%;
@@ -374,14 +390,13 @@ body {
     height: 60%;
     border: 1px solid black;
     margin: 0 20%;
-
 }
 
 .ods {
     width: 100%;
     height: 600px;
     /* background-color: aquamarine; */
-    background-image: url(IMAGENS/ods.jpg);
+    background-image: url(/site/public/assets/imgs/IMAGENS/ods.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -430,11 +445,11 @@ body {
 
 .ods .container .exemplos {
     border: 1px solid red;
-    background-color: cornflowerblue;   
+    background-color: cornflowerblue;
     width: 30%;
     height: 30%;
     /* margin: 0 5%; */
-    font-size: 20px; 
+    font-size: 20px;
 }
 
 .escolhido {
@@ -586,10 +601,9 @@ body {
 
 .shiaikata .container .bannerKata .kata img {
     border: 1px solid brown;
-    width: 50%; 
+    width: 50%;
     display: flex;
     justify-content: center;
-    align-self: ce;
 }
 
 .graduacoes {
@@ -608,11 +622,11 @@ body {
     justify-content: center;
 }
 
-.graduacoes .container .faixa{
+.graduacoes .container .faixa {
     width: 20%;
     height: 33%;
     border: 1px solid rgb(0, 124, 128);
-    border-radius: 10px;    
+    border-radius: 10px;
     margin: 0 2%;
     background-color: rgb(241, 213, 252);
 }
@@ -635,7 +649,7 @@ body {
     margin: 0 5%;
     display: flex;
     justify-content: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .divBotaoGraduacoes {

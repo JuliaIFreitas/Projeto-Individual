@@ -1,0 +1,406 @@
+.modalImg1 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: white; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    /* margin: 0 100% 0 0; */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalImg1 .modal {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 40%;
+    padding: 10%;
+    border-radius: 5%;
+    /* position: fixed; */
+}
+
+.modalImg1 .modal img {
+    width: 80%;
+}
+
+.modalImg1.abrir {
+    display: flex;
+}
+
+@keyframes abrirModal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir .modal {
+    animation: abrirModal 0.5s;
+}
+
+.fecharFoto {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MODAL 2 */
+
+.modalImg2 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: white; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    /* margin: 0 100% 0 0; */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalImg2 .modal2 {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 40%;
+    padding: 10%;
+    border-radius: 5%;
+    /* position: fixed; */
+}
+
+.modalImg2 .modal2 img {
+    width: 80%;
+}
+
+.modalImg2.abrir2 {
+    display: flex;
+}
+
+@keyframes abrirModal2 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir2 .modal2 {
+    animation: abrirModal2 0.5s;
+}
+
+.fecharFoto2 {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MODAL 3 */
+.modalImg3 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: white; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    /* margin: 0 100% 0 0; */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalImg3 .modal3 {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 40%;
+    padding: 10%;
+    border-radius: 5%;
+    /* position: fixed; */
+}
+
+.modalImg3 .modal3 img {
+    width: 80%;
+}
+
+.modalImg3.abrir3 {
+    display: flex;
+}
+
+@keyframes abrirModal3 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir3 .modal3 {
+    animation: abrirModal3 0.5s;
+}
+
+.fecharFoto3 {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MODAL 4 */
+.modalImg4 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: white; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    /* margin: 0 100% 0 0; */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalImg4 .modal4 {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 60%;
+    padding: 10%;
+    border-radius: 5%;
+    /* position: fixed; */
+}
+
+.modalImg4 .modal4 img {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalImg4.abrir4 {
+    display: flex;
+}
+
+@keyframes abrirModal4 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir4 .modal4 {
+    animation: abrirModal4 0.5s;
+}
+
+.fecharFoto4 {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MODAL 5 */
+.modalImg5 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: white; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    /* margin: 0 100% 0 0; */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalImg5 .modal5 {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 60%;
+    padding: 10%;
+    border-radius: 5%;
+    /* position: fixed; */
+}
+
+.modalImg5 .modal5 img {
+    width: 60%;
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalImg5.abrir5 {
+    display: flex;
+}
+
+@keyframes abrirModal5 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir5 .modal5 {
+    animation: abrirModal5 0.5s;
+}
+
+.fecharFoto5 {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* MODAL 6 */
+.modalImg6 {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* background-color: white; */
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    /* margin: 0 100% 0 0; */
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalImg6 .modal6 {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 60%;
+    padding: 10%;
+    border-radius: 5%;
+    /* position: fixed; */
+}
+
+.modalImg6 .modal6 img {
+    width: 90%;
+    height: 110%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalImg6.abrir6 {
+    display: flex;
+}
+
+@keyframes abrirModal6 {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir6 .modal6 {
+    animation: abrirModal6 0.5s;
+}
+
+.fecharFoto6 {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
