@@ -25,7 +25,7 @@ h1 {
     display: flex;
     align-items: center;
     font-size: 20px;
-    background-image: url(../IMAGENS/kata.jpg);
+    /* background-image: url(../IMAGENS/kata.jpg); */
 }
 
 .cadastro .container {

@@ -15,7 +15,8 @@ var indexRouter = require("./src/routes/index");
 // var aquariosRouter = require("./src/routes/aquarios");
 // var empresasRouter = require("./src/routes/empresas");
 // Minhas rotas
-var cadastrokarateRouter = require("./src/routes/karate");
+// var cadastrokarateRouter = require("./src/routes/karate");
+var usuarioRouter = require("./src/routes/usuario");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -29,7 +30,8 @@ app.use("/", indexRouter);
 // app.use("/medidas", medidasRouter);
 // app.use("/aquarios", aquariosRouter);
 // app.use("/empresas", empresasRouter);
-app.use("/karate", cadastrokarateRouter);
+// app.use("/karate", cadastrokarateRouter);
+app.use("/usuario", usuarioRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n
