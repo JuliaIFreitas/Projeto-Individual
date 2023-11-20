@@ -4,9 +4,8 @@ body {
 
 .login {
     width: 100%;
-    height: 600px;
+    height: 700px;
     border: 1px solid blue;
-    background-image: url(../IMAGENS/douglasLogin.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }

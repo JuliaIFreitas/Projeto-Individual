@@ -2,39 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CADASTRO - JULIA INADA DE FREITAS</title>
-    <link rel="stylesheet" href="./css/karatecadastro.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CADASTRO - JULIA INADA DE FREITAS</title>
+  <link rel="stylesheet" href="./css/karatecadastro.css">
 </head>
 
 <body>
 
-    <!-- Cadastro -->
-    <div id="campos_karateCadastro"  class="cadastro">
-        <div class="container">
-            <h1>Cadastro</h1>
-            <div class="campos">
-                Nome:<br>
-                <input placeholder="Nome" class="input" id="input_nome" required><br>
-                Sobrenome: <br>
-                <input placeholder="Sobrenome" class="input" id="input_sobrenome" required><br>
-                <!-- Data Nascimento: <input type="date" id="input_dtNasc"><br> -->
-                E-mail: <br>
-                <input placeholder="E-mail" class="input" type="email" id="input_email" required><br>
-                Telefone: <br>
-                <input placeholder="Tel()" class="input" type="tel" id="input_telefone" required><br>
-                Senha: <br>
-                <input placeholder="Senha" class="input" type="password" id="input_senha" required><br>
-                Confirme sua senha: <br>
-                <input placeholder="Confirmar Senha" class="input" type="password" id="input_confirmarSenha" required><br>
-                <button class="botao" onclick="cadastrar()">Cadastrar</button><br><br>
-                Já tem login? <a href="loginkarate.html">Clique aqui</a>
+  <!-- Cadastro -->
+  <div style="background-image: url(assets/imgs/IMAGENS/kata.jpg);" id="campos_karateCadastro" class="cadastro">
+    <div class="container">
+      <h1>Cadastro</h1>
+      <div class="campos">
+        Nome:<br>
+        <input placeholder="Nome" class="input" id="input_nome" required><br>
+        Sobrenome: <br>
+        <input placeholder="Sobrenome" class="input" id="input_sobrenome" required><br>
+        <!-- Data Nascimento: <input type="date" id="input_dtNasc"><br> -->
+        E-mail: <br>
+        <input placeholder="E-mail" class="input" type="email" id="input_email" required><br>
+        Telefone: <br>
+        <input placeholder="Tel()" class="input" type="tel" id="input_telefone" required><br>
+        Senha: <br>
+        <input placeholder="Senha" class="input" type="password" id="input_senha" required><br>
+        Confirme sua senha: <br>
+        <input placeholder="Confirmar Senha" class="input" type="password" id="input_confirmarSenha" required><br>
+        <button class="botao" onclick="cadastrar()">Cadastrar</button><br><br>
+        Já tem login? <a href="loginkarate.html">Clique aqui</a>
 
-            </div>
+      </div>
 
-            <!-- Karate -->
-            <!-- <div id="campos_associacao" style="display: none;">
+      <!-- Karate -->
+      <!-- <div id="campos_associacao" style="display: none;">
                 <h1>Associação</h1>
                 Associação: <input id="input_associacao"><br>
                 Faixa:
@@ -51,8 +51,8 @@
                 Sensei: <input id="input_sensei"><br>
                 <button onclick="cadastrar()">Cadastrar</button>
             </div> -->
-        </div>
     </div>
+  </div>
 
 </body>
 
@@ -60,8 +60,8 @@
 
 <script>
 
-    function cadastrar() {
-    
+  function cadastrar() {
+
 
     var nomeVar = input_nome.value;
     var sobrenomeVar = input_sobrenome.value;
@@ -70,55 +70,59 @@
     var senhaVar = input_senha.value;
     var confirmacaoSenhaVar = input_confirmarSenha.value;
 
-        if (
-              nomeVar == "" ||
-              sobrenomeVar == "" ||
-              emailVar == "" ||
-              telVar == "" ||
-              senhaVar == "" ||
-              confirmacaoSenhaVar == ""
-            ) {
-              return false;
-            }
-            //   cardErro.style.display = "block";
-            //   mensagem_erro.innerHTML =
-            //     "(Mensagem de erro para todos os campos em branco)";
-        
-            //   finalizarAguardar();
-            //   return false;
-            // } else {
-            //   setInterval(sumirMensagem, 5000);
-            // }
+    if (
+      nomeVar == "" ||
+      sobrenomeVar == "" ||
+      emailVar == "" ||
+      telVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      alert("insira seus dados")
+      return false;
+    } else {
+      // Redirecionamento para a nova página
+      window.location.href = 'loginkarate.html';
+    }
+    //   cardErro.style.display = "block";
+    //   mensagem_erro.innerHTML =
+    //     "(Mensagem de erro para todos os campos em branco)";
 
-            fetch("/karate/cadastrar", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                nomeServer: nomeVar,
-                sobrenomeServer: sobrenomeVar,
-                emailServer: emailVar,
-                telServer: telVar,
-                senhaServer: senhaVar
-              }),
-            })
-              .then(function (resposta) {
-                console.log("resposta: ", resposta);
+    //   finalizarAguardar();
+    //   return false;
+    // } else {
+    //   setInterval(sumirMensagem, 5000);
+    // }
 
-                if (resposta.ok) {
-                  setTimeout(() => {
-                    // window.location = "loginkarate";
-                  }, "2000");
-                } else {
-                  throw "Houve um erro ao tentar realizar o cadastro!";
-                }
-              })
-              .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-              })
-              return false;
-            }
+    fetch("/karate/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nomeServer: nomeVar,
+        sobrenomeServer: sobrenomeVar,
+        emailServer: emailVar,
+        telServer: telVar,
+        senhaServer: senhaVar
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          setTimeout(() => {
+            // window.location = "loginkarate";
+          }, "2000");
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+      })
+    return false;
+  }
 
 
 </script>

@@ -801,35 +801,36 @@ body {
     width: 90%;
     height: 100%;
     margin: 0 5%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
 .footer .container .significado {
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     width: 20%;
 } 
 
-.footer .container .significado h2 {
-    border: 1px solid green;
-}
-
 .footer .container .significado p {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 100%;
+    font-size: 18px;
 }
 
-.footer .container img {
-    height: 20%;
+.footer .container .significado img {
+    height: 15%;
     width: 20%;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .footer .container .footerSite {
-    border: 1px solid orange;
+    /* border: 1px solid orange; */
     width: 20%;
+}
+
+.footer .container .footerSite ul li {
+    font-size: 18px;
 }
 
 .footer .container .footerSite ul li a {
@@ -838,11 +839,40 @@ body {
 } 
 
 .footer .container .funcionalidades {
-    border: 1px solid white;
+    /* border: 1px solid white; */
     width: 20%;
-} 
+}
+
+.footer .container .funcionalidades li {
+    font-size: 18px;
+}
 
 .footer .container .funcionalidades ul li a {
     text-decoration: none;
     color: black;
 } 
+
+.footer .container .contato {
+    /* border: 1px solid purple; */
+    width: 25%;
+}
+
+.footer .container .contato ul li a {
+    text-decoration: none;
+    color: black;
+} 
+
+.footer .container .contato li img {
+    /* border: 1px solid rgb(230, 90, 90); */
+    width: 12%;
+
+}
+
+.footer .container .contato ul li {
+    list-style-type: none;
+    /* border: 1px solid aqua; */
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 18px;
+}
