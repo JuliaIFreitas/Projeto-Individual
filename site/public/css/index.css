@@ -644,44 +644,47 @@ body {
 
 .karateca {
     width: 100%;
-    height: 700px;
+    height: 890px;
     background-color: rgb(221, 143, 55);
 }
 
 .karateca .container {
     width: 80%;
     height: 100%;
-    border: 1px solid royalblue;
+    /* border: 1px solid royalblue; */
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: center;
-    align-items: center; */
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
     margin: 0 10%;
 }
 
 .karateca .container .paragrafo {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     height: 80%;
-    width: 50%;
+    width: 68%;
+    margin: 0 0;
 }
 
 .karateca .container .paragrafo h2 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 100%;
-    height: 10%;
+    height: 5%;
 }
 
 .karateca .container .paragrafo p {
     font-family: Regular;
-    border: 1px solid teal;
+    /* border: 1px solid teal; */
     width: 100%;
-    height: 80%;
+    height: 90%;
+    font-size: 20px;
 }
 
 .karateca .container .espelho img{
-    border: 1px solid yellowgreen;
-    height: 80%;
-    width: 10%;
+    /* border: 1px solid yellowgreen; */
+    height: 43%;
+    width: 45%;
 }
 
 .shiaikata {
