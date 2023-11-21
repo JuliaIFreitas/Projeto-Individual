@@ -162,3 +162,14 @@ function mostrarFaixaMarrom() {
         }
     })
 }
+
+function mostrarFaixaPreta() {
+    const modalfaixapreta = document.getElementById('modalFaixaPreta')
+    modalfaixapreta.classList.add('abrirfaixapreta')
+
+    modalfaixapreta.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharfaixapreta' || e.target.id == 'modalFaixaPreta') {
+            modalfaixapreta.classList.remove('abrirfaixapreta')
+        }
+    })
+}

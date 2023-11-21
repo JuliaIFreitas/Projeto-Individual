@@ -72,6 +72,12 @@ body {
     /* width: 68%; */
 }
 
+#listaHeader1:hover { 
+    background-color: rgb(148, 27, 27); 
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
 .header .container .navbar li {
     display: inline;
     padding: 0px 10px;
@@ -132,6 +138,12 @@ body {
     background-color: rgb(204, 83, 83);
     border-radius: 5px;
     cursor: pointer;
+}
+
+#id_botaoCadastrar:hover {
+    background-color: rgb(255, 214, 214);
+    transition: 0.5s;
+    opacity: 0.7;
 }
 
 .chamando .container img {
@@ -343,7 +355,7 @@ body {
 
 .glossario {
     width: 100%;
-    height: 650px;
+    height: 750px;
     background-color: rgb(173, 96, 96);
 }
 
@@ -360,7 +372,7 @@ body {
 .glossario .container .oss {
     /* border: 1px solid green; */
     width: 40%;
-    height: 30%;
+    height: 25%;
     background-color: rgb(189, 219, 205);
     border-radius: 20px;
 }
@@ -379,7 +391,7 @@ body {
 .glossario .container .numeros {
     /* border: 1px solid blue; */
     width: 20%;
-    height: 40%;
+    height: 35%;
     background-color: rgb(189, 219, 205);
     border-radius: 20px;
 }
@@ -399,7 +411,7 @@ body {
 .glossario .container .cores {
     /* border: 1px solid blue; */
     width: 25%;
-    height: 35%;
+    height: 32%;
     background-color: rgb(189, 219, 205);
     border-radius: 20px;
 }
@@ -415,6 +427,29 @@ body {
     display: flex;
     justify-content: center;
 }
+
+.glossario .container .kyu {
+    /* border: 1px solid blue; */
+    width: 25%;
+    height: 45%;
+    background-color: rgb(189, 219, 205);
+    border-radius: 20px;
+    margin: 2% 0;
+}
+
+.glossario .container .kyu h2 {
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: center;
+}
+
+.glossario .container .kyu p {
+    /* border: 1px solid aqua; */
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+}
+
 
 .onu {
     height: 700px;
@@ -652,7 +687,7 @@ body {
 .shiaikata {
     height: 600px;
     width: 100%;
-    background-color: rgb(202, 162, 137);
+    background-color: rgb(245, 210, 189);
 }
 
 .shiaikata .container {
@@ -670,17 +705,20 @@ body {
 }
 
 .shiaikata .container .bannerKata .shiai {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 50%;
     height: 80%;
 }
 
 .shiaikata .container .bannerKata .shiai .Titulokumite {
     /* border: 1px solid blue; */
-    width: 100%;
+    width: 60%;
+    margin: 5% 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(250, 186, 68);
+    border-radius: 10px;
 }
 
 .shiaikata .container .bannerKata .shiai p {
@@ -694,24 +732,43 @@ body {
 }
 
 .shiaikata .container .bannerKata .shiai img {
-    /* border: 2px solid green; */
+    /* border: 2px solid red; */
     height: 50%;
     width: 50%;
     margin: 0 25%;
 }
 
+.shiaikata .container .bannerKata .shiai .shiaiGif {
+    /* border: 2px solid green; */
+    height: 41%;
+    width: 20%;
+    margin: 0 20% 0 10%;
+}
+
+.shiaiGif {
+    position: absolute;
+    background: white;
+}
+  
+.shiaiGif:hover {
+    opacity:0;
+}
+
 .shiaikata .container .bannerKata .kata {
-    border: 2px solid rgb(0, 255, 21);
+    /* border: 2px solid rgb(0, 255, 21); */
     width: 50%;
     height: 80%;
 }
 
 .shiaikata .container .bannerKata .kata .tituloKata {
     /* border: 1px solid blue; */
-    width: 100%;
+    width: 60%;
+    margin: 5% 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(250, 186, 68);
+    border-radius: 10px;
 }
 
 .shiaikata .container .bannerKata .kata .textoKata {
@@ -730,6 +787,22 @@ body {
     display: flex;
     justify-content: center;
     margin: 0 25%;
+}
+
+.shiaikata .container .bannerKata .kata .kataGif {
+    /* border: 2px solid green; */
+    height: 41%;
+    width: 21%;
+    margin: 0 21% 0 9%;
+}
+
+.kataGif {
+    position: absolute;
+    background: white;
+}
+  
+.kataGif:hover {
+    opacity:0;
 }
 
 .graduacoes {

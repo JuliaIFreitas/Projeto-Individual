@@ -17,13 +17,13 @@
         <div class="container">
             <h1 class="titulo">Karate Shotokan</h1>
             <ul class="navbar">
-                <li><a href="#div_chamando">Home</a></li>
+                <li id="listaHeader1"><a href="#div_chamando">Home</a></li>
                 <!-- <li><a href="#">Valores</a></li> -->
-                <li><a href="#div_historia">História</a></li>
-                <li><a href="#div_sobremim">A Karateca</a></li>
-                <li><a href="#div_graduacoes">Graduações</a></li>
-                <li><a href="#div_modalidades">Modalidades</a></li>
-                <li><a href="index.html">Login/Cadastro</a></li>
+                <li id="listaHeader1"><a href="#div_historia">História</a></li>
+                <li id="listaHeader1"><a href="#div_sobremim">A Karateca</a></li>
+                <li id="listaHeader1"><a href="#div_graduacoes">Graduações</a></li>
+                <li id="listaHeader1"><a href="#div_modalidades">Modalidades</a></li>
+                <li id="listaHeader1"><a href="cadastro.html">Login/Cadastro</a></li>
             </ul>
         </div>
     </div>
@@ -34,7 +34,7 @@
                 <h2>Comunidade Karate Shotokan</h2>
                 <p>Quer ficar por dentro das competições, monitorar seus treinos e se conectar com outros karatecas?
                     <br><br> Cadastre-se já! <br><br>
-                    <a href="cadastro.html"><button class="botao" onclick="cadastrar()">Cadastrar</button></a>
+                    <a href="cadastro.html"><button id="id_botaoCadastrar" class="botao" onclick="cadastrar()">Cadastrar</button></a>
                 </p>
             </div>
             <div class="imagem">
@@ -270,6 +270,21 @@
                     Preta: Kuro
                 </p>
             </div>
+
+            <div class="kyu">
+                <h2>Kyu e Dan</h2>
+                <p>As faixas coloridas são divididas nas classes (kyu) e as pretas, em graus (Dan)<br>
+                    Sendo que o kyu vai no 7º ao 1º e o Dan do 1º ao 10º <br> <br>
+                    Faixa Branca: 7º Kyu<br>
+                    Faixa Amarela: 6º Kyu<br>
+                    Faixa Vermelha: 5º Kyu<br>
+                    Faixa Laranja: 4º Kyu<br>
+                    Faixa Verde: 3º Kyu<br>
+                    Faixa Roxa: 2º Kyu<br>
+                    Faixa Marrom: 1º Kyu<br>
+                    Faixa Preta: 1º Dan - 10º Dan
+                </p>
+            </div>
         </div>
     </div>
 
@@ -413,8 +428,10 @@
                     <p>Shiai é o combate entre competidores. O objetivo é marcar pontos contra o adversário através de
                         técnicas de ataque e defesa. As regras do shiai kumite são estabelecidas pela federação de
                         karate responsável pelo evento.</p>
-
-                    <img src="assets/imgs/IMAGENS/shiai.gif" alt="">
+                        <div>
+                            <img class="shiaiGif" src="assets/imgs/IMAGENS/shiai_ex_gif.jpg" alt="">
+                            <img src="assets/imgs/IMAGENS/shiai.gif" alt="">
+                        </div>
                 </div>
 
                 <div class="kata">
@@ -422,8 +439,10 @@
                     <p class="textoKata">Kata é um conjunto de movimentos de ataque e defesa, previamente estabelecidos
                         em várias direções e ângulos. Tem por objetivo desenvolver a coordenação motora, estética
                         postural e agilidade.</p>
-
-                    <img src="assets/imgs/IMAGENS/kata.gif" alt="">
+                        <div>
+                            <img class="kataGif" src="assets/imgs/IMAGENS/kata_ex_gif.jpg" alt="">
+                            <img src="assets/imgs/IMAGENS/kata.gif" alt="">
+                        </div>
                 </div>
             </div>
 
@@ -438,7 +457,8 @@
                     <button class="fecharfaixa" id="fecharfaixa">X</button>
                     <div class="divFaixa">
                         <h2>Especificações</h2>
-                        <p>Branco em japonês: Shiro<br>
+                        <p> 7º KYU (Classe)<br>
+                            Branco em japonês: Shiro<br>
                             Tempo para graduação: 6 meses <br>
                             Kata: Heian Shodan <br></p>
                         <iframe width="400" height="250"
@@ -455,7 +475,8 @@
                     <button class="fecharfaixaamarela" id="fecharfaixaamarela">X</button>
                     <div class="divFaixa">
                         <h2>Especificações</h2>
-                        <p>Amarelo em japonês: Kiiro<br>
+                        <p>6º KYU (Classe)<br>
+                            Amarelo em japonês: Kiiro<br>
                             Tempo para graduação: 6 meses <br>
                             Kata: Heian Nidan <br></p>
                         <iframe width="400" height="250"
@@ -472,11 +493,11 @@
                     <button class="fecharfaixaverm" id="fecharfaixaverm">X</button>
                     <div class="divFaixa">
                         <h2>Especificações</h2>
-                        <p>Vermelho em japonês: Aka<br>
+                        <p>5º KYU (Classe)<br>
+                            Vermelho em japonês: Aka<br>
                             Tempo para graduação: 6 meses <br>
                             Kata: Heian Sandan <br></p>
-                        <iframe width="400" height="250"
-                            src="https://www.youtube.com/embed/CJVOhn8w6tU?si=gIFaSsH5x4qwizUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe width="400" height="250"src="https://www.youtube.com/embed/CJVOhn8w6tU?si=gIFaSsH5x4qwizUo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -486,7 +507,8 @@
                     <button class="fecharfaixalara" id="fecharfaixalara">X</button>
                     <div class="divFaixa">
                         <h2>Especificações</h2>
-                        <p>Laranja em japonês: Orenji<br>
+                        <p>4º KYU (Classe)<br>
+                            Laranja em japonês: Orenji<br>
                             Tempo para graduação: 6 meses <br>
                             Kata: Heian Yodan <br></p>
                             <iframe width="400" height="250" src="https://www.youtube.com/embed/qy5tWu2ZUr0?si=7NUJkWTaxF_nBJAd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -499,7 +521,8 @@
                     <button class="fecharfaixaverde" id="fecharfaixaverde">X</button>
                     <div class="divFaixa">
                         <h2>Especificações</h2>
-                        <p>Verde em japonês: Midori<br>
+                        <p>3º KYU (Classe)<br>
+                            Verde em japonês: Midori<br>
                             Tempo para graduação: 1 ano <br>
                             Kata: Heian Godan <br></p>
                             <iframe width="400" height="250" src="https://www.youtube.com/embed/a-anwVcP-YU?si=1vjd1KrUjb3G0Yc7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    
@@ -512,7 +535,8 @@
                     <button class="fecharfaixaroxa" id="fecharfaixaroxa">X</button>
                     <div class="divFaixa">
                         <h2>Especificações</h2>
-                        <p>Roxa em japonês: Murasaki<br>
+                        <p>2º KYU (Classe)<br>
+                            Roxo em japonês: Murasaki<br>
                             Tempo para graduação: 1 ano <br>
                             Kata: Tekki Shodan <br></p>
                             <iframe width="400" height="250" src="https://www.youtube.com/embed/8BaRJoVoA1c?si=vTPzf1f_WTj8fZQT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    
@@ -525,13 +549,27 @@
                     <button class="fecharfaixamarrom" id="fecharfaixamarrom">X</button>
                     <div class="divFaixa">
                         <h2>Especificações</h2>
-                        <p>Marrom em japonês: Murasaki<br>
+                        <p>1º KYU (Classe)<br>
+                            Marrom em japonês: Murasaki<br>
                             Tempo para graduação: 18 meses a 24 meses <br>
                             Katas: Para o exame de faixa deve apresentar os cinco Heian, Tekki Shodan, além do Bassai Dai, Jion, Enpi ou Kanku Dai <br>
                         </p>
                             <iframe width="400" height="250" src="https://www.youtube.com/embed/NtiK0dIg-_I?si=gSHYsr8rGtaYgkmn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>  
-                            <iframe width="400" height="250" src="https://www.youtube.com/embed/JSr4Z1oDq3M?si=U9Jp8HkG0KvON5Aq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                  
                     </div>
+                </div>
+            </div>
+
+            <div class="modalFaixaPreta" id="modalFaixaPreta">
+                <div class="modalfaixapreta">
+                    <button class="fecharfaixapreta" id="fecharfaixapreta">X</button>
+                    <div class="divFaixa">
+                        <h2>Especificações</h2>
+                        <p>1º DAN (Grau)<br>
+                            Preto em japonês: Kuro<br>
+                            Tempo para graduação: 3 anos <br>
+                            Katas: Para o exame de faixa para o 1º Dan, deve saber os 5 Heian e apresentar um deles. Apresentar também o Tekki Shodan. Além desses, deve executar um dos seguintes katas: Bassai Dai, Jion, Enpi ou Kanku Dai<br>
+                        </p>
+                        <iframe width="400" height="250" src="https://www.youtube.com/embed/vb2omsNOw2s?si=9S6nzycex2PPYZjm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    </div>
                 </div>
             </div>
 
@@ -574,7 +612,7 @@
                     sugere segurança e isolamento.</p>
             </div>
 
-            <div class="faixa">
+            <div onclick="mostrarFaixaMarrom()" class="faixa">
                 <h2><img src="assets/imgs/IMAGENS/faixa_preta.png" alt=""></h2>
                 <p>É a junção de todas as cores. Representa autocontrole, serenidade, disciplina e responsabilidade,
                     dignidade e conhecimento. É a cor do poder. </p>
