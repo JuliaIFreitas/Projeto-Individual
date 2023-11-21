@@ -148,13 +148,14 @@ body {
 
 .modal {
     width: 40%;
-    min-width: 450px;
+    min-width: 400px;
     min-height: 200px;
     background-color: rgba(255, 255, 255, 0.527);
     backdrop-filter: blur(10px);
     height: 70%;
     padding: 10%;
     border-radius: 5%;
+    overflow: auto;
     /* position: fixed; */
 }
 

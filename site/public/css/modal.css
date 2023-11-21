@@ -603,3 +603,610 @@
     align-items: center;
     font-size: 20px;
 }
+
+/* FAIXAS */
+.modalFaixa {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalFaixa .modalfaixa {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalFaixa .modalfaixa img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modalFaixa.abrirfaixa {
+    display: flex;
+}
+
+@keyframes abrirfaixa {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrirfaixa .modalfaixa {
+    animation: abrirfaixa 0.5s;
+}
+
+.fecharfaixa {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FAIXA AMARELA */
+.modalFaixaAmarela {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalFaixaAmarela .modalfaixaamarela {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalFaixaAmarela .modalfaixaamarela img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modalFaixaAmarela.abrirfaixaamarela {
+    display: flex;
+}
+
+@keyframes abrirfaixaamarela {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrirfaixaamarela .modalfaixaamarela {
+    animation: abrirfaixa 0.5s;
+}
+
+.fecharfaixaamarela {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FAIXA VERMELHA */
+.modalFaixaVerm {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalFaixaVerm .modalfaixaverm {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalFaixaVerm .modalfaixaverm img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modalFaixaVerm.abrirfaixaverm {
+    display: flex;
+}
+
+@keyframes abrirfaixaVerm {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrirfaixaverm .modalfaixaverm {
+    animation: abrirfaixa 0.5s;
+}
+
+.fecharfaixaverm {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FAIXA LARANJA */
+.modalFaixaLara {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalFaixaLara .modalfaixalara {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalFaixaLara .modalfaixalara img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modalFaixaLara.abrirfaixalara {
+    display: flex;
+}
+
+@keyframes abrirfaixalara {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrirfaixalara .modalfaixalara {
+    animation: abrirfaixa 0.5s;
+}
+
+.fecharfaixalara {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FAIXA VERMELHA */
+.modalFaixaVerm {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalFaixaVerm .modalfaixaverm {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalFaixaVerm .modalfaixaverm img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modalFaixaVerm.abrirfaixaverm {
+    display: flex;
+}
+
+@keyframes abrirfaixaVerm {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrirfaixaverm .modalfaixaverm {
+    animation: abrirfaixa 0.5s;
+}
+
+.fecharfaixaverm {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FAIXA LARANJA */
+.modalFaixaVerde {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalFaixaVerde .modalfaixaverde {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalFaixaVerde .modalfaixaverde img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modalFaixaVerde.abrirfaixaverde {
+    display: flex;
+}
+
+@keyframes abrirfaixaverde {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrirfaixaverde .modalfaixaverde {
+    animation: abrirfaixa 0.5s;
+}
+
+.fecharfaixaverde {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FAIXA ROXA */
+.modalFaixaRoxa {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalFaixaRoxa .modalfaixaroxa {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalFaixaRoxa .modalfaixaroxa img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modalFaixaRoxa.abrirfaixaroxa {
+    display: flex;
+}
+
+@keyframes abrirfaixaroxa {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrirfaixaroxa .modalfaixaroxa {
+    animation: abrirfaixa 0.5s;
+}
+
+.fecharfaixaroxa {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* FAIXA MARROM */
+.modalFaixaMarrom {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalFaixaMarrom .modalfaixamarrom {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(255, 255, 255, 0.527);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+.modalFaixaMarrom .modalfaixamarrom img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.modalFaixaMarrom.abrirfaixamarrom {
+    display: flex;
+}
+
+@keyframes abrirfaixamarrom {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrirfaixamarrom .modalfaixamarrom {
+    animation: abrirfaixa 0.5s;
+}
+
+.fecharfaixamarrom {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.graduacoes .container .modalFaixaMarrom .modalfaixamarrom h2 {
+    border: 1px solid red;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.graduacoes .container .modalFaixaMarrom .modalfaixamarrom p {
+    border: 1px solid blue;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.graduacoes .container .modalFaixaMarrom .modalfaixamarrom .divfaixa {
+    /* border: 1px solid green; */
+    width: 100%;
+    height: 80%;
+}
+
+.graduacoes .container .modalFaixaMarrom .modalfaixamarrom h2 {
+    border: 1px solid red;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.graduacoes .container .modalFaixaMarrom .modalfaixamarrom p {
+    border: 1px solid blue;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}

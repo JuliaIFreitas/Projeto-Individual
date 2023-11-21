@@ -85,3 +85,80 @@ function mostrarOds8() {
         }
     })
 }
+
+function mostrarFaixa() {
+    const modalfaixa = document.getElementById('modalFaixa')
+    modalfaixa.classList.add('abrirfaixa')
+
+    modalfaixa.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharfaixa' || e.target.id == 'modalFaixa') {
+            modalfaixa.classList.remove('abrirfaixa')
+        }
+    })
+}
+
+function mostrarFaixaAmarela() {
+    const modalfaixaamarela = document.getElementById('modalFaixaAmarela')
+    modalfaixaamarela.classList.add('abrirfaixaamarela')
+
+    modalfaixaamarela.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharfaixaamarela' || e.target.id == 'modalFaixaAmarela') {
+            modalfaixaamarela.classList.remove('abrirfaixaamarela')
+        }
+    })
+}
+
+function mostrarFaixaVerm() {
+    const modalfaixaverm = document.getElementById('modalFaixaVerm')
+    modalfaixaverm.classList.add('abrirfaixaverm')
+
+    modalfaixaverm.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharfaixaverm' || e.target.id == 'modalFaixaVerm') {
+            modalfaixaverm.classList.remove('abrirfaixaverm')
+        }
+    })
+}
+
+function mostrarFaixaLara() {
+    const modalfaixalara = document.getElementById('modalFaixaLara')
+    modalfaixalara.classList.add('abrirfaixalara')
+
+    modalfaixalara.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharfaixalara' || e.target.id == 'modalFaixaLara') {
+            modalfaixalara.classList.remove('abrirfaixalara')
+        }
+    })
+}
+
+function mostrarFaixaVerde() {
+    const modalfaixaverde = document.getElementById('modalFaixaVerde')
+    modalfaixaverde.classList.add('abrirfaixaverde')
+
+    modalfaixaverde.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharfaixaverde' || e.target.id == 'modalFaixaVerde') {
+            modalfaixaverde.classList.remove('abrirfaixaverde')
+        }
+    })
+}
+
+function mostrarFaixaRoxa() {
+    const modalfaixaroxa = document.getElementById('modalFaixaRoxa')
+    modalfaixaroxa.classList.add('abrirfaixaroxa')
+
+    modalfaixaroxa.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharfaixaroxa' || e.target.id == 'modalFaixaroxa') {
+            modalfaixaroxa.classList.remove('abrirfaixaroxa')
+        }
+    })
+}
+
+function mostrarFaixaMarrom() {
+    const modalfaixamarrom = document.getElementById('modalFaixaMarrom')
+    modalfaixamarrom.classList.add('abrirfaixamarrom')
+
+    modalfaixamarrom.addEventListener('click', (e) => {
+        if (e.target.id == 'fecharfaixamarrom' || e.target.id == 'modalFaixaMarrom') {
+            modalfaixamarrom.classList.remove('abrirfaixamarrom')
+        }
+    })
+}
