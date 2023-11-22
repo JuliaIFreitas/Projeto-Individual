@@ -9,18 +9,20 @@ body {
 
 h1 {
     font-family: Karate;
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     display: flex;
     justify-content: center;
     align-items: center;
     align-self: flex-start;
     width: 100%;
+    font-size: 33px;
+    color: rgb(68, 36, 33);
 }
 
 .cadastro {
-    height: 600px;
+    height: 700px;
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     justify-content: center;
     display: flex;
     align-items: center;
@@ -29,25 +31,73 @@ h1 {
 }
 
 .cadastro .container {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     width: 30%;
-    height: 90%;
+    height: 85%;
     border-radius: 10px;
-    justify-content: center;
-    /* display: flex; */
-    background-color: rgba(255, 253, 253, 0.7);
+    /* justify-content: space-evenly; */
+    background-color: rgba(255, 253, 253, 0.8);
+    /* flex-wrap: wrap; */
+    display: flex;
+    align-items: center;
 }
 
 .cadastro .container .campos {
-    border: 1px solid red;
-    height: 80%;
-    width: 60%;
-    margin: 0% 20%;
+    /* border: 1px solid rgb(0, 128, 58); */
+    height: 100%;
+    width: 70%;
+    margin: 0 15%;
+}
+
+.cadastro .container .campos span {
+    /* border: 2px solid salmon; */
+    color: rgb(109, 54, 49);
+    font-weight: bold;
+}
+
+.cadastro .container .campos .botao {
+    /* border: 2px solid gold; */
+    width: 44%;
+    height: 8%;
+    margin: 0 28%;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: rgb(224, 114, 104);
 }
 
 .cadastro .container .campos input {
-    border: 2px solid black;
+    /* border: 2px solid rgb(158, 35, 35); */
     border-radius: 5px;
-    height: 6%;
+    height: 5%;
     width: 90%;
 }
+
+#id_botaoCadastro:hover {
+    background-color: rgb(156, 19, 19);
+    color: white;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.alerta_erro{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #7588db 3px solid;
+    padding: 10px;
+    margin-left: 30%;
+    margin-bottom: 40%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }

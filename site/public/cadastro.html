@@ -19,23 +19,32 @@
       </div>
     </div>
     <div class="container">
-      <h1>Cadastro</h1>
+
+      <!-- <div class="mensagem">
+        <h1>Primeira vez por aqui?</h1>
+        <p>Seja bem-vindo, venha fazer parte da comunidade de Karate Shotokan <br>
+        Cadastre-se para ficar por dentro das competições, monitorar sua evolução nos katas e shiai
+      <br><br><br>
+        Já passou por aqui? <a href="login.html">Clique aqui</a></p>
+      </div> -->
+
       <div class="campos">
-        Nome:<br>
+        <h1>Cadastro</h1>
+        <span>Nome:</span> <br>
         <input placeholder="Nome" class="input" id="input_nome" required><br>
-        Sobrenome: <br>
+        <span>Sobrenome:</span> <br>
         <input placeholder="Sobrenome" class="input" id="input_sobrenome" required><br>
         <!-- Data Nascimento: <input type="date" id="input_dtNasc"><br> -->
-        E-mail: <br>
-        <input placeholder="E-mail" class="input" type="email" id="input_email" required><br>
-        Telefone: <br>
-        <input placeholder="Tel()" class="input" type="tel" id="input_telefone" required><br>
-        Senha: <br>
-        <input placeholder="Senha" class="input" type="password" id="input_senha" required><br>
-        Confirme sua senha: <br>
-        <input placeholder="Confirmar Senha" class="input" type="password" id="input_confirmarSenha" required><br>
-        <button class="botao" onclick="cadastrar()">Cadastrar</button><br><br>
-        Já tem login? <a href="login.html">Clique aqui</a>
+        <span>E-mail:</span> <br>
+        <input placeholder="exemplo@exemplo.com" class="input" type="email" id="input_email" required><br>
+        <span>Telefone: </span><br>
+        <input placeholder="DDD XXXXXXXXX" class="input" type="tel" id="input_telefone" required><br>
+        <span>Senha: </span><br>
+        <input placeholder="******" class="input" type="password" id="input_senha" required><br>
+        <span>Confirme sua senha: </span><br>
+        <input placeholder="******" class="input" type="password" id="input_confirmarSenha" required><br><br>
+        <button id="id_botaoCadastro" class="botao" onclick="cadastrar()">Cadastrar</button><br><br>
+        Já passou por aqui? <a href="login.html">Clique aqui</a></p>
         <!-- <div id="div_aguardar" class="loading-div">
           <img src="./assets/imgs/IMAGENS/circle-loading.gif" id="loading-gif" />
         </div> -->
@@ -83,17 +92,43 @@
       nomeVar == "" ||
       sobrenomeVar == "" ||
       emailVar == "" ||
+      telVar == "" ||
       senhaVar == "" ||
       confirmacaoSenhaVar == "" 
     ) {
       cardErro.style.display = "block";
       mensagem_erro.innerHTML =
-        "(Mensagem de erro para todos os campos em branco)";
+        "Todos os campos estão em branco";
 
       // finalizarAguardar();
       return false;
-    } else {
+    } else if (telVar.length < 11 || telVar.length > 11)  {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Insira um telefone válido";
+
+      // finalizarAguardar();
+      return false;
+    } else if (senhaVar != confirmacaoSenhaVar)  {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "As senhas são diferentes!";
+
+      // finalizarAguardar();
+      return false;
+    } else if (emailVar.indexOf('@') < 0 || emailVar.indexOf('.') < 0)  {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Insira um e-mail válido!";
+
+      // finalizarAguardar();
+      return false;
+    } 
+    else {
       setInterval(sumirMensagem, 5000);
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML =
+        "Indo para o login...";
     }
 
     fetch("/usuario/cadastrar", {
