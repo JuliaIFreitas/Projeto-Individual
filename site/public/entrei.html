@@ -20,9 +20,10 @@
             <div class="modalassociacao">
                 <button class="fechar" id="fechar">X</button>
                 <div class="divModalAsso">
-                    <h1>Dados</h1>
+                    <h1>Dados</h1><br>
                     <div class="asso">
-                        <span>Associação:</span><br><input placeholder="Nome da Associação" id="input_associacao"><br><br>
+                        <span>Associação:</span><br><input placeholder="Nome da Associação"
+                            id="input_associacao"><br><br>
                         <span>Faixa:</span> <br>
                         <select class="select" name="" id="">
                             <option value="branca">Branca(7° Kyu)</option>
@@ -42,90 +43,157 @@
                             <option value="preta">Preta(8° Dan)</option>
                             <option value="preta">Preta(9° Dan)</option>
                             <option value="preta">Preta(10° Dan)</option>
-    
+
                         </select><br><br>
-                        <span>Sensei: </span><br><input placeholder="Nome do Sensei" id="input_sensei"><br>
+                        <span>Sensei: </span><br><input placeholder="Nome do Sensei" id="input_sensei"><br><br>
+                        <span>Medalhas: </span><br><input placeholder="Quantidade de Medalhas"
+                            id="input_qtdMedalhas"><br>
                     </div>
                     <button class="botao" onclick="cadastrar()">Cadastrar</button>
                 </div>
             </div>
         </div>
-                <!-- Karate -->
+        <!-- Karate -->
 
-                <div class="container">
-                    <div class="perfil">
-                        <img src="" alt="">
-                        <div class="descricao">
-                            <p>Nome: <br>
-                                Associação: <br>
-                                Sensei: <br>
-                                Faixa: <br>
-                                Medalhas: <br><br>
-                                <button onclick="addDados()">Adicionar Dados</button>
-                            </p>
+        <div class="container">
+            <div class="perfil">
+                <img src="" alt="">
+                <div class="descricao">
+                    <p>
+                        <div id="id_nome">
+                            Nome:
                         </div>
-                    </div>
-                </div>
-                <div class="tela">
-                    <div class="metricas">
-                        <div class="competicao">
-                            <h2>Próxima competição: </h2>
-                            <p><b>Brasileiro:</b> 10/12/2023</p>
-                            <a href="https://www.karatedobrasil.com/">Saiba Mais</a>
-                        </div>
-                        <div class="kata">
-                            <h2>Quantos katas sabe: </h2><br>
-                            <p>
-                                1: Júnior
-                                7: Cheng
-                                13: Karate kid
-                                20: Sr. Miyagi
-                                26: Funakoshi
-                            </p>
-
-                            <button onclick="addkata()">Adicionar Kata</button>
-                            <div id="div_kata"></div>
-                        </div>
-                        <div class="movimentos">
-                            <h2>Competições que já participou: </h2><br>
-                            <p>
-                                1: Júnior
-                                7: Cheng
-                                13: Karate kid
-                                20: Sr. Miyagi
-                                26: Funakoshi
-                            </p>
-                            <button onclick="addComp()">Adicionar Competição</button>
-                        </div>
-                    </div>
-
-                    <div class="graficoKata">
-                        <p>Por saber 8 katas, você atualmente é "Cheng"</p>
-                        <div>
-                            <canvas class="kata" id="arm5"
-                                style="position: relative; width: 100%; height: 90%;"></canvas>
-                        </div>
-                    </div>
-
-                    <div class="janela-modal" id="janela-modal">
-                        <div class="modal">
-                            <button class="fechar" id="fechar">X</button>
-                            <h1>Adicionar Kata</h1>
-                            <p>
-                                Quantos katas você sabe:
-                            </p>
-                            <input class="campo" placeholder="Quantidade de Katas" id="input_qtdKata"><br><br>
-                            <button id="id_botao" class="botao" onclick="avancar()">Avançar</button>
-                            <div id="div_novoKata"></div>
-                            <div id="div_addKata"></div>
-                            <div id="div_finalizarKata"></div>
-                        </div>
-                    </div>
-
-                    <!-- <script src="../src/js/addkata.js"></script> -->
-
+                        Associação: <br>
+                        Sensei: <br>
+                        Faixa: <br>
+                        Medalhas: <br><br>
+                        <button onclick="addDados()">Adicionar Dados</button>
+                    </p>
                 </div>
             </div>
+        </div>
+        <div class="tela">
+            <div class="metricas">
+                <div class="competicao">
+                    <h2>Próxima competição: </h2>
+                    <p><b>Brasileiro:</b> 10/12/2023</p>
+                    <a href="https://www.karatedobrasil.com/">Saiba Mais</a>
+                </div>
+                <!-- <div class="kata">
+                    <h2>Quantos katas sabe: </h2><br>
+                    <ul>
+                        <li>1: Júnior</li>
+                        <li>7: Cheng</li>
+                        <li>13: Karate Kid</li>
+                        <li>20: Sr. Miyagi</li>
+                        <li>26: Funakoshi</li>
+                    </ul>
+                    <p>
+                                1: Júnior
+                                7: Cheng
+                                13: Karate kid
+                                20: Sr. Miyagi
+                                26: Funakoshi
+                            </p>
+
+                    <button onclick="addkata()">Adicionar Kata</button>
+                    <div id="div_kata"></div>
+                </div> -->
+                <!-- <div class="movimentos">
+                    <h2>Competições que já participou: </h2><br>
+                    <p>
+                        1: Júnior
+                        7: Cheng
+                        13: Karate kid
+                        20: Sr. Miyagi
+                        26: Funakoshi
+                    </p>
+                    <button onclick="addComp()">Adicionar Competição</button>
+                </div> -->
+            </div>
+
+            <div class="tabelas">
+                <h2>Quantos katas sabe: </h2><br>
+                <div class="dados">
+                    <div class="junior">
+                        Quantidade de katas 
+                    </div>
+                    
+                    <div class="junior">
+                        1 a 6 
+                    </div>
+
+                    <div class="junior">
+                        7 a 12
+                    </div>
+
+                    <div class="junior">
+                        13 a 19
+                    </div>
+
+                    <div class="junior">
+                        20 a 25
+                    </div>
+
+                    <div class="junior">
+                        26
+                    </div>
+                </div>
+
+                <div class="dados">
+
+                    <div class="junior">
+                        Designação 
+                    </div>
+
+                    <div class="junior">
+                        Júnior 
+                    </div>
+
+                    <div class="junior">
+                        Cheng
+                    </div>
+
+                    <div class="junior">
+                        Karate Kid
+                    </div>
+
+                    <div class="junior">
+                        Sr. Miyagi
+                    </div>
+
+                    <div class="junior">
+                        Funakoshi
+                    </div>
+                </div>
+            </div>
+
+            <div class="graficoKata">
+                <p>Por saber 8 katas, você atualmente é "Cheng"</p>
+                <div>
+                    <canvas class="kata" id="arm5" style="position: relative; width: 100%; height: 90%;"></canvas>
+                </div>
+            </div>
+
+            <div class="janela-modal" id="janela-modal">
+                <div class="modal">
+                    <button class="fechar" id="fechar">X</button>
+                    <h1>Adicionar Kata</h1>
+                    <p>
+                        Quantos katas você sabe:
+                    </p>
+                    <input class="campo" placeholder="Quantidade de Katas" id="input_qtdKata"><br><br>
+                    <button id="id_botao" class="botao" onclick="avancar()">Avançar</button>
+                    <div id="div_novoKata"></div>
+                    <div id="div_addKata"></div>
+                    <div id="div_finalizarKata"></div>
+                </div>
+            </div>
+
+            <!-- <script src="../src/js/addkata.js"></script> -->
+
+        </div>
+    </div>
 </body>
 
 </html>
@@ -134,16 +202,21 @@
 
 <script>
 
-function addDados() {
-    const modal = document.getElementById('modalAsso')
-    modal.classList.add('abrir')
+    var nome = sessionStorage.NOME_USUARIO;
 
-    modal.addEventListener('click', (e) => {
-        if (e.target.id == 'fechar' || e.target.id == 'modalAsso') {
-            modal.classList.remove('abrir')
-        }
-    })
-}
+    id_nome.innerHTML = `Nome: ${nome}`;
+
+
+    function addDados() {
+        const modal = document.getElementById('modalAsso')
+        modal.classList.add('abrir')
+
+        modal.addEventListener('click', (e) => {
+            if (e.target.id == 'fechar' || e.target.id == 'modalAsso') {
+                modal.classList.remove('abrir')
+            }
+        })
+    }
 
     function addkata() {
         const modal = document.getElementById('janela-modal')
