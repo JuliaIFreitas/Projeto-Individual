@@ -1281,3 +1281,74 @@
     font-size: 20px;
     cursor: pointer;
 }
+
+/* ASSOCIAÇÃO */
+.modalAsso {
+    width: 60%;
+    height: 90%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow: auto;
+    margin: 2% 20%;
+    border-radius: 5%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+}
+
+.modalAsso .modalassociacao {
+    width: 50%;
+    min-width: 400px;
+    min-height: 300px;
+    background-color: rgba(235, 144, 144, 0.75);
+    backdrop-filter: blur(10px);
+    height: 70%;
+    padding: 10%;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+}
+
+/* .modalAsso .modalassociacao img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+} */
+
+.modalAsso.abrir {
+    display: flex;
+}
+
+@keyframes abrir {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -20px, -5px);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.abrir .modalAsso {
+    animation: abrirfaixa 0.5s;
+}
+
+.fechar {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 8%;
+    height: 8%;
+    border-radius: 50%;
+    border: 0;
+    background-color: rgb(116, 54, 54);
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
