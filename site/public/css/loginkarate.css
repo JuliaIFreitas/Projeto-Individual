@@ -5,7 +5,7 @@ body {
 .login {
     width: 100%;
     height: 700px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -14,14 +14,14 @@ body {
     width: 80%;
     height: 100%;
     margin: 0 10%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .login .container .camposLogin {
-    border: 1px solid green;
+    /* border: 1px solid green; */
     width: 30%;
     height: 60%;
     /* display: flex; */
@@ -31,25 +31,34 @@ body {
 }
 
 .login .container .camposLogin h1 {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     display: flex;
     justify-content: center;
+    font-size: 33px;
+    color: rgb(68, 36, 33);
 }
 
 .login .container .camposLogin .inputs {
     /* display: flex; */
     justify-content: center;
-    border: 1px solid saddlebrown;
+    /* border: 1px solid saddlebrown; */
     height: 40%;
     width: 60%;
     margin: 15% 20%;
     font-size: 20px;
 }
 
+.login .container .camposLogin span {
+    /* border: 2px solid salmon; */
+    color: rgb(109, 54, 49);
+    font-weight: bold;
+}
+
 .login .container .camposLogin input {
-    border: 2px solid palegreen;
-    height: 15%;
+    /* border: 2px solid palegreen; */
+    height: 18%;
     border-radius: 5px;
+    width: 90%;
 }
 
 .login .container .camposLogin .botao {
@@ -57,4 +66,37 @@ body {
     width: 50%;
     height: 10%;
     margin: 0 25%;
+    border-radius: 10px;
+    font-size: 17px;
+    background-color: rgb(224, 114, 104);
 }
+
+#id_botaoLogin:hover {
+    background-color: rgb(156, 19, 19);
+    color: white;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.alerta_erro{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #7588db 3px solid;
+    padding: 10px;
+    margin-left: 30%;
+    margin-bottom: 40%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }

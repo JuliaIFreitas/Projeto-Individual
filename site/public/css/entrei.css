@@ -43,6 +43,14 @@ body {
     padding: 1%;
 }
 
+.arm .container .perfil .descricao button {
+    border: 1px solid purple;
+    width: 80%;
+    margin: 0 10%;
+    background-color: rgb(214, 143, 143);
+    padding: 1%;
+}
+
 .arm .tela {
     border: 2px solid purple;
     width: 100%;
@@ -66,7 +74,15 @@ body {
 
 .arm .tela .metricas p {
     font-size: 17px;
-    border: 1px solid green;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+
+.arm .tela .metricas .movimentos p {
+    font-size: 17px;
+    border: 1px solid white;
+    margin: 0;
     display: flex;
     justify-content: center;
 }
