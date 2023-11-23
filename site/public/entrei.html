@@ -8,19 +8,19 @@
     <link rel="stylesheet" href="./css/entrei.css">
     <link rel="stylesheet" href="./css/modal.css">
     <!-- <script src="../src/js/script.js"></script> -->
-    <script src="../src/js/entrei.js"></script>
+    <!-- <script src="../src/js/entrei.js"></script> -->
 </head>
 
 <body>
 
-    <script src="/site/src/js/login.js"></script>
+    <!-- <script src="/site/src/js/login.js"></script> -->
 
     <div class="arm">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
-              <span id="mensagem_erro"></span>
+                <span id="mensagem_erro"></span>
             </div>
-          </div>
+        </div>
 
         <div class="modalAsso" id="modalAsso">
             <div class="modalassociacao">
@@ -69,10 +69,13 @@
                     <div id="id_nome">
                         Nome:
                     </div>
-                    Associação: <br>
-                    Sensei: <br>
-                    Faixa: <br>
-                    Medalhas: <br><br>
+
+                    <div id="id_dados">
+                        Associação: <br>
+                        Sensei: <br>
+                        Faixa: <br>
+                        Medalhas: <br><br>
+                    </div>
                     <button onclick="addDados()">Adicionar Dados</button>
                     </p>
                 </div>
@@ -207,6 +210,109 @@
 
 <script>
 
+    //   Colocando o nome do usuário
+    var nome = sessionStorage.NOME_USUARIO;
+
+    id_nome.innerHTML = `Nome: ${nome}`;
+
+    // Dados do perfil
+    function atualizarDados() {
+        // aguardar();
+
+        var nomeAssoVar = input_associacao.value;
+        var faixaVar = id_select.value;
+        var nomeSenseiVar = input_sensei.value;
+        var medalhasVar = input_qtdMedalhas.value;
+
+        if (
+            nomeAssoVar == "" ||
+            faixaVar == "" ||
+            nomeSenseiVar == "" ||
+            medalhasVar == ""
+        ) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Todos os campos estão em branco";
+
+            // finalizarAguardar();
+            return false;
+        } else if (medalhasVar < 0) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Insira uma quantidade válida";
+
+            // finalizarAguardar();
+            return false;
+        } else {
+            setInterval(sumirMensagem, 5000);
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Atualizando dados...";
+        }
+
+        fetch("/dash/atualizarDados", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                nomeAssoServer: nomeAssoVar,
+                faixaServer: faixaVar,
+                nomeSenseiServer: nomeSenseiVar,
+                medalhasServer: medalhasVar
+
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+                        sessionStorage.NOMEASSO_DADOS = json.nomeAsso;
+                        sessionStorage.FAIXA_DADOS = json.faixa;
+                        sessionStorage.NOMESENSEI_DADOS = json.nomeSensei;
+                        sessionStorage.MEDALHAS_DADOS = json.medalhas;
+
+                        setTimeout(() => {
+                        cardErro.style.display = "block";
+                        mensagem_erro.innerHTML =
+                            "Atualizando dados...";
+                    }, "2000");
+                    });
+
+                } else {
+                    throw "Houve um erro ao tentar atualizar os dados!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            })
+        return false;
+    }
+
+    //  Colocando o resto dos dados
+    var nomeAsso = sessionStorage.NOMEASSO_DADOS;
+    var nomeSensei = sessionStorage.NOMESENSEI_DADOS;
+    var faixa = sessionStorage.FAIXA_DADOS;
+    var medalhas = sessionStorage.MEDALHAS_DADOS;
+
+    id_dados.innerHTML = `
+    Associação: ${nomeAsso} <br>
+    Sensei: ${nomeSensei} <br>
+    Faixa: ${faixa} <br>
+    Medalhas: ${medalhas} <br><br>
+    `;
+
+    function sumirMensagem() {
+        cardErro.style.display = "none";
+    }
+
+    // Dados para o gráfico de kata
     function addKata() {
         // aguardar();
 
@@ -215,7 +321,7 @@
 
         if (
             // nomeKataVar == "" ||
-            qtdMovimentosVar == "" 
+            qtdMovimentosVar == ""
         ) {
             cardErro.style.display = "block";
             mensagem_erro.innerHTML =
@@ -267,11 +373,6 @@
     function sumirMensagem() {
         cardErro.style.display = "none";
     }
-
-    //   Colocando o nome do usuário
-    var nome = sessionStorage.NOME_USUARIO;
-
-    id_nome.innerHTML = `Nome: ${nome}`;
 
 
     // Modal para adicionar dados

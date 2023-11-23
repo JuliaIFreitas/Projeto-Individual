@@ -18,7 +18,7 @@ function atualizarDados() {
 
         // finalizarAguardar();
         return false;
-    } else if (qtdMovimentosVar < 0) {
+    } else if (medalhasVar < 0) {
         cardErro.style.display = "block";
         mensagem_erro.innerHTML =
             "Insira uma quantidade válida";
@@ -39,7 +39,7 @@ function atualizarDados() {
         },
         body: JSON.stringify({
             nomeAssoServer: nomeAssoVar,
-            faixaServer: faixaVar,
+            // faixaServer: faixaVar,
             nomeSenseiServer: nomeSenseiVar,
             medalhasServer: medalhasVar
 
@@ -50,7 +50,7 @@ function atualizarDados() {
 
             if (resposta.ok) {
                 setTimeout(() => {
-                    window.location = "entrei.html";
+                    // window.location = "entrei.html";
                 }, "2000");
             } else {
                 throw "Houve um erro ao tentar atualizar os dados!";
