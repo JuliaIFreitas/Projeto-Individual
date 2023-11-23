@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/entrei.css">
     <link rel="stylesheet" href="./css/modal.css">
     <!-- <script src="../src/js/script.js"></script> -->
+    <script src="../src/js/entrei.js"></script>
 </head>
 
 <body>
@@ -15,6 +16,11 @@
     <script src="/site/src/js/login.js"></script>
 
     <div class="arm">
+        <div class="alerta_erro">
+            <div class="card_erro" id="cardErro">
+              <span id="mensagem_erro"></span>
+            </div>
+          </div>
 
         <div class="modalAsso" id="modalAsso">
             <div class="modalassociacao">
@@ -25,7 +31,7 @@
                         <span>Associação:</span><br><input placeholder="Nome da Associação"
                             id="input_associacao"><br><br>
                         <span>Faixa:</span> <br>
-                        <select class="select" name="" id="">
+                        <select class="select" name="" id="id_select">
                             <option value="branca">Branca(7° Kyu)</option>
                             <option value="amarela">Amarela(6° Kyu)</option>
                             <option value="vermelha">Vermelha(5° Kyu)</option>
@@ -49,7 +55,7 @@
                         <span>Medalhas: </span><br><input placeholder="Quantidade de Medalhas"
                             id="input_qtdMedalhas"><br>
                     </div>
-                    <button class="botao" onclick="cadastrar()">Cadastrar</button>
+                    <button class="botao" onclick="atualizarDados()">Adicionar</button>
                 </div>
             </div>
         </div>
@@ -60,14 +66,14 @@
                 <img src="" alt="">
                 <div class="descricao">
                     <p>
-                        <div id="id_nome">
-                            Nome:
-                        </div>
-                        Associação: <br>
-                        Sensei: <br>
-                        Faixa: <br>
-                        Medalhas: <br><br>
-                        <button onclick="addDados()">Adicionar Dados</button>
+                    <div id="id_nome">
+                        Nome:
+                    </div>
+                    Associação: <br>
+                    Sensei: <br>
+                    Faixa: <br>
+                    Medalhas: <br><br>
+                    <button onclick="addDados()">Adicionar Dados</button>
                     </p>
                 </div>
             </div>
@@ -79,37 +85,6 @@
                     <p><b>Brasileiro:</b> 10/12/2023</p>
                     <a href="https://www.karatedobrasil.com/">Saiba Mais</a>
                 </div>
-                <!-- <div class="kata">
-                    <h2>Quantos katas sabe: </h2><br>
-                    <ul>
-                        <li>1: Júnior</li>
-                        <li>7: Cheng</li>
-                        <li>13: Karate Kid</li>
-                        <li>20: Sr. Miyagi</li>
-                        <li>26: Funakoshi</li>
-                    </ul>
-                    <p>
-                                1: Júnior
-                                7: Cheng
-                                13: Karate kid
-                                20: Sr. Miyagi
-                                26: Funakoshi
-                            </p>
-
-                    <button onclick="addkata()">Adicionar Kata</button>
-                    <div id="div_kata"></div>
-                </div> -->
-                <!-- <div class="movimentos">
-                    <h2>Competições que já participou: </h2><br>
-                    <p>
-                        1: Júnior
-                        7: Cheng
-                        13: Karate kid
-                        20: Sr. Miyagi
-                        26: Funakoshi
-                    </p>
-                    <button onclick="addComp()">Adicionar Competição</button>
-                </div> -->
             </div>
 
             <div class="tabelas">
@@ -117,13 +92,13 @@
                 <div class="dados">
                     <div class="junior">
                         <div class="titulo">
-                            Quantidade de katas 
+                            Quantidade de katas
                         </div>
                     </div>
-                    
+
                     <div class="junior">
                         <div class="primeira">
-                            1 a 6 
+                            1 a 6
                         </div>
                     </div>
 
@@ -156,13 +131,13 @@
 
                     <div class="junior">
                         <div class="titulo">
-                            Designação 
+                            Designação
                         </div>
                     </div>
 
                     <div class="junior">
                         <div class="primeira">
-                            Júnior 
+                            Júnior
                         </div>
                     </div>
 
@@ -190,8 +165,8 @@
                         </div>
                     </div>
                 </div>
-                          <button onclick="addkata()">Adicionar Kata</button>
-            <div id="div_kata"></div>
+                <button id="id_botaoKata" onclick="adicionarkata()">Adicionar Kata</button>
+                <div id="div_kata"></div>
             </div>
 
             <div class="graficoKata">
@@ -232,11 +207,74 @@
 
 <script>
 
+    function addKata() {
+        // aguardar();
+
+        // var nomeKataVar = input_nomeKata.value;
+        var qtdMovimentosVar = input_qntSabe.value;
+
+        if (
+            // nomeKataVar == "" ||
+            qtdMovimentosVar == "" 
+        ) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Todos os campos estão em branco";
+
+            // finalizarAguardar();
+            return false;
+        } else if (qtdMovimentosVar < 0) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Insira uma quantidade válida";
+
+            // finalizarAguardar();
+            return false;
+        } else {
+            setInterval(sumirMensagem, 5000);
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Cadastrando kata...";
+        }
+
+        fetch("/dash/addKata", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                // nomeKataServer: nomeKataVar,
+                qtdMovimentosServer: qtdMovimentosVar
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    setTimeout(() => {
+                        window.location = "entrei.html";
+                    }, "2000");
+                } else {
+                    throw "Houve um erro ao tentar cadastrar o kata!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            })
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none";
+    }
+
+    //   Colocando o nome do usuário
     var nome = sessionStorage.NOME_USUARIO;
 
     id_nome.innerHTML = `Nome: ${nome}`;
 
 
+    // Modal para adicionar dados
     function addDados() {
         const modal = document.getElementById('modalAsso')
         modal.classList.add('abrir')
@@ -248,7 +286,9 @@
         })
     }
 
-    function addkata() {
+    // Modal para adicionar kata
+
+    function adicionarkata() {
         const modal = document.getElementById('janela-modal')
         modal.classList.add('abrir')
 
@@ -302,6 +342,8 @@
         //     localStorage.setItem('valuenumber', number);
         // })
     }
+
+    // Gráfico dos katas
 
     const ctx = document.getElementById('arm5');
 

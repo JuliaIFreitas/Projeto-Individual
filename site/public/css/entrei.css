@@ -135,7 +135,7 @@ body {
 
 .arm .tela .tabelas {
     border: 2px solid gold;
-    height: 40%;
+    height: 35%;
 }
 
 .arm .tela .tabelas .dados {
@@ -162,6 +162,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .arm .tela .tabelas .junior .primeira {
@@ -211,13 +213,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(104, 19, 19);
+    background-color: rgb(158, 29, 29);
 }
 
 .arm .tela .tabelas button {
     width: 15%;
     height: 15%;
-    /* margin: 1% 5%; */
+    margin: 1% 45%;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: rgb(243, 174, 174);
+}
+
+#id_botaoKata:hover {
+    background-color: rgb(129, 20, 20);
+    color: white;
+    transition: 0.5s;
+    opacity: 0.7;
 }
 
 .arm .tela .graficoKata {
@@ -397,3 +409,26 @@ body {
     width: 68%;
     margin: 0 16%;
 }
+
+.alerta_erro{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.card_erro {
+    display: none;
+    background-color: #fff;
+    color: black;
+    width: 230px;
+    position: fixed;
+    border-radius: 4px;
+    border: #7588db 3px solid;
+    padding: 10px;
+    margin-left: 30%;
+    margin-bottom: 40%;
+  }
+  
+  .card_erro #mensagem_erro{
+    font-weight: 500;
+    font-size: 20px;
+  }

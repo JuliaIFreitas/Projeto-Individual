@@ -17,6 +17,7 @@ var indexRouter = require("./src/routes/index");
 // Minhas rotas
 // var cadastrokarateRouter = require("./src/routes/karate");
 var usuarioRouter = require("./src/routes/usuario");
+var dashRouter = require("./src/routes/dash");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -32,6 +33,7 @@ app.use("/", indexRouter);
 // app.use("/empresas", empresasRouter);
 // app.use("/karate", cadastrokarateRouter);
 app.use("/usuario", usuarioRouter);
+app.use("/dash", dashRouter);
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n
