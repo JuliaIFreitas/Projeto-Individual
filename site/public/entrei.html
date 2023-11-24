@@ -393,6 +393,10 @@
         cardErro.style.display = "none";
     }
 
+
+    var listaKata = [];
+    var listaQtdMovimentos = []
+
     // Dados para o gráfico de kata
     function addKata() {
         // aguardar();
@@ -418,6 +422,9 @@
             // finalizarAguardar();
             return false;
         } else {
+            listaKata.push(nomeKataVar);
+            listaQtdMovimentos.push(qtdMovimentosVar);
+
             setInterval(sumirMensagem, 5000);
             cardErro.style.display = "block";
             mensagem_erro.innerHTML =
@@ -438,9 +445,15 @@
                 console.log("resposta: ", resposta);
 
                 if (resposta.ok) {
-                    setTimeout(() => {
-                        window.location = "entrei.html";
-                    }, "2000");
+
+                    setInterval(sumirMensagem, 5000);
+                    cardErro.style.display = "block";
+                    mensagem_erro.innerHTML =
+                        "Kata cadatrado com sucesso";
+
+                    // setTimeout(() => {
+                    //     window.location = "entrei.html";
+                    // }, "2000");
                 } else {
                     throw "Houve um erro ao tentar cadastrar o kata!";
                 }
@@ -481,9 +494,9 @@
         })
     }
 
-    var listaKata = [];
-    var qtdKata = ``;
-    var nomeKata = ``;
+    // var listaKata = [];
+    // var qtdKata = ``;
+    // var nomeKata = ``;
 
     // function avancar() {
     //     qtdKata = Number(input_qtdKata.value);
