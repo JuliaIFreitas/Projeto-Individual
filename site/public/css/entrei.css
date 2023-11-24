@@ -1,8 +1,8 @@
 h2 {
     display: flex;
     justify-content: center;
-    border: 2px red solid;
-    margin: 1%;
+    /* border: 2px red solid; */
+    margin: 0;
 }
 
 body {
@@ -62,7 +62,7 @@ body {
 
 .arm .tela .metricas {
     width: 100%;
-    height: 20%;
+    height: 25%;
     border: 2px solid green;
     display: flex;
 }
@@ -75,11 +75,126 @@ body {
     color: white;
 }
 
+/* .arm .tela .metricas .competicao .data p {
+    width: 100%;
+} */
+
+.arm .tela .metricas .competicao .data {
+    border: 2px solid blue;
+    height: 80%;
+    /* margin: ; */
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.arm .tela .metricas .tabelas {
+    border: 2px solid gold;
+    height: 100%;
+    width: 75%;
+}
+
+.arm .tela .metricas .tabelas .dados {
+    border: 2px solid purple;
+    width: 75%;
+    height: 25%;
+    display: flex;
+    margin: 0 12.5%;
+}
+
+.arm .tela .metricas .tabelas .junior {
+    border: 2px solid green;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.arm .tela .metricas .tabelas .junior .titulo {
+    /* border: 2px solid black; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.arm .tela .metricas .tabelas .junior .primeira {
+    /* border: 2px solid orange; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243, 174, 174);
+}
+
+.arm .tela .metricas .tabelas .junior .segunda {
+    /* border: 2px solid orange; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 130, 130);
+}
+
+.arm .tela .metricas .tabelas .junior .terceira {
+    /* border: 2px solid orange; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(218, 86, 86);
+}
+
+.arm .tela .metricas .tabelas .junior .quarta {
+    /* border: 2px solid orange; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(155, 48, 48);
+}
+
+.arm .tela .metricas .tabelas .junior .quinta {
+    /* border: 2px solid orange; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(158, 29, 29);
+}
+
+.arm .tela .metricas .tabelas button {
+    width: 25%;
+    height: 15%;
+    margin: 1.5% 37.5%;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: rgb(243, 174, 174);
+}
+
+#id_botaoKata:hover {
+    background-color: rgb(129, 20, 20);
+    color: white;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+
 .arm .tela .metricas p {
     font-size: 17px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .arm .tela .metricas .movimentos p {
@@ -131,105 +246,6 @@ body {
     height: 100%;
     background-color: rgb(148, 86, 86);
     color: white;
-}
-
-.arm .tela .tabelas {
-    border: 2px solid gold;
-    height: 35%;
-}
-
-.arm .tela .tabelas .dados {
-    border: 2px solid purple;
-    width: 60%;
-    height: 20%;
-    display: flex;
-    margin: 0 20%;
-}
-
-.arm .tela .tabelas .junior {
-    border: 2px solid green;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-}
-
-.arm .tela .tabelas .junior .titulo {
-    /* border: 2px solid black; */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: bold;
-}
-
-.arm .tela .tabelas .junior .primeira {
-    /* border: 2px solid orange; */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(243, 174, 174);
-}
-
-.arm .tela .tabelas .junior .segunda {
-    /* border: 2px solid orange; */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(230, 130, 130);
-}
-
-.arm .tela .tabelas .junior .terceira {
-    /* border: 2px solid orange; */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(218, 86, 86);
-}
-
-.arm .tela .tabelas .junior .quarta {
-    /* border: 2px solid orange; */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(155, 48, 48);
-}
-
-.arm .tela .tabelas .junior .quinta {
-    /* border: 2px solid orange; */
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(158, 29, 29);
-}
-
-.arm .tela .tabelas button {
-    width: 15%;
-    height: 15%;
-    margin: 1% 45%;
-    font-size: 17px;
-    border-radius: 10px;
-    background-color: rgb(243, 174, 174);
-}
-
-#id_botaoKata:hover {
-    background-color: rgb(129, 20, 20);
-    color: white;
-    transition: 0.5s;
-    opacity: 0.7;
 }
 
 .arm .tela .graficoKata {
@@ -343,10 +359,11 @@ body {
 .janela-modal .modal .botao {
     border: 1px solid orange;
     width: 25%;
-    height: 9%;
+    height: 10%;
+    margin: 0 37.5%;
     border-radius: 10px;
     font-size: 15px;
-    background-color: rgb(217, 185, 247);
+    background-color: rgb(181, 134, 226);
 }
 
 .campo {

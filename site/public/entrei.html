@@ -9,6 +9,80 @@
     <link rel="stylesheet" href="./css/modal.css">
     <!-- <script src="../src/js/script.js"></script> -->
     <!-- <script src="../src/js/entrei.js"></script> -->
+
+    <style>
+        /* ASSOCIAÇÃO */
+        .modalAsso {
+            width: 60%;
+            height: 90%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            overflow: auto;
+            margin: 2% 20%;
+            border-radius: 5%;
+            box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 1000px rgba(0, 0, 0, 0.491);
+        }
+
+        .modalAsso .modalassociacao {
+            width: 50%;
+            min-width: 400px;
+            min-height: 300px;
+            background-color: rgba(235, 144, 144, 0.75);
+            backdrop-filter: blur(10px);
+            height: 70%;
+            padding: 10%;
+            border-radius: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+        }
+
+        /* .modalAsso .modalassociacao img {
+    width: 120%;
+    height: 100%;
+    cursor: pointer;
+} */
+
+        .modalAsso.abrir {
+            display: flex;
+        }
+
+        @keyframes abrir {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -20px, -5px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        .abrir .modalAsso {
+            animation: abrirfaixa 0.5s;
+        }
+
+        .fechar {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 8%;
+            height: 8%;
+            border-radius: 50%;
+            border: 0;
+            background-color: rgb(116, 54, 54);
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -85,91 +159,94 @@
             <div class="metricas">
                 <div class="competicao">
                     <h2>Próxima competição: </h2>
-                    <p><b>Brasileiro:</b> 10/12/2023</p>
-                    <a href="https://www.karatedobrasil.com/">Saiba Mais</a>
-                </div>
-            </div>
-
-            <div class="tabelas">
-                <h2>Quantos katas sabe: </h2><br>
-                <div class="dados">
-                    <div class="junior">
-                        <div class="titulo">
-                            Quantidade de katas
-                        </div>
-                    </div>
-
-                    <div class="junior">
-                        <div class="primeira">
-                            1 a 6
-                        </div>
-                    </div>
-
-                    <div class="junior">
-                        <div class="segunda">
-                            7 a 12
-                        </div>
-                    </div>
-
-                    <div class="junior">
-                        <div class="terceira">
-                            13 a 19
-                        </div>
-                    </div>
-
-                    <div class="junior">
-                        <div class="quarta">
-                            20 a 25
-                        </div>
-                    </div>
-
-                    <div class="junior">
-                        <div class="quinta">
-                            26
-                        </div>
+                    <div class="data">
+                        <p><b>Brasileiro:</b> 10/12/2023</p>
+                        <a href="https://www.karatedobrasil.com/">Saiba Mais</a>
                     </div>
                 </div>
 
-                <div class="dados">
 
-                    <div class="junior">
-                        <div class="titulo">
-                            Designação
+                <div class="tabelas">
+                    <h2>Quantos katas sabe: </h2><br>
+                    <div class="dados">
+                        <div class="junior">
+                            <div class="titulo">
+                                Quantidade de katas
+                            </div>
+                        </div>
+
+                        <div class="junior">
+                            <div class="primeira">
+                                1 a 6
+                            </div>
+                        </div>
+
+                        <div class="junior">
+                            <div class="segunda">
+                                7 a 12
+                            </div>
+                        </div>
+
+                        <div class="junior">
+                            <div class="terceira">
+                                13 a 19
+                            </div>
+                        </div>
+
+                        <div class="junior">
+                            <div class="quarta">
+                                20 a 25
+                            </div>
+                        </div>
+
+                        <div class="junior">
+                            <div class="quinta">
+                                26
+                            </div>
                         </div>
                     </div>
 
-                    <div class="junior">
-                        <div class="primeira">
-                            Júnior
-                        </div>
-                    </div>
+                    <div class="dados">
 
-                    <div class="junior">
-                        <div class="segunda">
-                            Cheng
+                        <div class="junior">
+                            <div class="titulo">
+                                Designação
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="junior">
-                        <div class="terceira">
-                            Karate Kid
+                        <div class="junior">
+                            <div class="primeira">
+                                Júnior
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="junior">
-                        <div class="quarta">
-                            Sr. Miyagi
+                        <div class="junior">
+                            <div class="segunda">
+                                Cheng
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="junior">
-                        <div class="quinta">
-                            Funakoshi
+                        <div class="junior">
+                            <div class="terceira">
+                                Karate Kid
+                            </div>
+                        </div>
+
+                        <div class="junior">
+                            <div class="quarta">
+                                Sr. Miyagi
+                            </div>
+                        </div>
+
+                        <div class="junior">
+                            <div class="quinta">
+                                Funakoshi
+                            </div>
                         </div>
                     </div>
+                    <button id="id_botaoKata" onclick="adicionarkata()">Adicionar Kata</button>
+                    <div id="div_kata"></div>
                 </div>
-                <button id="id_botaoKata" onclick="adicionarkata()">Adicionar Kata</button>
-                <div id="div_kata"></div>
             </div>
 
             <div class="graficoKata">
@@ -187,14 +264,18 @@
                 <div class="modal">
                     <button class="fechar" id="fechar">X</button>
                     <h1>Adicionar Kata</h1>
-                    <p>
-                        Quantos katas você sabe:
-                    </p>
-                    <input class="campo" placeholder="Quantidade de Katas" id="input_qtdKata"><br><br>
-                    <button id="id_botao" class="botao" onclick="avancar()">Avançar</button>
-                    <div id="div_novoKata"></div>
-                    <div id="div_addKata"></div>
-                    <div id="div_finalizarKata"></div>
+
+                    <p>Digite o nome do kata que quer adicionar: </p>
+                    <input class="campo" placeholder="Nome do Kata" id="input_nomeKata"><br><br>
+
+                    <p>Digite quantos movimentos sabe dele: </p>
+                    <input class="campo" placeholder="Número de movimentos" type="number" id="input_qntSabe"><br><br>
+
+                    <button class="botao" onclick="addKata()">Adicionar</button>
+
+                    <!-- <div id="div_novoKata"></div> -->
+                    <!-- <div id="div_addKata"></div> -->
+                    <!-- <div id="div_finalizarKata"></div> -->
                 </div>
             </div>
 
@@ -279,10 +360,10 @@
                         sessionStorage.MEDALHAS_DADOS = json.medalhas;
 
                         setTimeout(() => {
-                        cardErro.style.display = "block";
-                        mensagem_erro.innerHTML =
-                            "Atualizando dados...";
-                    }, "2000");
+                            cardErro.style.display = "block";
+                            mensagem_erro.innerHTML =
+                                "Atualizando dados...";
+                        }, "2000");
                     });
 
                 } else {
@@ -316,11 +397,11 @@
     function addKata() {
         // aguardar();
 
-        // var nomeKataVar = input_nomeKata.value;
+        var nomeKataVar = input_nomeKata.value;
         var qtdMovimentosVar = input_qntSabe.value;
 
         if (
-            // nomeKataVar == "" ||
+            nomeKataVar == "" ||
             qtdMovimentosVar == ""
         ) {
             cardErro.style.display = "block";
@@ -349,7 +430,7 @@
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                // nomeKataServer: nomeKataVar,
+                nomeKataServer: nomeKataVar,
                 qtdMovimentosServer: qtdMovimentosVar
             }),
         })
@@ -404,45 +485,45 @@
     var qtdKata = ``;
     var nomeKata = ``;
 
-    function avancar() {
-        qtdKata = Number(input_qtdKata.value);
-        // nomeKata = input_nomeKata.value;
-        // listaKata.push(nomeKata);
+    // function avancar() {
+    //     qtdKata = Number(input_qtdKata.value);
+    // nomeKata = input_nomeKata.value;
+    // listaKata.push(nomeKata);
 
-        for (posicao = 0; posicao < qtdKata; posicao++) {
-            div_novoKata.innerHTML += `
-            <p>Digite o nome do kata: </p>
-            <input class="campo" placeholder="Nome do Kata" id="input_nomeKata"><br><br>
-            `;
-        }
+    // for (posicao = 0; posicao < qtdKata; posicao++) {
+    // div_novoKata.innerHTML += `
+    //     <p>Digite o nome do kata que quer adicionar: </p>
+    //     <input class="campo" placeholder="Nome do Kata" id="input_nomeKata"><br><br>
+    //     `;
+    // }
 
-        div_addKata.innerHTML = `
-        <button class="botao" onclick="continuar()">Continuar</button>   
-        `;
-    }
+    //     div_addKata.innerHTML = `
+    //     <button class="botao" onclick="continuar()">Continuar</button>   
+    //     `;
+    // }
 
-    function continuar() {
+    // function continuar() {
 
-        nomeKata = input_nomeKata.value;
-        listaKata.push(nomeKata);
+    //     nomeKata = input_nomeKata.value;
+    //     listaKata.push(nomeKata);
 
-        for (posicao = 0; posicao < qtdKata; posicao++) {
-            div_novoKata.innerHTML += `
-            <p>Digite quantos movimentos sabe: </p><input class="campo" placeholder="Número de movimentos" type="number" id="input_qntSabe"><br><br>
-            `;
-        }
+    //     for (posicao = 0; posicao < qtdKata; posicao++) {
+    //         div_novoKata.innerHTML += `
+    //         <p>Digite quantos movimentos sabe: </p><input class="campo" placeholder="Número de movimentos" type="number" id="input_qntSabe"><br><br>
+    //         `;
+    //     }
 
-        div_finalizarKata.innerHTML = `
-        <button class="botao" onclick="addKata()">Adicionar</button>   
-        `;
+    //     div_finalizarKata.innerHTML = `
+    //     <button class="botao" onclick="addKata()">Adicionar</button>   
+    //     `;
 
-        // var btn = document.querySelector("#id_botao");
+    // var btn = document.querySelector("#id_botao");
 
-        // btn.addEventListener("click", function () {
-        //     var number = document.querySelector("#input_qntSabe").value;
-        //     localStorage.setItem('valuenumber', number);
-        // })
-    }
+    // btn.addEventListener("click", function () {
+    //     var number = document.querySelector("#input_qntSabe").value;
+    //     localStorage.setItem('valuenumber', number);
+    // })
+    // }
 
     // Gráfico dos katas
 
