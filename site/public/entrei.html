@@ -7,6 +7,7 @@
     <title>ENTREI - JULIA INADA DE FREITAS</title>
     <link rel="stylesheet" href="./css/entrei.css">
     <link rel="stylesheet" href="./css/modal.css">
+    <!-- <script src="../src/js/addkata.js"></script> -->
     <!-- <script src="../src/js/script.js"></script> -->
     <!-- <script src="../src/js/entrei.js"></script> -->
 
@@ -157,45 +158,45 @@
         </div>
         <div class="tela">
             <div class="metricas">
-                <div class="competicao">
+                <!-- <div class="competicao">
                     <h2>Próxima competição: </h2>
                     <div class="data">
                         <p><b>Brasileiro:</b> 10/12/2023</p>
                         <a href="https://www.karatedobrasil.com/">Saiba Mais</a>
                     </div>
-                </div>
+                </div> -->
 
 
                 <div class="tabelas">
-                    <h2>Quantos katas sabe: </h2><br>
+                    <h2>Treinos da semana: </h2><br>
                     <div class="dados">
                         <div class="junior">
                             <div class="titulo">
-                                Quantidade de katas
+                                Quantidade de treinos
                             </div>
                         </div>
 
                         <div class="junior">
                             <div class="primeira">
-                                1 a 6
+                                1
                             </div>
                         </div>
 
                         <div class="junior">
                             <div class="segunda">
-                                7 a 12
+                                2 ou 3
                             </div>
                         </div>
 
                         <div class="junior">
                             <div class="terceira">
-                                13 a 19
+                                4 a 6
                             </div>
                         </div>
 
                         <div class="junior">
                             <div class="quarta">
-                                20 a 25
+                                7 a 12
                             </div>
                         </div>
 
@@ -244,7 +245,10 @@
                             </div>
                         </div>
                     </div>
-                    <button id="id_botaoKata" onclick="adicionarkata()">Adicionar Kata</button>
+                    <p>Digite o dia e o horário do treino: </p>
+                    <input class="campo" placeholder="Dia do treino" id="input_diaTreino">
+                    <input class="campo" placeholder="Hora do treino" id="input_horaTreino"><br><br>
+                    <button id="id_botaoKata" onclick="adicionarTreino()">Adicionar Treino</button>
                     <div id="div_kata"></div>
                 </div>
             </div>
@@ -258,29 +262,7 @@
                         <canvas class="kata" id="arm5" style="position: relative; width: 100%; height: 100%;"></canvas>
                     </div>
                 </div>
-            </div>
-
-            <div class="janela-modal" id="janela-modal">
-                <div class="modal">
-                    <button class="fechar" id="fechar">X</button>
-                    <h1>Adicionar Kata</h1>
-
-                    <p>Digite o nome do kata que quer adicionar: </p>
-                    <input class="campo" placeholder="Nome do Kata" id="input_nomeKata"><br><br>
-
-                    <p>Digite quantos movimentos sabe dele: </p>
-                    <input class="campo" placeholder="Número de movimentos" type="number" id="input_qntSabe"><br><br>
-
-                    <button class="botao" onclick="addKata()">Adicionar</button>
-
-                    <!-- <div id="div_novoKata"></div> -->
-                    <!-- <div id="div_addKata"></div> -->
-                    <!-- <div id="div_finalizarKata"></div> -->
-                </div>
-            </div>
-
-            <!-- <script src="../src/js/addkata.js"></script> -->
-
+            </div>        
         </div>
     </div>
 </body>
@@ -394,81 +376,6 @@
     }
 
 
-    var listaKata = [];
-    var listaQtdMovimentos = []
-
-    // Dados para o gráfico de kata
-    function addKata() {
-        // aguardar();
-
-        var nomeKataVar = input_nomeKata.value;
-        var qtdMovimentosVar = input_qntSabe.value;
-
-        if (
-            nomeKataVar == "" ||
-            qtdMovimentosVar == ""
-        ) {
-            cardErro.style.display = "block";
-            mensagem_erro.innerHTML =
-                "Todos os campos estão em branco";
-
-            // finalizarAguardar();
-            return false;
-        } else if (qtdMovimentosVar < 0) {
-            cardErro.style.display = "block";
-            mensagem_erro.innerHTML =
-                "Insira uma quantidade válida";
-
-            // finalizarAguardar();
-            return false;
-        } else {
-            listaKata.push(nomeKataVar);
-            listaQtdMovimentos.push(qtdMovimentosVar);
-
-            setInterval(sumirMensagem, 5000);
-            cardErro.style.display = "block";
-            mensagem_erro.innerHTML =
-                "Cadastrando kata...";
-        }
-
-        fetch("/dash/addKata", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                nomeKataServer: nomeKataVar,
-                qtdMovimentosServer: qtdMovimentosVar
-            }),
-        })
-            .then(function (resposta) {
-                console.log("resposta: ", resposta);
-
-                if (resposta.ok) {
-
-                    setInterval(sumirMensagem, 5000);
-                    cardErro.style.display = "block";
-                    mensagem_erro.innerHTML =
-                        "Kata cadatrado com sucesso";
-
-                    // setTimeout(() => {
-                    //     window.location = "entrei.html";
-                    // }, "2000");
-                } else {
-                    throw "Houve um erro ao tentar cadastrar o kata!";
-                }
-            })
-            .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-            })
-        return false;
-    }
-
-    function sumirMensagem() {
-        cardErro.style.display = "none";
-    }
-
-
     // Modal para adicionar dados
     function addDados() {
         const modal = document.getElementById('modalAsso')
@@ -494,50 +401,6 @@
         })
     }
 
-    // var listaKata = [];
-    // var qtdKata = ``;
-    // var nomeKata = ``;
-
-    // function avancar() {
-    //     qtdKata = Number(input_qtdKata.value);
-    // nomeKata = input_nomeKata.value;
-    // listaKata.push(nomeKata);
-
-    // for (posicao = 0; posicao < qtdKata; posicao++) {
-    // div_novoKata.innerHTML += `
-    //     <p>Digite o nome do kata que quer adicionar: </p>
-    //     <input class="campo" placeholder="Nome do Kata" id="input_nomeKata"><br><br>
-    //     `;
-    // }
-
-    //     div_addKata.innerHTML = `
-    //     <button class="botao" onclick="continuar()">Continuar</button>   
-    //     `;
-    // }
-
-    // function continuar() {
-
-    //     nomeKata = input_nomeKata.value;
-    //     listaKata.push(nomeKata);
-
-    //     for (posicao = 0; posicao < qtdKata; posicao++) {
-    //         div_novoKata.innerHTML += `
-    //         <p>Digite quantos movimentos sabe: </p><input class="campo" placeholder="Número de movimentos" type="number" id="input_qntSabe"><br><br>
-    //         `;
-    //     }
-
-    //     div_finalizarKata.innerHTML = `
-    //     <button class="botao" onclick="addKata()">Adicionar</button>   
-    //     `;
-
-    // var btn = document.querySelector("#id_botao");
-
-    // btn.addEventListener("click", function () {
-    //     var number = document.querySelector("#input_qntSabe").value;
-    //     localStorage.setItem('valuenumber', number);
-    // })
-    // }
-
     // Gráfico dos katas
 
     const ctx = document.getElementById('arm5');
@@ -548,7 +411,7 @@
             labels: ['Heian Shodan', 'Heian Nidan', 'Heian Sandan', 'Heian Yodan', 'Heian Godan', 'Tekki Shodan', 'Tekki Nidan', 'Tekki Sandan', 'Bassai Dai', 'Kanku Dai', 'Empi', 'Jion', 'Jitte', 'Hangetsu', 'Gankaku', 'Bassai Sho', 'Kanku Sho', 'Chinte', 'Unsu', 'Sochin', 'Nijushiho', 'Gojushiro Dai', 'Gojushiro Sho', 'Meikyo', 'Jiin', 'Wankan'],
             datasets: [{
                 label: 'Kata',
-                data: [12, 19, 90, 70, 2, 3, 73, 12, 12, 50, 12, 12, 12, 39, 12, 12, 12, 95, 12, 12, 12, 12, 29, 12, 12, 12],
+                data: [11, 12, 90, 70, 2, 3, 73, 12, 12, 50, 12, 12, 12, 39, 12, 12, 12, 95, 12, 12, 12, 12, 29, 12, 12, 12],
                 borderWidth: 1
             }]
         },

@@ -62,31 +62,30 @@ body {
 
 .arm .tela .metricas {
     width: 100%;
-    height: 25%;
+    height: 30%;
     border: 2px solid green;
     display: flex;
 }
 
-.arm .tela .metricas .competicao {
+/* .arm .tela .metricas .competicao {
     border: 2px solid aqua;
     width: 25%;
     height: 100%;
     background-color: rgb(168, 94, 94);
     color: white;
-}
+} */
 
 /* .arm .tela .metricas .competicao .data p {
     width: 100%;
 } */
 
-.arm .tela .metricas .competicao .data {
+/* .arm .tela .metricas .competicao .data {
     border: 2px solid blue;
     height: 80%;
-    /* margin: ; */
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-}
+} */
 
 .arm .tela .metricas .tabelas {
     border: 2px solid gold;
@@ -97,7 +96,7 @@ body {
 .arm .tela .metricas .tabelas .dados {
     border: 2px solid purple;
     width: 75%;
-    height: 25%;
+    height: 20%;
     display: flex;
     margin: 0 12.5%;
 }
@@ -172,10 +171,25 @@ body {
     background-color: rgb(158, 29, 29);
 }
 
+.arm .tela .metricas p {
+    font-size: 17px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.arm .tela .metricas .campo {
+    border: 2px solid green;
+    height: 10%;
+    width: 30%;
+    /* border-radius: 10px; */
+}
+
 .arm .tela .metricas .tabelas button {
-    width: 25%;
-    height: 15%;
-    margin: 1.5% 37.5%;
+    width: 20%;
+    height: 10%;
+    /* margin: 1.5% 37.5%; */
     font-size: 17px;
     border-radius: 10px;
     background-color: rgb(243, 174, 174);
@@ -186,15 +200,6 @@ body {
     color: white;
     transition: 0.5s;
     opacity: 0.7;
-}
-
-
-.arm .tela .metricas p {
-    font-size: 17px;
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    width: 100%;
 }
 
 .arm .tela .metricas .movimentos p {
@@ -269,8 +274,8 @@ body {
     border: 2px solid teal;
     /* display: flex; */
     /* margin: 40% 0; */
-    width: 70%;
-    height: 100%;
+    width: 50%;
+    /* height: 100%; */
 }
 
 .janela-modal {
@@ -364,13 +369,6 @@ body {
     border-radius: 10px;
     font-size: 15px;
     background-color: rgb(181, 134, 226);
-}
-
-.campo {
-    border: 2px solid green;
-    height: 20%;
-    width: 70%;
-    /* border-radius: 10px; */
 }
 
 .arm .modalAsso .modalassociacao .divModalAsso {
