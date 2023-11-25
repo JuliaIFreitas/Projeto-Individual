@@ -3,9 +3,9 @@ var router = express.Router();
 
 var dashController = require("../controllers/dashController");
 
-router.post("/addKata", function (req, res) {
-    // função a ser chamada quando acessar /dash/addKata
-    dashController.addKata(req, res);
+router.post("/adicionarTreino", function (req, res) {
+    // função a ser chamada quando acessar /dash/adicionarTreino
+    dashController.adicionarTreino(req, res);
 });
 
 router.post("/atualizarDados", function (req, res) {

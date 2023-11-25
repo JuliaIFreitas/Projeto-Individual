@@ -62,7 +62,7 @@ body {
 
 .arm .tela .metricas {
     width: 100%;
-    height: 30%;
+    height: 35%;
     border: 2px solid green;
     display: flex;
 }
@@ -96,7 +96,7 @@ body {
 .arm .tela .metricas .tabelas .dados {
     border: 2px solid purple;
     width: 75%;
-    height: 20%;
+    height: 15%;
     display: flex;
     margin: 0 12.5%;
 }
@@ -171,26 +171,36 @@ body {
     background-color: rgb(158, 29, 29);
 }
 
-.arm .tela .metricas p {
-    font-size: 17px;
+.arm .tela .metricas .tabelas .treino {
+    border: 2px solid purple;
+    margin: 2% 0;
+    height: 40%;
+}
+
+.arm .tela .metricas .tabelas .treino p {
+    font-size: 19px;
     border: 1px solid black;
     display: flex;
     justify-content: center;
-    width: 100%;
+    width: 40%;
+    margin: 1% 30%;
+    background-color: rgb(252, 134, 154);
 }
 
-.arm .tela .metricas .campo {
+.arm .tela .metricas .tabelas .treino .campo {
     border: 2px solid green;
-    height: 10%;
+    height: 22%;
+    margin: 0 9%;
     width: 30%;
     /* border-radius: 10px; */
 }
 
-.arm .tela .metricas .tabelas button {
-    width: 20%;
-    height: 10%;
+.arm .tela .metricas .tabelas .treino button {
+    width: 18%;
+    height: 20%;
     /* margin: 1.5% 37.5%; */
     font-size: 17px;
+    margin: 0 41%;
     border-radius: 10px;
     background-color: rgb(243, 174, 174);
 }

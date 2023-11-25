@@ -9,10 +9,10 @@ var database = require("../database/config")
 //     return database.executar(instrucao);
 // }
 
-function addKata(nomeKata, qtdMovimentos) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function addKata():", nomeKata, qtdMovimentos);
+function adicionarTreino(diaTreino, horaTreino, fkUsuarioTreino) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function adicionarTreino():", diaTreino, horaTreino, fkUsuarioTreino);
     var instrucao = `
-        INSERT INTO kata (nomeKata, qtdMovimentos) VALUES ('${nomeKata}', '${qtdMovimentos}');
+        INSERT INTO treinos (diaTreino, horaTreino, fkUsuarioTreino) VALUES ('${diaTreino}', '${horaTreino}', '${fkUsuarioTreino}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -29,7 +29,7 @@ function atualizarDados(nomeAsso, faixa, nomeSensei, medalhas) {
 
 
 module.exports = {
-    addKata,
-    atualizarDados,
+    adicionarTreino,
+    atualizarDados
     // continuar
 };

@@ -1,21 +1,26 @@
 var dashModel = require("../models/dashModel");
 
-function addKata(req, res) {
-    var nomeKata = req.body.nomeKataServer;
-    var qtdMovimentos = req.body.qtdMovimentosServer;
+function adicionarTreino(req, res) {
+    var diaTreino = req.body.diaTreinoServer;
+    var horaTreino = req.body.horaTreinoServer;
+    var fkUsuarioTreino = req.body.fkUsuarioTreinoServer;
 
-    if (nomeKata == undefined) {
-        res.status(400).send("O nome do kata está undefined");
+    if (diaTreino == undefined) {
+        res.status(400).send("Dia do treino vazio");
     } 
-    if (qtdMovimentos == undefined) {
-        res.status(400).send("A quantidade de movimentos está undefined!");
+    if (horaTreino == undefined) {
+        res.status(400).send("Hora do treino vazio!");
+    }
+    if (fkUsuarioTreino == undefined) {
+        res.status(400).send("fkUsuarioTreino vazia!");
+    } else {
+        dashModel.adicionarTreino(diaTreino, horaTreino, fkUsuarioTreino).then(function(resposta){
+            res.status(200).send("Treino inserido com sucesso!");
+        }).catch(function(erro){
+            res.status(500).json({erro: "Uau! Karateca está treinando bastante, nem o site acompanha esse mawashi. Tente novamente mais tarde."});
+        });
     }
 
-    dashModel.addKata(nomeKata, qtdMovimentos).then(function(resposta){
-        res.status(200).send("dados inseridos com sucesso");
-    }).catch(function(erro){
-        res.status(500).json(erro.sqlMessage);
-    })
 }
 
 function atualizarDados(req, res) {
@@ -45,7 +50,7 @@ function atualizarDados(req, res) {
 }
 
 module.exports = {
-    addKata,
+    adicionarTreino,
     atualizarDados
     // continuar
 }
