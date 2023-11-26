@@ -190,8 +190,8 @@ body {
 .arm .tela .metricas .tabelas .treino .campo {
     border: 2px solid green;
     height: 22%;
-    margin: 0 9%;
-    width: 30%;
+    margin: 0 6%;
+    width: 20%;
     /* border-radius: 10px; */
 }
 
@@ -280,13 +280,17 @@ body {
     width: 100%;
 }
 
-.arm .tela .graficoKata .kata {
-    border: 2px solid teal;
-    /* display: flex; */
-    /* margin: 40% 0; */
-    width: 50%;
-    /* height: 100%; */
+.descricaoKarateca {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+/* .arm .tela .graficoKata .kata {
+    border: 2px solid teal;
+    display: flex;
+    margin: 40% 0;
+    width: 50%;
+    height: 100%;
+} */
 
 .janela-modal {
     width: 50%;

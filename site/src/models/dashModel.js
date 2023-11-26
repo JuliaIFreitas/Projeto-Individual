@@ -9,10 +9,10 @@ var database = require("../database/config")
 //     return database.executar(instrucao);
 // }
 
-function adicionarTreino(diaTreino, horaTreino, fkUsuarioTreino) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function adicionarTreino():", diaTreino, horaTreino, fkUsuarioTreino);
+function adicionarTreino(dataTreino, diaTreino, horaTreino, fkUsuarioTreino) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function adicionarTreino():", dataTreino, diaTreino, horaTreino, fkUsuarioTreino);
     var instrucao = `
-        INSERT INTO treinos (diaTreino, horaTreino, fkUsuarioTreino) VALUES ('${diaTreino}', '${horaTreino}', '${fkUsuarioTreino}');
+        INSERT INTO treinos (diaSemana, diaTreino, horaTreino, fkUsuarioTreino) VALUES ('${dataTreino}', '${diaTreino}', '${horaTreino}', '${fkUsuarioTreino}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -27,9 +27,54 @@ function atualizarDados(nomeAsso, faixa, nomeSensei, medalhas, fkUsuarioDados) {
     return database.executar(instrucao);
 }
 
+function listarQtdTreinos(idUsuario) {
+    console.log("ACESSEI O DASH MODEL para buscar quantidade de treinos por usuário, function listarQtdTreinos()", idUsuario);
+
+    var instrucao = `
+    select count(idTreino) as qtdTreino from treinos 
+	inner join usuario 
+		on fkUsuarioTreino = idUsuario
+			where idUsuario = '${idUsuario}'
+				and diaSemana = 'Segunda';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function buscarDia(idUsuario) {
+    console.log("ACESSEI O DIARIO MODEL para buscar quantidade de treinos por dia, function buscarDia()", idUsuario);
+
+    var instrucao = `
+
+    select count(idTreino) AS qtdTreino, diaSemana as dia 
+    from treinos 
+    where fkUsuarioTreino = ${idUsuario}
+    and diaSemana = 'Segunda' 
+    group by dia`;
+
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function obterUltimosTreinos() {
+        console.log("ACESSEI O OBTER ULTIMOS TREINOS \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function obterUltimosDiarios()");
+    
+        var instrucao = `
+        SELECT idTreino, diaTreino, horaTreino
+        FROM treinos
+        ORDER BY idTreino DESC; `;
+    
+        console.log("Executando a instrução SQL: \n" + instrucao);
+    
+        return database.executar(instrucao);
+    }
+
 
 module.exports = {
     adicionarTreino,
-    atualizarDados
+    atualizarDados,
+    listarQtdTreinos,
+    buscarDia,
+    obterUltimosTreinos
     // continuar
 };
