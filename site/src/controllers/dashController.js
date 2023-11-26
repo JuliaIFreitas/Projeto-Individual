@@ -28,6 +28,8 @@ function atualizarDados(req, res) {
     var faixa = req.body.faixaServer;
     var nomeSensei = req.body.nomeSenseiServer;
     var medalhas = req.body.medalhasServer;
+    var fkUsuarioDados = req.body.fkUsuarioDadosServer;
+
 
     if (nomeAsso == undefined) {
         res.status(400).send("O nome da associação está undefined");
@@ -41,8 +43,11 @@ function atualizarDados(req, res) {
     if (medalhas == undefined) {
         res.status(400).send("As medalhas estão undefineds!");
     }
+    if (fkUsuarioDados == undefined) {
+        res.status(400).send("As medalhas estão undefineds!");
+    }
 
-    dashModel.atualizarDados(nomeAsso, faixa, nomeSensei, medalhas).then(function(resposta){
+    dashModel.atualizarDados(nomeAsso, faixa, nomeSensei, medalhas, fkUsuarioDados).then(function(resposta){
         res.status(200).send("dados inseridos com sucesso");
     }).catch(function(erro){
         res.status(500).json(erro.sqlMessage);
