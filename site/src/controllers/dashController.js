@@ -1,14 +1,14 @@
 var dashModel = require("../models/dashModel");
 
 function adicionarTreino(req, res) {
-    var dataTreino = req.body.dataTreinoServer;
+    // var dataTreino = req.body.dataTreinoServer;
     var diaTreino = req.body.diaTreinoServer;
     var horaTreino = req.body.horaTreinoServer;
     var fkUsuarioTreino = req.body.fkUsuarioTreinoServer;
 
-    if (dataTreino == undefined) {
-        res.status(400).send("Data do treino vazia");
-    }
+    // if (dataTreino == undefined) {
+    //     res.status(400).send("Data do treino vazia");
+    // }
     if (diaTreino == undefined) {
         res.status(400).send("Dia do treino vazio");
     } 
@@ -18,7 +18,7 @@ function adicionarTreino(req, res) {
     if (fkUsuarioTreino == undefined) {
         res.status(400).send("fkUsuarioTreino vazia!");
     } else {
-        dashModel.adicionarTreino(dataTreino, diaTreino, horaTreino, fkUsuarioTreino).then(function(resposta){
+        dashModel.adicionarTreino(diaTreino, horaTreino, fkUsuarioTreino).then(function(resposta){
             res.status(200).send("Treino inserido com sucesso!");
         }).catch(function(erro){
             res.status(500).json({erro: "Uau! Karateca está treinando bastante, nem o site acompanha esse mawashi. Tente novamente mais tarde."});

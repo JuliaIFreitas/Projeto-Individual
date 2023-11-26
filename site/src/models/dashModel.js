@@ -9,10 +9,10 @@ var database = require("../database/config")
 //     return database.executar(instrucao);
 // }
 
-function adicionarTreino(dataTreino, diaTreino, horaTreino, fkUsuarioTreino) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function adicionarTreino():", dataTreino, diaTreino, horaTreino, fkUsuarioTreino);
+function adicionarTreino(diaTreino, horaTreino, fkUsuarioTreino) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function adicionarTreino():", diaTreino, horaTreino, fkUsuarioTreino);
     var instrucao = `
-        INSERT INTO treinos (diaSemana, diaTreino, horaTreino, fkUsuarioTreino) VALUES ('${dataTreino}', '${diaTreino}', '${horaTreino}', '${fkUsuarioTreino}');
+        INSERT INTO treinos (diaTreino, horaTreino, fkUsuarioTreino) VALUES ('${diaTreino}', '${horaTreino}', '${fkUsuarioTreino}');
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -34,23 +34,20 @@ function listarQtdTreinos(idUsuario) {
     select count(idTreino) as qtdTreino from treinos 
 	inner join usuario 
 		on fkUsuarioTreino = idUsuario
-			where idUsuario = '${idUsuario}'
-				and diaSemana = 'Segunda';
+			where idUsuario = '${idUsuario}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
 function buscarDia(idUsuario) {
-    console.log("ACESSEI O DIARIO MODEL para buscar quantidade de treinos por dia, function buscarDia()", idUsuario);
+    console.log("ACESSEI O DASH MODEL para buscar quantidade de treinos por dia, function buscarDia()", idUsuario);
 
     var instrucao = `
 
-    select count(idTreino) AS qtdTreino, diaSemana as dia 
-    from treinos 
+    select count(idTreino) as qtdTreino, dayname(diaTreino) as dia_semana from treinos
     where fkUsuarioTreino = ${idUsuario}
-    and diaSemana = 'Segunda' 
-    group by dia`;
+    group by dia_semana`;
 
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
