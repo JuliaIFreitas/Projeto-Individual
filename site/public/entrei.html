@@ -248,27 +248,25 @@
                     <div class="treino">
                         <p>Digite o dia e o horário do treino: </p>
                         <!-- <input class="campo" placeholder="Dia da Semana" id="input_dataTreino"> -->
-                        <input class="campo" placeholder="Data do treino" id="input_diaTreino">
+                        <input class="campo" placeholder="Data(AAAA-MM-DD)" id="input_diaTreino">
                         <input class="campo" placeholder="Hora do treino" id="input_horaTreino"><br><br>
                         <button id="id_botaoKata" onclick="adicionarTreino()"> Adicionar Treino</button>
+                        <button id="id_botaoDeletar" onclick="deletar()">Deletar</button>
                     </div>
                     <div id="div_kata"></div>
                 </div>
             </div>
 
-            <div class="graficoKata">
+            <div class="graficoTreinos">
                 <div id="div_classificacao" class="classificacao">
-                    <div id="div_treinosCadastrados"></div>
+                    <div class="treinos" id="div_treinosCadastrados"></div>
                     <!-- <p>Você é o karateca...</p>
                     <div class="nomePerfil" id="div_campoPerfil"> </div> -->
                 </div>
-                <!-- <div class="kata">
-                    <div>
-                        <canvas class="kata" id="arm5" style="position: relative; width: 100%; height: 100%;"></canvas>
-                    </div>
-                </div> -->
+                <div class="grafico">
+                    <canvas class="grafico" id="myChart" height="100" width="100" style="margin-left: 30px"> </canvas>
+                </div>
 
-                <canvas id="myChart" width="900" height="300" style="margin-left: 30px; margin-right: 30px; "></canvas>
             </div>
         </div>
     </div>
@@ -282,6 +280,8 @@
 
     var feed2 = document.getElementById("div_treinosCadastrados");
     var mensagem = document.createElement("span");
+
+    var listaTreinos = [];
 
     var idUsuario = sessionStorage.ID_USUARIO;
 
@@ -452,6 +452,8 @@
                         cardErro.style.display = "block";
                         mensagem_erro.innerHTML = "Treino adicionado com sucesso!";
 
+                        listaTreinos.push(diaTreinoVar);
+
                         setTimeout(() => {
                             cardErro.style.display = "block";
                             mensagem_erro.innerHTML =
@@ -506,15 +508,15 @@
                         qtdTotal.innerHTML = `<b>${qtsTreinos}</b>`;
 
                         if (qtsTreinos == 1) {
-                            div_classificacao.innerHTML = `<h2><b>Júnior</b></h2> <span class="descricaoKarateca"> Seus treinos estão baixos, por enquanto. Karateca está no início de sua jornada, não desista! </span>`;
+                            div_classificacao.innerHTML = `<h2><b>JKarateca nível júnior</b></h2> <span class="descricaoKarateca"> Seus treinos estão baixos, por enquanto. Karateca está no início de sua jornada, não desista! </span>`;
                         } else if (qtsTreinos <= 3) {
-                            div_classificacao.innerHTML = `<h2><b>Cheng</b></h2> <span class="descricaoKarateca">Como o Cheng (Karate Kid) você está se esforçando, mas ainda pode mais um pouco. Força, karateca!</span>`;
+                            div_classificacao.innerHTML = `<h2><b>Karateca nível Cheng</b></h2> <span class="descricaoKarateca">Como o Cheng (Karate Kid) você está se esforçando, mas ainda pode mais um pouco. Força, karateca!</span>`;
                         } else if (qtsTreinos <= 6) {
-                            div_classificacao.innerHTML = `<h2><b>Karate Kid</b></h2> <span class="descricaoKarateca">Como o próprio Karate Kid, você está treinando bastante para alcançar seu Sensei. Está no caminho certo!</span>`;
+                            div_classificacao.innerHTML = `<h2><b>Karateca nível Karate Kid</b></h2> <span class="descricaoKarateca">Como o próprio Karate Kid, você está treinando bastante para alcançar seu Sensei. Está no caminho certo!</span>`;
                         } else if (qtsTreinos <= 12) {
-                            div_classificacao.innerHTML = `<h2><b>Sr. Miyagi</b></h2> <span class="descricaoKarateca">Seus treinos estão tão frequentes quanto do Sr. Miyagi, continue assim e virá um mestre também. </span>`;
+                            div_classificacao.innerHTML = `<h2><b>Karateca nível Sr. Miyagi</b></h2> <span class="descricaoKarateca">Seus treinos estão tão frequentes quanto do Sr. Miyagi, continue assim e virará um mestre também. </span>`;
                         } else if (qtsTreinos > 12) {
-                            div_classificacao.innerHTML = `<h2><b>Funakoshi</b></h2> <span class="descricaoKarateca">Karateca do céu! Está treinando tanto quanto o criados da nossa arte! Ai que demais! </span>`;
+                            div_classificacao.innerHTML = `<h2><b>Karateca nível Funakoshi</b></h2> <span class="descricaoKarateca">Karateca do céu! Está treinando tanto quanto o criados da nossa arte! Ai que demais! </span>`;
                         } else { console.log(`Erro ao capturar perfil... valor da variavel ${qtsTreinos}`) }
                     })
             })
@@ -561,7 +563,7 @@
                         datasets: [{
                             label: 'Quantidade de Treinos por Dia',
                             data: dados,
-                            backgroundColor: '#584634',
+                            backgroundColor: 'rgb(134, 64, 64)',
                             borderWidth: 1
                         }]
                     },

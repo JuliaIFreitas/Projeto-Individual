@@ -11,7 +11,7 @@ body {
 
 .arm {
     width: 100%;
-    height: 900px;
+    height: 1200px;
     border: 2px solid orange;
     display: flex;
 }
@@ -22,6 +22,7 @@ body {
     height: 100%;
     margin: 0;
     background-color: rgb(134, 64, 64);
+    /* position: absolute; */
 }
 
 .arm .container .perfil img {
@@ -49,7 +50,7 @@ body {
     width: 80%;
     margin: 0 10%;
     height: 30px;
-    background-color: rgb(134, 64, 64);
+    background-color: rgb(156, 102, 102);
     padding: 1%;
     color: white;
 }
@@ -58,11 +59,12 @@ body {
     border: 2px solid purple;
     width: 100%;
     height: 100%;
+    background-color: rgb(211, 150, 150);
 }
 
 .arm .tela .metricas {
     width: 100%;
-    height: 35%;
+    height: 30%;
     border: 2px solid green;
     display: flex;
 }
@@ -119,6 +121,8 @@ body {
     align-items: center;
     font-size: 18px;
     font-weight: bold;
+    background-color: rgb(134, 64, 64);
+    color: white;
 }
 
 .arm .tela .metricas .tabelas .junior .primeira {
@@ -128,7 +132,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(243, 174, 174);
+    background-color: white;
 }
 
 .arm .tela .metricas .tabelas .junior .segunda {
@@ -138,7 +142,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(230, 130, 130);
+    background-color: rgb(247, 132, 55);
 }
 
 .arm .tela .metricas .tabelas .junior .terceira {
@@ -148,7 +152,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(218, 86, 86);
+    background-color: rgb(78, 122, 68);
+    color: white;
 }
 
 .arm .tela .metricas .tabelas .junior .quarta {
@@ -158,7 +163,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(155, 48, 48);
+    background-color: rgb(143, 22, 143);
+    color: white;
 }
 
 .arm .tela .metricas .tabelas .junior .quinta {
@@ -168,7 +174,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(158, 29, 29);
+    background-color: black;
+    color: white;
 }
 
 .arm .tela .metricas .tabelas .treino {
@@ -184,13 +191,14 @@ body {
     justify-content: center;
     width: 40%;
     margin: 1% 30%;
-    background-color: rgb(252, 134, 154);
+    background-color: rgb(134, 64, 64);
+    color: white;
 }
 
 .arm .tela .metricas .tabelas .treino .campo {
-    border: 2px solid green;
+    /* border: 2px solid green; */
     height: 22%;
-    margin: 0 6%;
+    margin: 0 14%;
     width: 20%;
     /* border-radius: 10px; */
 }
@@ -202,7 +210,8 @@ body {
     font-size: 17px;
     margin: 0 41%;
     border-radius: 10px;
-    background-color: rgb(243, 174, 174);
+    background-color: rgb(139, 78, 78);
+    color: white;
 }
 
 #id_botaoKata:hover {
@@ -212,85 +221,55 @@ body {
     opacity: 0.7;
 }
 
-.arm .tela .metricas .movimentos p {
-    font-size: 17px;
-    border: 1px solid white;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.arm .tela .metricas a {
-    color: white;
-    border: 1px solid yellow;
-    width: 100%;
-    font-size: 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.arm .tela .metricas .kata {
-    border: 2px solid salmon;
-    width: 37.5%;
-    height: 100%;
-    background-color: rgb(148, 86, 86);
-    color: white;
-}
-
-.arm .tela .metricas .kata ul {
-    border: 1px solid lawngreen;
-    padding: 0px 10px;
-}
-
-.arm .tela .metricas .kata ul li {
-    border: 1px solid indigo;
-    /* margin: 0;
-    height: 30%; */
-    display: inline;
-}
-
-.arm .tela .metricas .kata button {
-    width: 30%;
-    height: 20%;
-    margin: 1% 5%;
-}
-
-.arm .tela .metricas .movimentos {
-    border: 2px solid seagreen;
-    width: 37.5%;
-    height: 100%;
-    background-color: rgb(148, 86, 86);
-    color: white;
-}
-
-.arm .tela .graficoKata {
-    height: 50%;
+.arm .tela .graficoTreinos {
+    height: 45%;
     border: 2px solid slateblue;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-.arm .tela .graficoKata .classificacao {
+.arm .tela .graficoTreinos .classificacao {
     border: 1px solid mediumspringgreen;
-    height: 10%;
-    font-size: 20px;
+    height: 20%;
+    /* font-size: 20px; */
     display: flex;
     justify-content: center;
     width: 100%;
+    flex-wrap: wrap;
+    /* margin: 5% 0; */
 }
 
-.descricaoKarateca {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.arm .tela .graficoTreinos .classificacao h2 {
+    /* border: 2px solid red; */
+    width: 40%;
+    background-color: rgb(134, 64, 64);
+    color: white;
+    border-radius: 10px;
+    margin: 2% 0;
 }
 
-/* .arm .tela .graficoKata .kata {
-    border: 2px solid teal;
+.arm .tela .graficoTreinos .classificacao .descricaoKarateca {
+    border: 2px solid yellowgreen;
+    height: 35%;
+    font-size: 18px;
     display: flex;
-    margin: 40% 0;
-    width: 50%;
-    height: 100%;
+    justify-content: center;
+    width: 100%;
+    margin: 1% 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+} 
+
+/* .arm .tela .graficoTreinos .graficoDiv {
+    border: 2px solid orange;
 } */
+
+.arm .tela .graficoTreinos .grafico {
+    border: 2px solid blue;
+    height: 60%;
+    width: 50%;
+}
 
 .janela-modal {
     width: 50%;

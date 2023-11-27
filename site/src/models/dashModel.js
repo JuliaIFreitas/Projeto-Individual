@@ -54,18 +54,17 @@ function buscarDia(idUsuario) {
 }
 
 function obterUltimosTreinos() {
-        console.log("ACESSEI O OBTER ULTIMOS TREINOS \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function obterUltimosDiarios()");
-    
-        var instrucao = `
+    console.log("ACESSEI O OBTER ULTIMOS TREINOS \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function obterUltimosDiarios()");
+
+    var instrucao = `
         SELECT idTreino, diaTreino, horaTreino
         FROM treinos
         ORDER BY idTreino DESC; `;
-    
-        console.log("Executando a instrução SQL: \n" + instrucao);
-    
-        return database.executar(instrucao);
-    }
 
+    console.log("Executando a instrução SQL: \n" + instrucao);
+
+    return database.executar(instrucao);
+}
 
 module.exports = {
     adicionarTreino,
