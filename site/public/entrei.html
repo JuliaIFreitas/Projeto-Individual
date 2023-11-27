@@ -275,6 +275,10 @@
                     Facilidade: <input placeholder="Facilidade" id="input_facilidade">
                     <input placeholder="Nível (0 a 10)" type="number" id="input_nivelFaci"><br>
                     <button id="id_botaoKata" onclick="adicionarMelhorias()"> Adicionar Melhorias</button>
+                    <button onclick="listarMelhorias()">Listar</button>
+                    <div id="div_melhorias">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -567,6 +571,44 @@
         return false;
     }
 
+
+    function listarMelhorias() {
+        console.log(idUsuario)
+        fetch(`/dash/listarMelhorias/${idUsuario}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(function (resposta) {
+                console.log("Dados recebidos: ", JSON.stringify(resposta));
+                resposta.json()
+                    .then((json) => {
+                        console.log(json);
+                        console.log(json[0].melhorias);
+
+                        var quaisMelhorias = json[0].melhorias;
+                        console.log(quaisMelhorias);
+
+                        var melhor = document.getElementById("div_melhorias")
+                        melhor.innerHTML = `<b>${quaisMelhorias}</b> <br>`;
+                        
+                        div_melhorias.innerHTML = `
+                        ${dificuldadeServer}<br>
+                        ${nivelDifiServer}<br>
+                        ${facilidadeServer}<br>
+                        ${nivelFaciServer}
+                        `;
+                        
+                    })
+            })
+
+
+            .catch(function (erro) {
+                console.error('Erro desconhecido na API.');
+            }
+            );
+    }
 
     // Modal para adicionar dados
     function addDados() {

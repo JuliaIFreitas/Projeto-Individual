@@ -86,90 +86,129 @@ function mostrarOds8() {
     })
 }
 
-function mostrarFaixa() {
-    const modalfaixa = document.getElementById('modalFaixa')
-    modalfaixa.classList.add('abrirfaixa')
+function mostrarFaixa(faixaId) {
 
-    modalfaixa.addEventListener('click', (e) => {
-        if (e.target.id == 'fecharfaixa' || e.target.id == 'modalFaixa') {
-            modalfaixa.classList.remove('abrirfaixa')
-        }
-    })
+    var faixa = document.querySelector('.descricaoFaixas');
+
+    var cores = ["FAIXA BRANCA", "FAIXA AMARELA", "FAIXA VERMELHA", "FAIXA LARANJA", "FAIXA VERDE", "FAIXA ROXA", "FAIXA MARROM", "FAIXA PRETA"];
+
+    var descricao = [
+        // branca
+        "<h2>Especificações</h2><p> 7º KYU (Classe)<br>Branco em japonês: Shiro<br> Tempo para graduação: 6 meses <br> Kata: Heian Shodan <br></p> <br><p>Representa a pureza, o começo, a iniciação, é o verdadeiro começo nas artes marciais do karatê.</p>",
+        // amarela
+        "<h2>Especificações</h2><p>6º KYU (Classe)<br>Amarelo em japonês: Kiiro<br> Tempo para graduação: 6 meses <br> Kata: Heian Nidan <br></p>",
+        // vermelha
+        "<h2>Especificações</h2> <p>5º KYU (Classe)<br>Vermelho em japonês: Aka<br>Tempo para graduação: 6 meses <br> Kata: Heian Sandan <br></p>",
+        // laranja
+        "<h2>Especificações</h2><p>4º KYU (Classe)<br>Laranja em japonês: Orenji<br>Tempo para graduação: 6 meses <br>Kata: Heian Yodan <br></p>",
+        // verde
+        "<h2>Especificações</h2><p>3º KYU (Classe)<br>Verde em japonês: Midori<br>Tempo para graduação: 1 ano <br>Kata: Heian Godan <br></p>",
+        // roxa
+        "<h2>Especificações</h2><p>2º KYU (Classe)<br>Roxo em japonês: Murasaki<br>Tempo para graduação: 1 ano <br>Kata: Tekki Shodan <br></p>",
+        // marrom
+        "<h2>Especificações</h2><p>1º KYU (Classe)<br> Marrom em japonês: Murasaki<br>Tempo para graduação: 18 meses a 24 meses <br>Katas: Para o exame de faixa deve apresentar os cinco Heian, Tekki Shodan, além do Bassai Dai, Jion, Enpi ou Kanku Dai <br></p>",
+        // preta
+        "<h2>Especificações</h2><p>1º DAN (Grau)<br>Preto em japonês: Kuro<br>Tempo para graduação: 3 anos <br>Katas: Para o exame de faixa para o 1º Dan, deve saber os 5 Heian e apresentar um deles. Apresentar também o Tekki Shodan. Além desses, deve executar um dos seguintes katas: Bassai Dai, Jion, Enpi ou Kanku Dai<br></p>"
+    ]
+
+    var posicao = cores.indexOf(faixaId);
+
+    if (posicao != -1) {
+        faixa.innerHTML = `<h6 class="significadoCores"> ${cores[posicao]} </h6> 
+        <div class="caixaCor">
+         <p> 
+            ${descricao[posicao]} 
+         </p> 
+         </div>
+        `;
+    }
+
 }
 
-function mostrarFaixaAmarela() {
-    const modalfaixaamarela = document.getElementById('modalFaixaAmarela')
-    modalfaixaamarela.classList.add('abrirfaixaamarela')
+// function mostrarFaixa() {
+//     const modalfaixa = document.getElementById('modalFaixa')
+//     modalfaixa.classList.add('abrirfaixa')
 
-    modalfaixaamarela.addEventListener('click', (e) => {
-        if (e.target.id == 'fecharfaixaamarela' || e.target.id == 'modalFaixaAmarela') {
-            modalfaixaamarela.classList.remove('abrirfaixaamarela')
-        }
-    })
-}
+//     modalfaixa.addEventListener('click', (e) => {
+//         if (e.target.id == 'fecharfaixa' || e.target.id == 'modalFaixa') {
+//             modalfaixa.classList.remove('abrirfaixa')
+//         }
+//     })
+// }
 
-function mostrarFaixaVerm() {
-    const modalfaixaverm = document.getElementById('modalFaixaVerm')
-    modalfaixaverm.classList.add('abrirfaixaverm')
+// function mostrarFaixaAmarela() {
+//     const modalfaixaamarela = document.getElementById('modalFaixaAmarela')
+//     modalfaixaamarela.classList.add('abrirfaixaamarela')
 
-    modalfaixaverm.addEventListener('click', (e) => {
-        if (e.target.id == 'fecharfaixaverm' || e.target.id == 'modalFaixaVerm') {
-            modalfaixaverm.classList.remove('abrirfaixaverm')
-        }
-    })
-}
+//     modalfaixaamarela.addEventListener('click', (e) => {
+//         if (e.target.id == 'fecharfaixaamarela' || e.target.id == 'modalFaixaAmarela') {
+//             modalfaixaamarela.classList.remove('abrirfaixaamarela')
+//         }
+//     })
+// }
 
-function mostrarFaixaLara() {
-    const modalfaixalara = document.getElementById('modalFaixaLara')
-    modalfaixalara.classList.add('abrirfaixalara')
+// function mostrarFaixaVerm() {
+//     const modalfaixaverm = document.getElementById('modalFaixaVerm')
+//     modalfaixaverm.classList.add('abrirfaixaverm')
 
-    modalfaixalara.addEventListener('click', (e) => {
-        if (e.target.id == 'fecharfaixalara' || e.target.id == 'modalFaixaLara') {
-            modalfaixalara.classList.remove('abrirfaixalara')
-        }
-    })
-}
+//     modalfaixaverm.addEventListener('click', (e) => {
+//         if (e.target.id == 'fecharfaixaverm' || e.target.id == 'modalFaixaVerm') {
+//             modalfaixaverm.classList.remove('abrirfaixaverm')
+//         }
+//     })
+// }
 
-function mostrarFaixaVerde() {
-    const modalfaixaverde = document.getElementById('modalFaixaVerde')
-    modalfaixaverde.classList.add('abrirfaixaverde')
+// function mostrarFaixaLara() {
+//     const modalfaixalara = document.getElementById('modalFaixaLara')
+//     modalfaixalara.classList.add('abrirfaixalara')
 
-    modalfaixaverde.addEventListener('click', (e) => {
-        if (e.target.id == 'fecharfaixaverde' || e.target.id == 'modalFaixaVerde') {
-            modalfaixaverde.classList.remove('abrirfaixaverde')
-        }
-    })
-}
+//     modalfaixalara.addEventListener('click', (e) => {
+//         if (e.target.id == 'fecharfaixalara' || e.target.id == 'modalFaixaLara') {
+//             modalfaixalara.classList.remove('abrirfaixalara')
+//         }
+//     })
+// }
 
-function mostrarFaixaRoxa() {
-    const modalfaixaroxa = document.getElementById('modalFaixaRoxa')
-    modalfaixaroxa.classList.add('abrirfaixaroxa')
+// function mostrarFaixaVerde() {
+//     const modalfaixaverde = document.getElementById('modalFaixaVerde')
+//     modalfaixaverde.classList.add('abrirfaixaverde')
 
-    modalfaixaroxa.addEventListener('click', (e) => {
-        if (e.target.id == 'fecharfaixaroxa' || e.target.id == 'modalFaixaroxa') {
-            modalfaixaroxa.classList.remove('abrirfaixaroxa')
-        }
-    })
-}
+//     modalfaixaverde.addEventListener('click', (e) => {
+//         if (e.target.id == 'fecharfaixaverde' || e.target.id == 'modalFaixaVerde') {
+//             modalfaixaverde.classList.remove('abrirfaixaverde')
+//         }
+//     })
+// }
 
-function mostrarFaixaMarrom() {
-    const modalfaixamarrom = document.getElementById('modalFaixaMarrom')
-    modalfaixamarrom.classList.add('abrirfaixamarrom')
+// function mostrarFaixaRoxa() {
+//     const modalfaixaroxa = document.getElementById('modalFaixaRoxa')
+//     modalfaixaroxa.classList.add('abrirfaixaroxa')
 
-    modalfaixamarrom.addEventListener('click', (e) => {
-        if (e.target.id == 'fecharfaixamarrom' || e.target.id == 'modalFaixaMarrom') {
-            modalfaixamarrom.classList.remove('abrirfaixamarrom')
-        }
-    })
-}
+//     modalfaixaroxa.addEventListener('click', (e) => {
+//         if (e.target.id == 'fecharfaixaroxa' || e.target.id == 'modalFaixaroxa') {
+//             modalfaixaroxa.classList.remove('abrirfaixaroxa')
+//         }
+//     })
+// }
 
-function mostrarFaixaPreta() {
-    const modalfaixapreta = document.getElementById('modalFaixaPreta')
-    modalfaixapreta.classList.add('abrirfaixapreta')
+// function mostrarFaixaMarrom() {
+//     const modalfaixamarrom = document.getElementById('modalFaixaMarrom')
+//     modalfaixamarrom.classList.add('abrirfaixamarrom')
 
-    modalfaixapreta.addEventListener('click', (e) => {
-        if (e.target.id == 'fecharfaixapreta' || e.target.id == 'modalFaixaPreta') {
-            modalfaixapreta.classList.remove('abrirfaixapreta')
-        }
-    })
-}
+//     modalfaixamarrom.addEventListener('click', (e) => {
+//         if (e.target.id == 'fecharfaixamarrom' || e.target.id == 'modalFaixaMarrom') {
+//             modalfaixamarrom.classList.remove('abrirfaixamarrom')
+//         }
+//     })
+// }
+
+// function mostrarFaixaPreta() {
+//     const modalfaixapreta = document.getElementById('modalFaixaPreta')
+//     modalfaixapreta.classList.add('abrirfaixapreta')
+
+//     modalfaixapreta.addEventListener('click', (e) => {
+//         if (e.target.id == 'fecharfaixapreta' || e.target.id == 'modalFaixaPreta') {
+//             modalfaixapreta.classList.remove('abrirfaixapreta')
+//         }
+//     })
+// }

@@ -34,7 +34,8 @@
                 <h2>Comunidade Karate Shotokan</h2>
                 <p>Quer ficar por dentro das competições, monitorar seus treinos e se conectar com outros karatecas?
                     <br><br> Cadastre-se já! <br><br>
-                    <a href="cadastro.html"><button id="id_botaoCadastrar" class="botao" onclick="cadastrar()">Cadastrar</button></a>
+                    <a href="cadastro.html"><button id="id_botaoCadastrar" class="botao"
+                            onclick="cadastrar()">Cadastrar</button></a>
                 </p>
             </div>
             <div class="imagem">
@@ -429,10 +430,10 @@
                     <p>Shiai é o combate entre competidores. O objetivo é marcar pontos contra o adversário através de
                         técnicas de ataque e defesa. As regras do shiai kumite são estabelecidas pela federação de
                         karate responsável pelo evento.</p>
-                        <div>
-                            <img class="shiaiGif" src="assets/imgs/IMAGENS/shiai_ex_gif.jpg" alt="">
-                            <img src="assets/imgs/IMAGENS/shiai.gif" alt="">
-                        </div>
+                    <div>
+                        <img class="shiaiGif" src="assets/imgs/IMAGENS/shiai_ex_gif.jpg" alt="">
+                        <img src="assets/imgs/IMAGENS/shiai.gif" alt="">
+                    </div>
                 </div>
 
                 <div class="kata">
@@ -440,20 +441,26 @@
                     <p class="textoKata">Kata é um conjunto de movimentos de ataque e defesa, previamente estabelecidos
                         em várias direções e ângulos. Tem por objetivo desenvolver a coordenação motora, estética
                         postural e agilidade.</p>
-                        <div>
-                            <img class="kataGif" src="assets/imgs/IMAGENS/kata_ex_gif.jpg" alt="">
-                            <img src="assets/imgs/IMAGENS/kata.gif" alt="">
-                        </div>
+                    <div>
+                        <img class="kataGif" src="assets/imgs/IMAGENS/kata_ex_gif.jpg" alt="">
+                        <img src="assets/imgs/IMAGENS/kata.gif" alt="">
+                    </div>
                 </div>
             </div>
 
         </div>
     </div>
 
+    
+
     <div id="div_graduacoes" class="graduacoes">
         <div class="container">
+            <h1>Graduações</h1>
 
-            <div class="modalFaixa" id="modalFaixa">
+            <div class="descricaoFaixas" id="descricaoFaixas">
+
+
+                <!-- <div class="faixa" id="faixa">
                 <div class="modalfaixa">
                     <button class="fecharfaixa" id="fecharfaixa">X</button>
                     <div class="divFaixa">
@@ -572,52 +579,56 @@
                         </p>
                         <iframe width="400" height="250" src="https://www.youtube.com/embed/vb2omsNOw2s?si=9S6nzycex2PPYZjm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>                    </div>
                 </div>
+            </div> -->
+
+
+                <div onclick="mostrarFaixa('FAIXA BRANCA')" class="faixa">
+                    <h2><img src="assets/imgs/IMAGENS/faixa_branca-pintada.png" alt=""></h2>
+                    <p>Representa a pureza, o começo, a iniciação, é o verdadeiro começo nas artes marciais do karatê.
+                    </p>
+                </div>
+
+                <div onclick="mostrarFaixa('FAIXA AMARELA')" class="faixa">
+                    <h2><img src="assets/imgs/IMAGENS/faixa_amarela.png" alt=""></h2>
+                    <p> Assim como um sol que desponta todos os dias, ela significa que é um iniciante no Karatê </p>
+                </div>
+
+                <div onclick="mostrarFaixa('FAIXA VERMELHA')" class="faixa">
+                    <h2><img src="assets/imgs/IMAGENS/faixa_vermelha.png" alt=""></h2>
+                    <p>Sugere motivação, atividade e vontade. Também simboliza aquilo que deve ser contido pelo seu
+                        portador
+                    </p>
+                </div>
+
+                <div onclick="mostrarFaixa('FAIXA LARANJA')" class="faixa">
+                    <h2><img src="assets/imgs/IMAGENS/faixa_laranja.png" alt=""></h2>
+                    <p> Simboliza aquilo que o praticante deve buscar: o encorajamento, robustez, gentileza e tolerância
+                    </p>
+                </div>
+
+                <div onclick="mostrarFaixa('FAIXA VERDE')" class="faixa">
+                    <h2><img src="assets/imgs/IMAGENS/faixa_verde.png" alt=""></h2>
+                    <p>Ela representa a esperança, a fé e o crescimento. É a cor mais harmoniosa e calmante de todas</p>
+                </div>
+
+                <div onclick="mostrarFaixa('FAIXA ROXA')" class="faixa">
+                    <h2><img src="assets/imgs/IMAGENS/faixa_roxa.png" alt=""></h2>
+                    <p>Representa o mistério, a dignidade, a inspiração e justiça.</p>
+                </div>
+
+                <div onclick="mostrarFaixa('FAIXA MARROM')" class="faixa">
+                    <h2><img src="assets/imgs/IMAGENS/faixa_marrom.png" alt=""></h2>
+                    <p>É a cor da solidificação. Representa a constância, a disciplina, a uniformidade adquirida. Também
+                        sugere segurança e isolamento.</p>
+                </div>
+
+                <div onclick="mostrarFaixa('FAIXA PRETA')" class="faixa">
+                    <h2><img src="assets/imgs/IMAGENS/faixa_preta.png" alt=""></h2>
+                    <p>É a junção de todas as cores. Representa autocontrole, serenidade, disciplina e responsabilidade,
+                        dignidade e conhecimento. É a cor do poder. </p>
+                </div>
             </div>
 
-            <h1>Graduações</h1>
-
-            <div onclick="mostrarFaixa()" class="faixa">
-                <h2><img src="assets/imgs/IMAGENS/faixa_branca-pintada.png" alt=""></h2>
-                <p>Representa a pureza, o começo, a iniciação, é o verdadeiro começo nas artes marciais do karatê. </p>
-            </div>
-
-            <div onclick="mostrarFaixaAmarela()" class="faixa">
-                <h2><img src="assets/imgs/IMAGENS/faixa_amarela.png" alt=""></h2>
-                <p> Assim como um sol que desponta todos os dias, ela significa que é um iniciante no Karatê </p>
-            </div>
-
-            <div onclick="mostrarFaixaVerm()" class="faixa">
-                <h2><img src="assets/imgs/IMAGENS/faixa_vermelha.png" alt=""></h2>
-                <p>Sugere motivação, atividade e vontade. Também simboliza aquilo que deve ser contido pelo seu portador
-                </p>
-            </div>
-
-            <div onclick="mostrarFaixaLara()" class="faixa">
-                <h2><img src="assets/imgs/IMAGENS/faixa_laranja.png" alt=""></h2>
-                <p> Simboliza aquilo que o praticante deve buscar: o encorajamento, robustez, gentileza e tolerância</p>
-            </div>
-
-            <div onclick="mostrarFaixaVerde()" class="faixa">
-                <h2><img src="assets/imgs/IMAGENS/faixa_verde.png" alt=""></h2>
-                <p>Ela representa a esperança, a fé e o crescimento. É a cor mais harmoniosa e calmante de todas</p>
-            </div>
-
-            <div onclick="mostrarFaixaRoxa()" class="faixa">
-                <h2><img src="assets/imgs/IMAGENS/faixa_roxa.png" alt=""></h2>
-                <p>Representa o mistério, a dignidade, a inspiração e justiça.</p>
-            </div>
-
-            <div onclick="mostrarFaixaMarrom()" class="faixa">
-                <h2><img src="assets/imgs/IMAGENS/faixa_marrom.png" alt=""></h2>
-                <p>É a cor da solidificação. Representa a constância, a disciplina, a uniformidade adquirida. Também
-                    sugere segurança e isolamento.</p>
-            </div>
-
-            <div onclick="mostrarFaixaMarrom()" class="faixa">
-                <h2><img src="assets/imgs/IMAGENS/faixa_preta.png" alt=""></h2>
-                <p>É a junção de todas as cores. Representa autocontrole, serenidade, disciplina e responsabilidade,
-                    dignidade e conhecimento. É a cor do poder. </p>
-            </div>
         </div>
     </div>
 

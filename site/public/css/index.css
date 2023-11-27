@@ -819,15 +819,15 @@ body {
     height: 100%;
     /* border: 2px solid rgb(73, 73, 1); */
     margin: 0 10%;
-    display: flex;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
     justify-content: center;
 }
 
 .graduacoes .container .faixa {
-    width: 20%;
-    height: 33%;
-    /* border: 1px solid rgb(0, 124, 128); */
+    width: 40%;
+    height: 50%;
+    border: 1px solid rgb(0, 124, 128);
     border-radius: 10px;
     margin: 0 2%;
     background-color: rgb(243, 219, 219);
@@ -839,14 +839,14 @@ body {
 }
 
 .graduacoes .container .faixa h2 {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     display: flex;
     justify-content: center;
     height: 21%;
 }
 
 .graduacoes .container .faixa p {
-    /* border: 1px solid navy; */
+    border: 1px solid navy;
     height: 60%;
     width: 90%;
     margin: 0 5%;
