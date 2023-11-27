@@ -27,6 +27,36 @@ function adicionarTreino(req, res) {
 
 }
 
+function adicionarMelhorias(req, res) {
+    var dificuldade = req.body.dificuldadeServer;
+    var nivelDifi = req.body.nivelDifiServer;
+    var facilidade = req.body.facilidadeServer;
+    var nivelFaci = req.body.nivelFaciServer;
+    var fkUsuarioMel = req.body.fkUsuarioMelServer;
+
+    if (dificuldade == undefined) {
+        res.status(400).send("Dificuldade vazia");
+    }
+    if (nivelDifi == undefined) {
+        res.status(400).send("Nível de dificuldade vazio");
+    } 
+    if (facilidade == undefined) {
+        res.status(400).send("Facilidade vazia!");
+    }
+    if (nivelFaci == undefined) {
+        res.status(400).send("Nível de facilidade vazia!");
+    } if (fkUsuarioMel == undefined) {
+        res.status(400).send("Nível de facilidade vazia!");
+    }else {
+        dashModel.adicionarMelhorias(dificuldade, nivelDifi, facilidade, nivelFaci, fkUsuarioMel).then(function(resposta){
+            res.status(200).send("Melhorias inseridas com sucesso!");
+        }).catch(function(erro){
+            res.status(500).json({erro: "Uau! Karateca está treinando bastante, nem o site acompanha esse mawashi. Tente novamente mais tarde."});
+        });
+    }
+
+}
+
 function atualizarDados(req, res) {
     var nomeAsso = req.body.nomeAssoServer;
     var faixa = req.body.faixaServer;
@@ -125,6 +155,7 @@ module.exports = {
     atualizarDados,
     listarQtdTreinos,
     buscarDia,
-    obterUltimosTreinos
+    obterUltimosTreinos,
+    adicionarMelhorias
     // continuar
 }

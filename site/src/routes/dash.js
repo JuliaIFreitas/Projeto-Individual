@@ -34,4 +34,8 @@ router.get("/buscarDia/:idUsuario", function (req, res) {
     dashController.buscarDia(req, res);
 });
 
+router.post("/adicionarMelhorias", function (req, res) {
+    dashController.adicionarMelhorias(req, res);
+});
+
 module.exports = router;

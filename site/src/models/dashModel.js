@@ -66,11 +66,21 @@ function obterUltimosTreinos() {
     return database.executar(instrucao);
 }
 
+function adicionarMelhorias(dificuldade, nivelDifi, facilidade, nivelFaci, fkUsuarioMel) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function adicionarMelhorias():", dificuldade, nivelDifi, facilidade, nivelFaci, fkUsuarioMel);
+    var instrucao = `
+        INSERT INTO melhorar (nomeDificuldade, nivelDificuldade, nomeFacilidade, nivelFacilidade, fkUsuarioMel) VALUES ('${dificuldade}', '${nivelDifi}', '${facilidade}', '${nivelFaci}', '${fkUsuarioMel}');
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     adicionarTreino,
     atualizarDados,
     listarQtdTreinos,
     buscarDia,
-    obterUltimosTreinos
+    obterUltimosTreinos,
+    adicionarMelhorias
     // continuar
 };

@@ -251,7 +251,6 @@
                         <input class="campo" placeholder="Data(AAAA-MM-DD)" id="input_diaTreino">
                         <input class="campo" placeholder="Hora do treino" id="input_horaTreino"><br><br>
                         <button id="id_botaoKata" onclick="adicionarTreino()"> Adicionar Treino</button>
-                        <button id="id_botaoDeletar" onclick="deletar()">Deletar</button>
                     </div>
                     <div id="div_kata"></div>
                 </div>
@@ -267,6 +266,16 @@
                     <canvas class="grafico" id="myChart" height="100" width="100" style="margin-left: 30px"> </canvas>
                 </div>
 
+            </div>
+
+            <div class="melhorar">
+                <div>
+                    Dificuldade: <input placeholder="Dificuldade" id="input_dificuldade">
+                    <input placeholder="Nível (0 a 10)" type="number" id="input_nivelDifi"><br>
+                    Facilidade: <input placeholder="Facilidade" id="input_facilidade">
+                    <input placeholder="Nível (0 a 10)" type="number" id="input_nivelFaci"><br>
+                    <button id="id_botaoKata" onclick="adicionarMelhorias()"> Adicionar Melhorias</button>
+                </div>
             </div>
         </div>
     </div>
@@ -463,6 +472,93 @@
                     }
                 } else {
                     throw "Houve um erro ao tentar adicionar o treino!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            })
+        return false;
+    }
+
+    // Função para adicionar melhorias
+    function adicionarMelhorias() {
+        // aguardar();
+
+        var dificuldadeVar = input_dificuldade.value;
+        var nivelDifiVar = input_nivelDifi.value;
+        var facilidadeVar = input_facilidade.value;
+        var nivelFaciVar = input_nivelFaci.value;
+
+        if (
+            dificuldadeVar == "" &&
+            nivelDifiVar == ""
+        ) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Insira o nível da dificuldade";
+
+            // finalizarAguardar();
+            return false;
+        } 
+        if (
+            facilidadeVar == "" &&
+            nivelFaciVar == ""
+        ) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Insira o nível da facilidade";
+
+            // finalizarAguardar();
+            return false;
+        } else if (nivelDifiVar < 0 || nivelDifiVar > 10 || nivelFaciVar < 0 || nivelFaciVar > 10) {
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Insira um nível válido";
+
+            // finalizarAguardar();
+            return false;
+        } else {
+            setInterval(sumirMensagem, 5000);
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML =
+                "Atualizando melhorias...";
+        }
+
+        fetch("/dash/adicionarMelhorias", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                dificuldadeServer: dificuldadeVar,
+                nivelDifiServer: nivelDifiVar,
+                facilidadeServer: facilidadeVar,
+                nivelFaciServer: nivelFaciVar,
+                fkUsuarioMelServer: idUsuario
+
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    console.log(resposta);
+
+                    if (resposta.ok) {
+                        cardErro.style.display = "block";
+                        mensagem_erro.innerHTML = "Melhoria adicionada com sucesso!";
+
+
+                        setTimeout(() => {
+                            cardErro.style.display = "block";
+                            mensagem_erro.innerHTML =
+                                "Atualizando dados...";
+                        }, "2000");
+
+                    }
+                } else {
+                    throw "Houve um erro ao tentar adicionar melhoria!";
                 }
             })
             .catch(function (resposta) {
