@@ -75,12 +75,26 @@ function adicionarMelhorias(dificuldade, nivelDifi, facilidade, nivelFaci, fkUsu
     return database.executar(instrucao);
 }
 
+function listarMelhorias(idUsuario) {
+    console.log("ACESSEI O DASH MODEL para listar as melhorias do usuário, function listarMelhorias()", idUsuario);
+
+    var instrucao = `
+    select nomeDificuldade, nivelDificuldade, nomeFacilidade, nivelFacilidade from melhorar 
+	inner join usuario 
+		on fkUsuarioMel = idUsuario
+			where idUsuario = '${idUsuario}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     adicionarTreino,
     atualizarDados,
     listarQtdTreinos,
     buscarDia,
     obterUltimosTreinos,
-    adicionarMelhorias
+    adicionarMelhorias,
+    listarMelhorias
     // continuar
 };

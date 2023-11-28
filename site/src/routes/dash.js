@@ -38,4 +38,8 @@ router.post("/adicionarMelhorias", function (req, res) {
     dashController.adicionarMelhorias(req, res);
 });
 
+router.get("/listarMelhorias/:idUsuario", function (req, res) {
+    dashController.listarMelhorias(req, res);
+});
+
 module.exports = router;

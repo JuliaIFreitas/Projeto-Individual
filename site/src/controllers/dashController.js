@@ -150,12 +150,40 @@ function obterUltimosTreinos(req, res) {
         });
 }
 
+function listarMelhorias(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    console.log(`estou na funcao listar melhorias do controller`);
+    dashModel.listarMelhorias(idUsuario)
+        .then(
+            function (resultado) {
+                if (resultado.length > 0) {
+                    res.status(200).json(resultado);
+
+                } else {
+                    res.status(204).send("Nenhum resultado encontrado!");
+                }
+            }
+        )
+        .catch(
+            function (erro) {
+                console.log(erro);
+                console.log(
+                    "Houve um erro ao buscar as melhorias: ",
+                    erro.sqlMessage
+                );
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+}
+
 module.exports = {
     adicionarTreino,
     atualizarDados,
     listarQtdTreinos,
     buscarDia,
     obterUltimosTreinos,
-    adicionarMelhorias
+    adicionarMelhorias,
+    listarMelhorias
     // continuar
 }
