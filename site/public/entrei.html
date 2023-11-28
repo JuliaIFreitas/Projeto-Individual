@@ -154,6 +154,11 @@
                     <button onclick="addDados()">Adicionar Dados</button>
                     </p>
                 </div>
+                <div class="botao">
+                    <a href="login.html"><button id="id_sair" class="sair" onclick="sair()">Sair</button>
+                    </a>
+                </div>
+
             </div>
         </div>
         <div class="tela">
@@ -274,16 +279,19 @@
                     <div class="campos">
                         <span class="titulo">Dificuldade: </span>
                         <input class="campoMelhorar" placeholder="Dificuldade" id="input_dificuldade">
-    
-                        <input class="campoMelhorar" placeholder="Nível (0 a 10)" type="number" id="input_nivelDifi"><br> <br>
-    
+
+                        <input class="campoMelhorar" placeholder="Nível (0 a 10)" type="number"
+                            id="input_nivelDifi"><br> <br>
+
                         <span class="titulo">Facilidade: </span>
                         <input class="campoMelhorar" placeholder="Facilidade" id="input_facilidade">
-    
-                        <input class="campoMelhorar" placeholder="Nível (0 a 10)" type="number" id="input_nivelFaci"><br> <br>
+
+                        <input class="campoMelhorar" placeholder="Nível (0 a 10)" type="number"
+                            id="input_nivelFaci"><br> <br>
                     </div>
 
-                    <button class="botaoMelhorar" id="id_botaoMelhorar" onclick="adicionarMelhorias()"> Adicionar Melhorias</button>
+                    <button class="botaoMelhorar" id="id_botaoMelhorar" onclick="adicionarMelhorias()"> Adicionar
+                        Melhorias</button>
 
                     <button id="id_botaoMelhorar" class="botaoMelhorar" onclick="listarMelhorias()">Listar</button>
                     <div id="div_melhorias">
@@ -654,7 +662,7 @@
                         var qtdTotal = document.getElementById("div_treinosCadastrados")
                         qtdTotal.innerHTML = `<b>${qtsTreinos}</b>`;
 
-                        if (qtsTreinos == 1) {
+                        if (qtsTreinos <= 1) {
                             div_classificacao.innerHTML = `<h2><b>JKarateca nível júnior</b></h2> <span class="descricaoKarateca"> Seus treinos estão baixos, por enquanto. Karateca está no início de sua jornada, não desista! </span>`;
                         } else if (qtsTreinos <= 3) {
                             div_classificacao.innerHTML = `<h2><b>Karateca nível Cheng</b></h2> <span class="descricaoKarateca">Como o Cheng (Karate Kid) você está se esforçando, mas ainda pode mais um pouco. Força, karateca!</span>`;

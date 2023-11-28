@@ -12,17 +12,17 @@ body {
 .arm {
     width: 100%;
     height: 1200px;
-    border: 2px solid orange;
+    /* border: 2px solid orange; */
     display: flex;
 }
 
 .arm .container {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width: 17%;
     height: 100%;
     margin: 0;
     background-color: rgb(134, 64, 64);
-    /* position: absolute; */
+    position: fixed;
 }
 
 .arm .container .perfil img {
@@ -37,7 +37,7 @@ body {
 }
 
 .arm .container .perfil .descricao {
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     width: 80%;
     margin: 0 10%;
     background-color: rgb(233, 159, 159);
@@ -46,7 +46,7 @@ body {
 }
 
 .arm .container .perfil .descricao button {
-    border: 1px solid purple;
+    /* border: 1px solid purple; */
     width: 80%;
     margin: 0 10%;
     height: 30px;
@@ -55,48 +55,57 @@ body {
     color: white;
 }
 
+.arm .container .perfil .botao {
+    /* border: 2px solid green; */
+    margin: 90% 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: flex-end;
+    width: 70%;
+}
+
+.arm .container .perfil .sair {
+    /* border: 2px solid blue; */
+    width: 200%;
+    height: 100%;
+    font-size: 20px;
+    background-color: rgb(252, 214, 214);
+    border-radius: 10px;
+    margin-right: 10%;
+}
+
+#id_sair:hover {
+    background-color: rgb(129, 20, 20);
+    color: white;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
 .arm .tela {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     width: 100%;
     height: 100%;
     background-color: rgb(211, 150, 150);
+    overflow: hidden;
+    margin: 0 0 0 17%;
 }
 
 .arm .tela .metricas {
     width: 100%;
     height: 30%;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     display: flex;
 }
 
-/* .arm .tela .metricas .competicao {
-    border: 2px solid aqua;
-    width: 25%;
-    height: 100%;
-    background-color: rgb(168, 94, 94);
-    color: white;
-} */
-
-/* .arm .tela .metricas .competicao .data p {
-    width: 100%;
-} */
-
-/* .arm .tela .metricas .competicao .data {
-    border: 2px solid blue;
-    height: 80%;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-} */
-
 .arm .tela .metricas .tabelas {
-    border: 2px solid gold;
+    /* border: 2px solid gold; */
     height: 100%;
     width: 100%;
 }
 
 .arm .tela .metricas .tabelas .dados {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     width: 75%;
     height: 15%;
     display: flex;

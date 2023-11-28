@@ -46,7 +46,7 @@ function buscarDia(idUsuario) {
     var instrucao = `
 
     select count(idTreino) as qtdTreino, traduz_dia(dayname(diaTreino)) as dia_semana from treinos
-    where fkUsuarioTreino = 5
+    where fkUsuarioTreino = '${idUsuario}'
     group by dia_semana;`;
 
     console.log("Executando a instrução SQL: \n" + instrucao);
