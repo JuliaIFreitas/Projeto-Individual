@@ -91,30 +91,31 @@ function mostrarFaixa(faixaId) {
     var faixa = document.querySelector('.descricaoFaixas');
 
     var cores = ["FAIXA BRANCA", "FAIXA AMARELA", "FAIXA VERMELHA", "FAIXA LARANJA", "FAIXA VERDE", "FAIXA ROXA", "FAIXA MARROM", "FAIXA PRETA"];
+''
 
     var descricao = [
         // branca
-        "<h2>Especificações</h2><p> 7º KYU (Classe)<br>Branco em japonês: Shiro<br> Tempo para graduação: 6 meses <br> Kata: Heian Shodan <br></p> <br><p>Representa a pureza, o começo, a iniciação, é o verdadeiro começo nas artes marciais do karatê.</p>",
+        "<p class='representacao'>Representa a pureza, o começo, a iniciação, é o verdadeiro começo nas artes marciais do karatê.</p><h3>Especificações</h3><p class= 'especificacoes'> 7º KYU (Classe)<br><br><span class='negrito'>Branco em japonês: </span> Shiro<br><br> <span class='negrito'>Tempo para graduação:</span> 6 meses <br><br><span class='negrito'> Kata: Heian Shodan <br></p> <br>",
         // amarela
-        "<h2>Especificações</h2><p>6º KYU (Classe)<br>Amarelo em japonês: Kiiro<br> Tempo para graduação: 6 meses <br> Kata: Heian Nidan <br></p>",
+        "<p class='representacao'> Assim como um sol que desponta todos os dias, ela significa que é um iniciante no Karatê</p><h3>Especificações</h3><p class= 'especificacoes'>6º KYU (Classe)<br><br><span class='negrito'>Amarelo em japonês:</span> Kiiro<br><br> <span class='negrito'>Tempo para graduação:</span> 6 meses <br><br> <span class='negrito'>Kata:</span> Heian Nidan <br></p>",
         // vermelha
-        "<h2>Especificações</h2> <p>5º KYU (Classe)<br>Vermelho em japonês: Aka<br>Tempo para graduação: 6 meses <br> Kata: Heian Sandan <br></p>",
+        "<p class='representacao'>Sugere motivação, atividade e vontade. Também simboliza aquilo que deve ser contido pelo seu portador</p><h3>Especificações</span></h3> <p class= 'especificacoes'>5º KYU (Classe)<br><br><span class='negrito'>Vermelho em japonês:</span> Aka<br><br><span class='negrito'>Tempo para graduação:</span> 6 meses <br><br> <span class='negrito'>Kata:</span> Heian Sandan <br></p>",
         // laranja
-        "<h2>Especificações</h2><p>4º KYU (Classe)<br>Laranja em japonês: Orenji<br>Tempo para graduação: 6 meses <br>Kata: Heian Yodan <br></p>",
+        "<p class='representacao'> Simboliza aquilo que o praticante deve buscar: o encorajamento, robustez, gentileza e tolerância </p><h3>Especificações</h3><p class= 'especificacoes'>4º KYU (Classe)<br><br><span class='negrito'>Laranja em japonês:</span> Orenji<br><br><span class='negrito'>Tempo para graduação:</span> 6 meses <br><br><span class='negrito'>Kata:</span> Heian Yodan <br></p>",
         // verde
-        "<h2>Especificações</h2><p>3º KYU (Classe)<br>Verde em japonês: Midori<br>Tempo para graduação: 1 ano <br>Kata: Heian Godan <br></p>",
+        "<p class='representacao'>Ela representa a esperança, a fé e o crescimento. É a cor mais harmoniosa e calmante de todas </p><h3>Especificações</h3><p class= 'especificacoes'>3º KYU (Classe)<br><br><span class='negrito'>Verde em japonês:</span> Midori<br><br><span class='negrito'>Tempo para graduação:</span> 1 ano <br><br><span class='negrito'>Kata:</span> Heian Godan <br></p>",
         // roxa
-        "<h2>Especificações</h2><p>2º KYU (Classe)<br>Roxo em japonês: Murasaki<br>Tempo para graduação: 1 ano <br>Kata: Tekki Shodan <br></p>",
+        "<p class='representacao'>Representa o mistério, a dignidade, a inspiração e justiça.</p><h3>Especificações</h3><p class= 'especificacoes'>2º KYU (Classe)<br><br><span class='negrito'>Roxo em japonês: </span>Murasaki<br><br><span class='negrito'>Tempo para graduação:</span> 1 ano <br><br><span class='negrito'>Kata: </span>Tekki Shodan <br></p>",
         // marrom
-        "<h2>Especificações</h2><p>1º KYU (Classe)<br> Marrom em japonês: Murasaki<br>Tempo para graduação: 18 meses a 24 meses <br>Katas: Para o exame de faixa deve apresentar os cinco Heian, Tekki Shodan, além do Bassai Dai, Jion, Enpi ou Kanku Dai <br></p>",
+        "<p class='representacao'>É a cor da solidificação. Representa a constância, a disciplina, a uniformidade adquirida. Também sugere segurança e isolamento.</p><h3>Especificações</h3><p class= 'especificacoes'>1º KYU (Classe)<br><br> <span class='negrito'>Marrom em japonês:</span> Murasaki<br><br><span class='negrito'>Tempo para graduação:</span> 18 meses a 24 meses <br><br><span class='negrito'>Katas: </span>Para o exame de faixa deve apresentar os cinco Heian, Tekki Shodan, além do Bassai Dai, Jion, Enpi ou Kanku Dai <br></p>",
         // preta
-        "<h2>Especificações</h2><p>1º DAN (Grau)<br>Preto em japonês: Kuro<br>Tempo para graduação: 3 anos <br>Katas: Para o exame de faixa para o 1º Dan, deve saber os 5 Heian e apresentar um deles. Apresentar também o Tekki Shodan. Além desses, deve executar um dos seguintes katas: Bassai Dai, Jion, Enpi ou Kanku Dai<br></p>"
+        "<p class='representacao'>É a junção de todas as cores. Representa autocontrole, serenidade, disciplina e responsabilidade, dignidade e conhecimento. É a cor do poder. </p><h3>Especificações</h3><br><br><p class= 'especificacoes'>1º DAN (Grau)<br><span class='negrito'>Preto em japonês:</span> Kuro<br><br><span class='negrito'>Tempo para graduação:</span> 3 anos <br><br> <span class='negrito'> Katas:</span> Para o 1º Dan, deve saber os 5 Heian e apresentar um deles. Apresentar também o Tekki Shodan. Além desses, deve executar um dos seguintes katas: Bassai Dai, Jion, Enpi ou Kanku Dai<br></p>"
     ]
 
     var posicao = cores.indexOf(faixaId);
 
     if (posicao != -1) {
-        faixa.innerHTML = `<h6 class="significadoCores"> ${cores[posicao]} </h6> 
+        faixa.innerHTML = `<h2 class="significadoCores"> ${cores[posicao]} </h2> 
         <div class="caixaCor">
          <p> 
             ${descricao[posicao]} 

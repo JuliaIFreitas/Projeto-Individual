@@ -92,7 +92,7 @@ body {
 .arm .tela .metricas .tabelas {
     border: 2px solid gold;
     height: 100%;
-    width: 75%;
+    width: 100%;
 }
 
 .arm .tela .metricas .tabelas .dados {
@@ -251,7 +251,7 @@ body {
 }
 
 .arm .tela .graficoTreinos .classificacao .descricaoKarateca {
-    border: 2px solid yellowgreen;
+    /* border: 2px solid yellowgreen; */
     height: 35%;
     font-size: 18px;
     display: flex;
@@ -261,14 +261,70 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 } 
 
-/* .arm .tela .graficoTreinos .graficoDiv {
-    border: 2px solid orange;
-} */
-
 .arm .tela .graficoTreinos .grafico {
     border: 2px solid blue;
     height: 60%;
     width: 50%;
+}
+
+.melhorar {
+    /* border: 2px solid purple; */
+    height: 30%;
+}
+
+.melhorar h2 {
+    /* border: 2px solid yellow; */
+    height: 12%;
+    font-size: 32px;
+    width: 28%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(134, 64, 64);
+    color: white;
+    margin: 0 36%;
+}
+
+.melhorar .melhorias {
+    /* border: 2px solid green; */
+    height: 60%;
+}
+
+.melhorar .melhorias .campos {
+    /* border: 2px solid firebrick; */
+    height: 50%;
+    width: 50%;
+    margin: 1% 25%;
+}
+
+.melhorar .melhorias .titulo {
+    /* border: 2px solid cornflowerblue; */
+    font-size: 23px;
+}
+
+.melhorar .melhorias .campoMelhorar {
+    /* border: 2px solid blue; */
+    height: 20%;
+    margin: 0 2%;
+
+}
+
+.melhorar .melhorias .botaoMelhorar {
+    /* border: 2px solid red; */
+    height: 15%;
+    width: 15%;
+    margin: 0 17%;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: rgb(139, 78, 78);
+    color: white;
+}
+
+#id_botaoMelhorar:hover {
+    background-color: rgb(151, 69, 69);
+    color: white;
+    transition: 0.5s;
+    opacity: 0.7;
 }
 
 .janela-modal {

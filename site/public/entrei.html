@@ -269,15 +269,24 @@
             </div>
 
             <div class="melhorar">
-                <div>
-                    Dificuldade: <input placeholder="Dificuldade" id="input_dificuldade">
-                    <input placeholder="Nível (0 a 10)" type="number" id="input_nivelDifi"><br>
-                    Facilidade: <input placeholder="Facilidade" id="input_facilidade">
-                    <input placeholder="Nível (0 a 10)" type="number" id="input_nivelFaci"><br>
-                    <button id="id_botaoKata" onclick="adicionarMelhorias()"> Adicionar Melhorias</button>
-                    <button onclick="listarMelhorias()">Listar</button>
-                    <div id="div_melhorias">
+                <h2>Melhorias</h2>
+                <div class="melhorias">
+                    <div class="campos">
+                        <span class="titulo">Dificuldade: </span>
+                        <input class="campoMelhorar" placeholder="Dificuldade" id="input_dificuldade">
+    
+                        <input class="campoMelhorar" placeholder="Nível (0 a 10)" type="number" id="input_nivelDifi"><br> <br>
+    
+                        <span class="titulo">Facilidade: </span>
+                        <input class="campoMelhorar" placeholder="Facilidade" id="input_facilidade">
+    
+                        <input class="campoMelhorar" placeholder="Nível (0 a 10)" type="number" id="input_nivelFaci"><br> <br>
+                    </div>
 
+                    <button class="botaoMelhorar" id="id_botaoMelhorar" onclick="adicionarMelhorias()"> Adicionar Melhorias</button>
+
+                    <button id="id_botaoMelhorar" class="botaoMelhorar" onclick="listarMelhorias()">Listar</button>
+                    <div id="div_melhorias">
                     </div>
                 </div>
             </div>
@@ -503,7 +512,7 @@
 
             // finalizarAguardar();
             return false;
-        } 
+        }
         if (
             facilidadeVar == "" &&
             nivelFaciVar == ""
@@ -592,14 +601,14 @@
 
                         var melhor = document.getElementById("div_melhorias")
                         melhor.innerHTML = `<b>${quaisMelhorias}</b> <br>`;
-                        
+
                         div_melhorias.innerHTML = `
                         ${dificuldadeServer}<br>
                         ${nivelDifiServer}<br>
                         ${facilidadeServer}<br>
                         ${nivelFaciServer}
                         `;
-                        
+
                     })
             })
 
@@ -654,7 +663,7 @@
                         } else if (qtsTreinos <= 12) {
                             div_classificacao.innerHTML = `<h2><b>Karateca nível Sr. Miyagi</b></h2> <span class="descricaoKarateca">Seus treinos estão tão frequentes quanto do Sr. Miyagi, continue assim e virará um mestre também. </span>`;
                         } else if (qtsTreinos > 12) {
-                            div_classificacao.innerHTML = `<h2><b>Karateca nível Funakoshi</b></h2> <span class="descricaoKarateca">Karateca do céu! Está treinando tanto quanto o criados da nossa arte! Ai que demais! </span>`;
+                            div_classificacao.innerHTML = `<h2><b>Karateca nível Funakoshi</b></h2> <span class="descricaoKarateca">Karateca do céu! Está treinando tanto quanto o criador da nossa arte! Ai que demais! </span>`;
                         } else { console.log(`Erro ao capturar perfil... valor da variavel ${qtsTreinos}`) }
                     })
             })
@@ -686,7 +695,7 @@
                 const ctx = document.getElementById('myChart');
 
                 const diaSemana = [
-                    'Sunday', 'Monday', 'Tusday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
+                    'Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'
                 ];
 
 
@@ -715,12 +724,12 @@
                 });
             })
             .catch(error => {
-                console.error('AAAAAAAA errinho do grafico:', error);
+                console.error('Erro no grafico:', error);
             });
     }
 
     window.onload = function () {
-                        listarQtdTreinos();
-                        buscarDia();
-                    };
+        listarQtdTreinos();
+        buscarDia();
+    };
 </script>
