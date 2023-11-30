@@ -88,6 +88,19 @@ function listarMelhorias(idUsuario) {
     return database.executar(instrucao);
 }
 
+function listarDados(idUsuario) {
+    console.log("ACESSEI O DASH MODEL para listar os dados do usuário, function listarDados()", idUsuario);
+
+    var instrucao = `
+    select nomeAsso from dados 
+	inner join usuario 
+		on fkUsuarioDados = idUsuario
+			where idUsuario = '${idUsuario}';
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
 module.exports = {
     adicionarTreino,
     atualizarDados,
@@ -95,6 +108,7 @@ module.exports = {
     buscarDia,
     obterUltimosTreinos,
     adicionarMelhorias,
-    listarMelhorias
+    listarMelhorias,
+    listarDados
     // continuar
 };

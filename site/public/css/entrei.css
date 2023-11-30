@@ -11,7 +11,7 @@ body {
 
 .arm {
     width: 100%;
-    height: 1200px;
+    height: 3000px;
     /* border: 2px solid orange; */
     display: flex;
 }
@@ -93,7 +93,7 @@ body {
 
 .arm .tela .metricas {
     width: 100%;
-    height: 30%;
+    height: 15%;
     /* border: 2px solid green; */
     display: flex;
 }
@@ -188,14 +188,14 @@ body {
 }
 
 .arm .tela .metricas .tabelas .treino {
-    border: 2px solid purple;
+    /* border: 2px solid purple; */
     margin: 2% 0;
     height: 40%;
 }
 
 .arm .tela .metricas .tabelas .treino p {
     font-size: 19px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     justify-content: center;
     width: 40%;
@@ -231,17 +231,22 @@ body {
 }
 
 .arm .tela .graficoTreinos {
-    height: 45%;
-    border: 2px solid slateblue;
+    height: 20%;
+    /* border: 2px solid slateblue; */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
+.pxmFaixa {
+    /* border: 2px solid palegreen; */
+    width: 40%;
+}
+
 .arm .tela .graficoTreinos .classificacao {
-    border: 1px solid mediumspringgreen;
-    height: 20%;
+    /* border: 1px solid mediumspringgreen; */
+    height: 18%;
     /* font-size: 20px; */
     display: flex;
     justify-content: center;
@@ -257,6 +262,7 @@ body {
     color: white;
     border-radius: 10px;
     margin: 2% 0;
+    height: 25%;
 }
 
 .arm .tela .graficoTreinos .classificacao .descricaoKarateca {
@@ -271,19 +277,19 @@ body {
 } 
 
 .arm .tela .graficoTreinos .grafico {
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     height: 60%;
     width: 50%;
 }
 
 .melhorar {
     /* border: 2px solid purple; */
-    height: 30%;
+    height: 7%;
 }
 
 .melhorar h2 {
     /* border: 2px solid yellow; */
-    height: 12%;
+    height: 14%;
     font-size: 32px;
     width: 28%;
     display: flex;
@@ -296,14 +302,14 @@ body {
 
 .melhorar .melhorias {
     /* border: 2px solid green; */
-    height: 60%;
+    height: 80%;
 }
 
 .melhorar .melhorias .campos {
     /* border: 2px solid firebrick; */
-    height: 50%;
-    width: 50%;
-    margin: 1% 25%;
+    height: 60%;
+    width: 60%;
+    margin: 1% 20%;
 }
 
 .melhorar .melhorias .titulo {
@@ -320,7 +326,7 @@ body {
 
 .melhorar .melhorias .botaoMelhorar {
     /* border: 2px solid red; */
-    height: 15%;
+    height: 17%;
     width: 15%;
     margin: 0 17%;
     font-size: 15px;
@@ -334,6 +340,23 @@ body {
     color: white;
     transition: 0.5s;
     opacity: 0.7;
+}
+
+.tela .listandoMelhorias {
+    /* border: 2px solid yellow; */
+    font-size: 20px;
+    width: 30%;
+    margin: 0 35%;
+}
+
+.tela .listandoMelhorias h2 {
+    /* border: 2px solid red; */
+    width: 100%;
+    background-color: rgb(134, 64, 64);
+    color: white;
+    border-radius: 10px;
+    margin: 2% 0;
+    height: 25%;
 }
 
 .janela-modal {

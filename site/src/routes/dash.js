@@ -42,4 +42,8 @@ router.get("/listarMelhorias/:idUsuario", function (req, res) {
     dashController.listarMelhorias(req, res);
 });
 
+router.get("/listarDados/:idUsuario", function (req, res) {
+    dashController.listarDados(req, res);
+});
+
 module.exports = router;

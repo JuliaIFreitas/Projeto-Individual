@@ -144,14 +144,6 @@
                     <div id="id_nome">
                         Nome:
                     </div>
-
-                    <div id="id_dados">
-                        Associação: <br>
-                        Sensei: <br>
-                        Faixa: <br>
-                        Medalhas: <br><br>
-                    </div>
-                    <button onclick="addDados()">Adicionar Dados</button>
                     </p>
                 </div>
                 <div class="botao">
@@ -173,7 +165,7 @@
 
 
                 <div class="tabelas">
-                    <h2>Treinos da semana: </h2><br>
+                    <h2>Métricas </h2><br>
                     <div class="dados">
                         <div class="junior">
                             <div class="titulo">
@@ -271,6 +263,9 @@
                     <canvas class="grafico" id="myChart" height="100" width="100" style="margin-left: 30px"> </canvas>
                 </div>
 
+                <div id="div_pxmFaixa" class="pxmFaixa">
+                </div>
+
             </div>
 
             <div class="melhorar">
@@ -294,10 +289,9 @@
                         Melhorias</button>
 
                     <button id="id_botaoMelhorar" class="botaoMelhorar" onclick="listarMelhorias()">Listar</button>
-                    <div id="div_melhorias">
-                    </div>
                 </div>
             </div>
+            <div class="listandoMelhorias" id="div_melhorias"></div>
         </div>
     </div>
 </body>
@@ -318,102 +312,9 @@
     //   Colocando o nome do usuário
     var nome = sessionStorage.NOME_USUARIO;
 
-    id_nome.innerHTML = `Nome: ${nome}`;
+    id_nome.innerHTML = `Olá karateca, ${nome}`;
 
-    // Dados do perfil
-    function atualizarDados() {
-        // aguardar();
 
-        var nomeAssoVar = input_associacao.value;
-        var faixaVar = id_select.value;
-        var nomeSenseiVar = input_sensei.value;
-        var medalhasVar = input_qtdMedalhas.value;
-
-        if (
-            nomeAssoVar == "" ||
-            faixaVar == "" ||
-            nomeSenseiVar == "" ||
-            medalhasVar == ""
-        ) {
-            cardErro.style.display = "block";
-            mensagem_erro.innerHTML =
-                "Todos os campos estão em branco";
-
-            // finalizarAguardar();
-            return false;
-        } else if (medalhasVar < 0) {
-            cardErro.style.display = "block";
-            mensagem_erro.innerHTML =
-                "Insira uma quantidade válida";
-
-            // finalizarAguardar();
-            return false;
-        } else {
-            setInterval(sumirMensagem, 5000);
-            cardErro.style.display = "block";
-            mensagem_erro.innerHTML =
-                "Atualizando dados...";
-        }
-
-        fetch("/dash/atualizarDados", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                nomeAssoServer: nomeAssoVar,
-                faixaServer: faixaVar,
-                nomeSenseiServer: nomeSenseiVar,
-                medalhasServer: medalhasVar,
-                fkUsuarioDadosServer: idUsuario
-
-            }),
-        })
-            .then(function (resposta) {
-                console.log("resposta: ", resposta);
-
-                if (resposta.ok) {
-
-                    console.log(resposta);
-
-                    resposta.json().then(json => {
-                        console.log(json);
-                        console.log(JSON.stringify(json));
-                        sessionStorage.NOMEASSO_DADOS = json.nomeAsso;
-                        sessionStorage.FAIXA_DADOS = json.faixa;
-                        sessionStorage.NOMESENSEI_DADOS = json.nomeSensei;
-                        sessionStorage.MEDALHAS_DADOS = json.medalhas;
-                        sessionStorage.FKUSUARIODADOS_DADOS = json.fkUsuarioDados;
-
-                        setTimeout(() => {
-                            cardErro.style.display = "block";
-                            mensagem_erro.innerHTML =
-                                "Atualizando dados...";
-                        }, "2000");
-                    });
-
-                } else {
-                    throw "Houve um erro ao tentar atualizar os dados!";
-                }
-            })
-            .catch(function (resposta) {
-                console.log(`#ERRO: ${resposta}`);
-            })
-        return false;
-    }
-
-    //  Colocando o resto dos dados
-    var nomeAsso = sessionStorage.NOMEASSO_DADOS;
-    var nomeSensei = sessionStorage.NOMESENSEI_DADOS;
-    var faixa = sessionStorage.FAIXA_DADOS;
-    var medalhas = sessionStorage.MEDALHAS_DADOS;
-
-    id_dados.innerHTML = `
-    Associação: ${nomeAsso} <br>
-    Sensei: ${nomeSensei} <br>
-    Faixa: ${faixa} <br>
-    Medalhas: ${medalhas} <br><br>
-    `;
 
     function sumirMensagem() {
         cardErro.style.display = "none";
@@ -588,11 +489,12 @@
         return false;
     }
 
+    var contador = 0;
 
     function listarMelhorias() {
 
         // div_melhorias.innerHTML = ``;
-        
+
         fetch(`/dash/listarMelhorias/${idUsuario}`, {
             method: 'GET',
             headers: {
@@ -601,17 +503,23 @@
         })
             .then(function (resposta) {
                 resposta.json().then((resposta) => {
+                    div_melhorias.innerHTML = `<h2> Lista de Melhorias </h2>`;
+
                     resposta.forEach((resposta) => {
-                        if(resposta.nomeDificuldade && resposta.nivelDificuldade && resposta.nomeFacilidade && resposta.nivelFacilidade) {
+                        // for (contador = 0; contador )
+                        if (resposta.nomeDificuldade && resposta.nivelDificuldade || resposta.nomeFacilidade && resposta.nivelFacilidade
+                        ) {
+                            contador++;
                             div_melhorias.innerHTML += `
-                            <br> Dificuldade: ${resposta.nomeDificuldade}  nível: ${resposta.nivelDificuldade}<br><br>
-                            Facilidade: ${resposta.nomeFacilidade}   nível: ${resposta.nivelFacilidade}<br><br>
-                            `;
+                                <br> <b>Dificuldade ${contador}:</b> ${resposta.nomeDificuldade} <b>Nível:</b> ${resposta.nivelDificuldade} <br><br>
+                                <b>Facilidade ${contador}:</b> ${resposta.nomeFacilidade}  <b>Nível:</b> ${resposta.nivelFacilidade}<br><br>
+                                `;
                         }
                     });
                 });
             });
-        }
+    }
+
 
     // Modal para adicionar dados
     function addDados() {
@@ -626,6 +534,18 @@
     }
 
     // Gráfico dos treinos
+
+
+    function pxmFaixaPreta() {
+
+        var qtsTreinos = json[0].qtdTreino;
+
+        var faixaPreta = (qtsTreino / 105) * 100;
+
+        div_pxmFaixa = `
+        Ainda falta ${faixaPreta}% para você chegar na faixa preta. Não desista!
+        `;
+    }
 
     function listarQtdTreinos() {
         console.log(idUsuario)
@@ -642,14 +562,14 @@
                         console.log(json);
                         console.log(json[0].qtdTreino);
 
-                        var qtsTreinos = json[0].qtdTreino;
+                        var qtsTreinos = json[0].qtdTreino
                         console.log(qtsTreinos);
 
                         var qtdTotal = document.getElementById("div_treinosCadastrados")
                         qtdTotal.innerHTML = `<b>${qtsTreinos}</b>`;
 
                         if (qtsTreinos <= 1) {
-                            div_classificacao.innerHTML = `<h2><b>JKarateca nível júnior</b></h2> <span class="descricaoKarateca"> Seus treinos estão baixos, por enquanto. Karateca está no início de sua jornada, não desista! </span>`;
+                            div_classificacao.innerHTML = `<h2><b>JKarateca nível júnior</b></h2> <span class="descricaoKarateca"> Seus treinos estão baixos, por enquanto. Karateca está no início de sua jornada, não desista! </span> <br>`;
                         } else if (qtsTreinos <= 3) {
                             div_classificacao.innerHTML = `<h2><b>Karateca nível Cheng</b></h2> <span class="descricaoKarateca">Como o Cheng (Karate Kid) você está se esforçando, mas ainda pode mais um pouco. Força, karateca!</span>`;
                         } else if (qtsTreinos <= 6) {
@@ -659,6 +579,8 @@
                         } else if (qtsTreinos > 12) {
                             div_classificacao.innerHTML = `<h2><b>Karateca nível Funakoshi</b></h2> <span class="descricaoKarateca">Karateca do céu! Está treinando tanto quanto o criador da nossa arte! Ai que demais! </span>`;
                         } else { console.log(`Erro ao capturar perfil... valor da variavel ${qtsTreinos}`) }
+                        pxmFaixaPreta();
+
                     })
             })
 
@@ -725,5 +647,6 @@
     window.onload = function () {
         listarQtdTreinos();
         buscarDia();
+        listarMelhorias();
     };
 </script>
