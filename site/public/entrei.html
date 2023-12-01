@@ -7,6 +7,7 @@
     <title>ENTREI - JULIA INADA DE FREITAS</title>
     <link rel="stylesheet" href="./css/entrei.css">
     <link rel="stylesheet" href="./css/modal.css">
+    <link rel="icon" href="assets/imgs/IMAGENS/favicon.ico">
     <!-- <script src="../src/js/addkata.js"></script> -->
     <!-- <script src="../src/js/script.js"></script> -->
     <!-- <script src="../src/js/entrei.js"></script> -->
@@ -88,8 +89,6 @@
 
 <body>
 
-    <!-- <script src="/site/src/js/login.js"></script> -->
-
     <div class="arm">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
@@ -97,48 +96,11 @@
             </div>
         </div>
 
-        <div class="modalAsso" id="modalAsso">
-            <div class="modalassociacao">
-                <button class="fechar" id="fechar">X</button>
-                <div class="divModalAsso">
-                    <h1>Dados</h1><br>
-                    <div class="asso">
-                        <span>Associação:</span><br><input placeholder="Nome da Associação"
-                            id="input_associacao"><br><br>
-                        <span>Faixa:</span> <br>
-                        <select class="select" name="" id="id_select">
-                            <option value="branca">Branca(7° Kyu)</option>
-                            <option value="amarela">Amarela(6° Kyu)</option>
-                            <option value="vermelha">Vermelha(5° Kyu)</option>
-                            <option value="laranja">Laranja(4° Kyu)</option>
-                            <option value="verde">Verde(3° Kyu)</option>
-                            <option value="roxa">Roxa(2° Kyu)</option>
-                            <option value="marrom">Marrom(1° Kyu)</option>
-                            <option value="preta">Preta(1° Dan)</option>
-                            <option value="preta">Preta(2° Dan)</option>
-                            <option value="preta">Preta(3° Dan)</option>
-                            <option value="preta">Preta(4° Dan)</option>
-                            <option value="preta">Preta(5° Dan)</option>
-                            <option value="preta">Preta(6° Dan)</option>
-                            <option value="preta">Preta(7° Dan)</option>
-                            <option value="preta">Preta(8° Dan)</option>
-                            <option value="preta">Preta(9° Dan)</option>
-                            <option value="preta">Preta(10° Dan)</option>
-
-                        </select><br><br>
-                        <span>Sensei: </span><br><input placeholder="Nome do Sensei" id="input_sensei"><br><br>
-                        <span>Medalhas: </span><br><input placeholder="Quantidade de Medalhas"
-                            id="input_qtdMedalhas"><br>
-                    </div>
-                    <button class="botao" onclick="atualizarDados()">Adicionar</button>
-                </div>
-            </div>
-        </div>
         <!-- Karate -->
 
         <div class="container">
             <div class="perfil">
-                <img src="" alt="">
+                <img src="assets/imgs/IMAGENS/shotokan-removebg-preview.png" alt="">
                 <div class="descricao">
                     <p>
                     <div id="id_nome">
@@ -289,9 +251,12 @@
                         Melhorias</button>
 
                     <button id="id_botaoMelhorar" class="botaoMelhorar" onclick="listarMelhorias()">Listar</button>
+
+                    <div id="div_melhorias" class="listandoMelhorias">
+
+                    </div>
                 </div>
             </div>
-            <div class="listandoMelhorias" id="div_melhorias"></div>
         </div>
     </div>
 </body>
@@ -489,10 +454,11 @@
         return false;
     }
 
-    var contador = 0;
+   
 
     function listarMelhorias() {
 
+        var contador = 0;
         // div_melhorias.innerHTML = ``;
 
         fetch(`/dash/listarMelhorias/${idUsuario}`, {

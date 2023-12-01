@@ -97,7 +97,7 @@ body {
 }
 
 .chamando {
-    height: 600px;
+    height: 750px;
     width: 100%;
     background-color: rgb(240, 200, 200);
 }
@@ -228,35 +228,9 @@ body {
     }
 }
 
-.banner {
-    width: 100%;
-    height: 500px;
-    border: 2px solid rgb(224, 64, 117);
-    background-image: url(/site/public/assets/imgs/IMAGENS/IMG-20230715-WA0015.jpg);
-}
-
-.banner .container {
-    width: 80%;
-    height: 100%;
-    border: 1px solid goldenrod;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0 10%;
-}
-
-.banner .container p {
-    margin: 0;
-    width: 40%;
-    height: 20%;
-    font-family: Roboto;
-    border: 1px solid rgb(60, 168, 60);
-    display: flex;
-}
-
 .historia {
     width: 100%;
-    height: 550px;
+    height: 600px;
     /* border: 2px solid lawngreen; */
     background-color: rgb(109, 49, 49);
 }
@@ -266,7 +240,7 @@ body {
     height: 100%;
     margin: 0 10%;
     display: flex;
-    /* border: 1px solid red;   */
+    /* border: 2px solid red;   */
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -686,7 +660,7 @@ body {
 
 .karateca .container .espelho {
     /* border: 2px solid rgb(100, 26, 67); */
-    height: 35%;
+    height: 40%;
     width: 15%;
     display: flex;
 }
@@ -707,7 +681,7 @@ body {
     width: 80%;
     height: 100%;
     margin: 0 10%;
-    /* border: 1px solid purple; */
+    border: 1px solid rgb(245, 210, 189);
 }
 
 .shiaikata .container .bannerKata {
@@ -822,14 +796,14 @@ body {
 
 .graduacoes {
     width: 100%;
-    height: 800px;
+    height: 900px;
     background-color: rgb(255, 214, 214);
 }
 
 .graduacoes .container {
     width: 80%;
     height: 100%;
-    /* border: 2px solid rgb(73, 73, 1); */
+    border: 2px solid rgb(255, 214, 214);
     margin: 0 10%;
     /* display: flex; */
     /* flex-wrap: wrap; */
@@ -840,7 +814,7 @@ body {
     /* border: 2px solid green; */
     display: flex;
     flex-wrap: wrap;
-    height: 25%;
+    height: 23%;
     width: 100%;
     justify-content: space-between;
 }
@@ -869,13 +843,13 @@ body {
 
 .graduacoes .container .descricaoFaixas {
     /* border: 3px solid green; */
-    height: 60%;
+    height: 55%;
     margin: 4% 0;
 }
 
 .graduacoes .container .descricaoFaixas h2 {
     /* border: 2px solid blue; */
-    height: 10%;
+    height: 8%;
     font-size: 30px;
     display: flex;
     justify-content: center;
@@ -889,7 +863,7 @@ body {
 .graduacoes .container .descricaoFaixas h3 {
     /* border: 2px solid yellow; */
     font-size: 32px;
-    height: 10%;
+    height: 8%;
     display: flex;
     justify-content: center;
     margin: 2% 35%;
@@ -901,7 +875,7 @@ body {
 
 .graduacoes .container .descricaoFaixas .representacao {
     /* border: 2px solid rgb(0, 128, 128); */
-    height: 10%;
+    height: 9%;
     font-size: 22px;
     display: flex;
     justify-content: center;
@@ -923,16 +897,6 @@ body {
     margin: 0 22.5%;
     width: 55%;
 }
-
-/* .graduacoes .container .faixa p {
-    border: 1px solid navy;
-    height: 60%;
-    width: 90%;
-    margin: 0 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
 
 .divBotaoGraduacoes {
     /* border: 1px solid navy; */
